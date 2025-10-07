@@ -1,0 +1,6 @@
+site_name: CLM Admin Guide
+site_url: https://dictalabs.github.io/clm-admin-guide/
+theme:
+  name: material
+nav:
+  - Home: index.md
