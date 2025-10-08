@@ -5,11 +5,51 @@
          <lastmod>2025-10-08</lastmod>
     </url>
     <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/acme_server/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/certificate_management/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/certificate_requests/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/cmp_server/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/connectors/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/crypto_sources/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/est_server/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/key_management/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
          <loc>https://dictalabs.github.io/clm-admin-guide/roles/</loc>
          <lastmod>2025-10-08</lastmod>
     </url>
     <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/scep_server/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
          <loc>https://dictalabs.github.io/clm-admin-guide/tenants/</loc>
+         <lastmod>2025-10-08</lastmod>
+    </url>
+    <url>
+         <loc>https://dictalabs.github.io/clm-admin-guide/users/</loc>
          <lastmod>2025-10-08</lastmod>
     </url>
 </urlset>
