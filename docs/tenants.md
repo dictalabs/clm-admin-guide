@@ -1,6 +1,5 @@
 # Managing Tenants
 
-## Overview
 After logging in to CLM with the **default operator account** for the first time, it is strongly recommended to create a new **Tenant**, along with appropriate **Roles** and **Users**, before starting certificate operations.
 
 ## Accessing Tenants

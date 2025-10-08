@@ -1,60 +1,94 @@
 # Managing ACME Server
 
-## Overview
-*(Paste the full ACME Server Overview from the PDF — describe what the ACME protocol is, its purpose in CLM, and how it automates certificate issuance and renewal for integrated systems.)*
+The ACME Server module allows administrators to manage Automatic Certificate Management Environment (ACME) profiles, process certificate orders, and monitor enrollment activity.
 
 ## Accessing ACME Server
-*(Insert the detailed instructions for navigating to the ACME Server module in the CLM Admin Portal.)*
+
+From the sidebar menu, navigate to **Protocols > ACME Server**.
+
+The ACME Server page opens, displaying an overview of all configured ACME profiles.
+
 ![ACME Server Page Overview](images/acme_server_page_overview.png)
 
+### ACME Server Overview
+
+At the top of the page, administrators can view summary information displayed in cards:
+
+- **Total Orders** – The total number of certificate orders processed through ACME.
+    
+- **Success Rate** – The percentage of successfully completed certificate orders.
+    
+- **Active Orders** – The number of ongoing or pending ACME orders.
+    
+- **Failed Orders** – The number of certificate orders that failed during processing.
+    
+- **Avg Processing** – The average time taken to process an ACME order.
+    
+- **Active Accounts** – The total number of active ACME accounts registered.
 ## Search and Filter
-*(Paste the content explaining how to search, sort, or filter ACME profiles.)*
-- Use the search bar to locate ACME profiles by name or associated CA.  
-- Apply filters for status, creation date, or challenge type (HTTP-01, DNS-01, etc.).  
-![ACME Server Search and Filter](images/acme_server_search_filter.png)
+
+ Below the summary cards, a **Search and Filter** section allows administrators to:
+
+- Search ACME server profiles by name, tenant, or keyword.
+    
+- Apply filters (e.g., by order status, account, or date range).
 
 ## ACME Profiles List
-*(Paste the description of the ACME profiles list view — include column headings and available management actions.)*
-- Profile Name  
-- Associated CA  
-- Challenge Type  
-- Status  
-- Actions (View, Edit, Delete)
-![ACME Profiles List](images/acme_profiles_list.png)
+
+The ACME server profiles list table provides detailed information about each configured profile, typically including:
+
+- **Profile Name**
+    
+- **Directory Endpoint**
+    
+- **Challenges**
+    
+- **Status (Active/Inactive)**
+    
+- **Rate Limits**
+    
+- **Connector**
+    
+- **Actions** (e.g., View, Edit, Disable, or Delete)
+    
+
+This centralized view helps administrators manage ACME-based certificate automation efficiently across multiple tenants.
 
 ## Creating a New ACME Profile
-*(Paste the detailed process for adding a new ACME profile, converting numbered steps to bullet points.)*
-- Click **Add Profile** or **Create New ACME Profile**.  
-- Enter profile name and select the issuing CA.  
-- Choose the challenge type (e.g., HTTP-01, DNS-01).  
-- Define authorization and certificate renewal settings.  
-- Save the profile.  
+
+To configure a new ACME profile in CLM, follow these steps:
+
+### 1. Navigate to the ACME Server Page
+
+From the sidebar menu, select **Protocols > ACME Server**.
+
+On the top-right corner of the page, click the **Add ACME Profile** button.
 ![Create ACME Profile Form](images/create_acme_profile_form.png)
+### 2. Fill in the ACME Profile Form
 
-## Navigate to the ACME Server Page
-*(Include any detailed navigation screenshots or explanation from the PDF.)*
-![Navigate to ACME Server Page](images/navigate_acme_server_page.png)
+A form will open with the following fields:
 
-## Fill in the ACME Profile Form
-*(Paste detailed breakdown of each configuration field in the form.)*
-- Profile Name  
-- Description  
-- Associated CA  
-- Challenge Type  
-- Domain Validation Settings  
-- Validity and Renewal Options  
-![ACME Profile Form Fields](images/acme_profile_form_fields.png)
+- **Endpoint Name** – Enter a unique name for the ACME endpoint.
+    
+- **Directory Path** – Specify the ACME directory path used for order and account requests.
+    
+- **Connector (Dropdown)** – Select the connector associated with this ACME profile.
+    
+- **Website URL** – Provide the URL of the website or service linked to this ACME configuration.
+    
+- **Challenge Type (Dropdown)** – Select the ACME challenge type (e.g., HTTP-01, DNS-01).
+    
+- **Status (Dropdown)** – Choose whether the ACME profile is Active or Inactive.
 
-## Save the ACME Profile
-*(Include instructions on saving and validation.)*
-- Review the details entered.  
-- Click **Save** to finalize the new ACME profile.  
-- Verify that the profile appears in the list view.  
-![ACME Profile Saved Confirmation](images/acme_profile_saved_confirmation.png)
 
-## Post-Creation
-*(Paste any content from the PDF about testing or verifying ACME integrations after profile creation.)*
-- Test certificate issuance using an ACME client (e.g., Certbot).  
-- Verify enrollment logs.  
-- Confirm successful issuance and renewal.  
-![ACME Profile Test Results](images/acme_profile_test_results.png)
+### 3. Save the Profile
+
+After completing the form, click the **Create Profile** button.
+
+### 4. Post-Creation
+
+The new ACME profile will appear in the **ACME Server Profiles List** with its details.
+
+
+
+

@@ -1,44 +1,98 @@
 # Certificate Requests
 
-## Overview
-*(Paste the full Certificate Requests Overview text from the PDF — explain what certificate requests are, their role in CLM, and how administrators manage them.)*
+The **Certificate Requests** module allows administrators to view, approve, or reject certificate enrollment requests submitted by tenants or integrated systems. This ensures that all certificate issuance remains controlled and compliant with organizational policies.
 
 ## Accessing Certificate Requests
-*(Insert the complete instructions from the PDF for navigating to the Certificate Requests section in the CLM Admin Portal.)*
+
+From the **sidebar menu**, navigate to **Certificate Requests**.
+
+The Certificate Requests page opens, displaying an overview of all pending and processed requests.
+
 ![Certificate Requests Page Overview](images/certificate_requests_page_overview.png)
 
-## Search and Filter
-*(Paste the explanation of search and filter capabilities for certificate requests.)*
-- Use the search bar to locate certificate requests by requester name, request ID, or status.  
-- Apply filters for type (New, Renewal, Revocation), validity, or creation date.  
-![Certificate Requests Search and Filter](images/certificate_requests_search_filter.png)
+### Certificate Requests Overview
 
-## Certificate Requests List
-*(Paste the section from the PDF describing the list view, columns, and available management actions.)*
-- Request ID  
-- Common Name  
-- Requester  
-- Certificate Type  
-- Status  
-- Actions (View, Approve, Reject, Delete)
-![Certificate Requests List](images/certificate_requests_list.png)
+At the top of the page, administrators can view summary information displayed in cards:
+
+- **Total Tenants** – The number of tenants that have submitted certificate requests.
+    
+- **Total Requests** – The total number of certificate requests received in the system.
+    
+- **Pending Approval** – The number of requests awaiting administrator review.
+
+### Search and Filter
+
+Below the summary cards, a **Search and Filter** section allows administrators to:
+
+- Search certificate requests by request ID, tenant, domain, or status.
+    
+- Apply filters (e.g., by status or Tenant).
+
+### Certificate Requests List
+
+The **Certificate Requests List Table** provides detailed information about each request, including:
+
+- **Name**
+    
+- **Tenant**
+    
+- **Key**
+    
+- **Protocol**
+    
+- **Status** (Pending, Approved, Rejected)
+    
+- **Creation Date**
+    
+- **Actions** (e.g., View, Delete)
+    
+
+This centralized view helps administrators efficiently manage and control certificate issuance workflows across the CLM system.
 
 ## Creating a New Certificate Request
-*(Paste the complete step-by-step process for submitting or creating a new certificate request, converting numbered steps into bullet points.)*
-- Click **Add Request** or **Create New Certificate Request**.  
-- Provide request details such as Common Name, Subject DN, and validity period.  
-- Select the certificate profile or template.  
-- Attach CSR (if required) or let CLM generate one automatically.  
-- Review and submit the request.  
+To create a new certificate request in CLM, follow these steps:
+
+1. **Navigate to the Certificate Requests Page**
+    
+
+From the sidebar, select **Certificate Requests**.
+
+On the top-right corner of the page, click the **New Request** button.
 ![Create Certificate Request Form](images/create_certificate_request_form.png)
 
-## Viewing and Managing Requests
-*(Paste the text describing how to open, review, approve, or reject certificate requests.)*
-- Select a certificate request from the list.  
-- Review its details and attached CSR or metadata.  
-- Approve to issue, or reject with comments.  
-![View Certificate Request](images/view_certificate_request.png)
+2. **Fill in the Certificate Request Form**
+    
 
-## Request History and Audit
-*(Paste any content related to tracking certificate request history, logs, or audit trails.)*
-![Certificate Request History](images/certificate_request_history.png)
+A form will open with the following fields:
+
+- **Common Name** – Enter the primary domain or identifier for the certificate (e.g., `example.com`).
+    
+- **Select Key (Dropdown)** – Choose the cryptographic key that will be used with this certificate.
+    
+- **Target Tenant (Dropdown)** – Select the tenant for which the certificate will be issued.
+    
+    The certificate will be issued for the selected tenant.
+    
+- **Organization** – Enter the legal name of the organization.
+    
+- **Organizational Unit** – Specify the department or unit within the organization.
+    
+- **City** – Enter the city where the organization is based.
+    
+- **State** – Enter the state or province of the organization.
+    
+- **Country** – Provide the two-letter ISO country code (e.g., US, PK).
+    
+
+3. **Submit the Request**
+    
+
+After completing the form, click the **Submit Request** button.
+
+4. **Post-Creation**
+    
+
+The new request will appear in the **Certificate Requests List Table** with the status **Pending Approval**.  
+An administrator can then review the request and take the appropriate action (Approve or Reject).
+
+

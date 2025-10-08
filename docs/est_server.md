@@ -1,60 +1,92 @@
 # Managing EST Server
 
-## Overview
-*(Paste the full EST Server Overview from the PDF — describe what EST (Enrollment over Secure Transport) is, how it functions in CLM, and its role in secure certificate enrollment.)*
+The EST Server module allows administrators to configure and manage EST (Enrollment over Secure Transport) profiles used for certificate enrollment.
 
 ## Accessing EST Server
-*(Insert the detailed instructions for navigating to the EST Server module in the CLM Admin Portal.)*
+
+From the sidebar menu, navigate to **Protocols > EST Server**.
+
+The EST Server page opens, showing an overview of all EST profiles in the system.
 ![EST Server Page Overview](images/est_server_page_overview.png)
 
+### EST Server Overview
+
+At the top of the page, administrators can view summary information displayed in cards:
+
+- **Total Orders** – The total number of certificate enrollment orders handled by the EST server.
+    
+- **Success Rate** – The percentage of successful enrollments.
+    
+- **Active Orders** – The number of orders currently in progress.
+    
+- **Failed Orders** – The number of enrollment orders that failed.
+    
+- **Avg Processing** – The average processing time for EST enrollment requests.
+    
+- **Active Accounts** – The total number of accounts actively using the EST service.
+
 ## Search and Filter
-*(Paste the content explaining how to use the search and filter options for EST profiles.)*
-- Use the search bar to locate specific EST profiles by name or associated CA.  
-- Apply filters for status, creation date, or profile attributes.  
-![EST Server Search and Filter](images/est_server_search_filter.png)
+
+Below the summary cards, a **Search and Filter** section allows administrators to:
+
+- Search EST profiles by name or keyword.
+    
+- Apply filters (e.g., by connector, status, or success rate).
 
 ## EST Profiles List
-*(Paste the section from the PDF describing the EST profiles list view — include table columns and actions.)*
-- Profile Name  
-- Associated CA  
-- Authentication Method  
-- Status  
-- Actions (View, Edit, Delete)
-![EST Profiles List](images/est_profiles_list.png)
+
+The EST profiles list table provides detailed information about each configured profile, typically including:
+
+- **Profile Name**
+    
+- **Associated Connector**
+    
+- **Status (Active/Inactive)**
+    
+- **Description**
+    
+- **Actions (e.g., View, Edit, Disable, Delete)**
+    
+
+This view enables administrators to efficiently manage and monitor all EST profiles across the CLM system.
 
 ## Creating a New EST Profile
-*(Paste the complete step-by-step process for creating a new EST profile, replacing numbered steps with bullets.)*
-- Click **Add Profile** or **Create New EST Profile**.  
-- Enter the profile name and select the issuing CA.  
-- Configure authentication and certificate issuance parameters.  
-- Define allowed key usages and validity period.  
-- Save to create the EST profile.  
+
+To define a new EST profile in CLM, follow these steps:
+
+### 1. Navigate to the EST Server Page
+
+From the sidebar menu, go to **Protocols > EST Server**.
+
+On the top-right corner of the page, click the **Add EST Profile** button.
 ![Create EST Profile Form](images/create_est_profile_form.png)
 
-## Navigate to the EST Server Page
-*(Include any detailed navigation description or screenshot from the PDF.)*
-![Navigate to EST Server Page](images/navigate_est_server_page.png)
+### 2. Fill in the EST Profile Form
 
-## Fill in the EST Profile Form
-*(Paste detailed breakdown of the configuration fields.)*
-- Profile Name  
-- Description  
-- Associated CA  
-- Authentication Type (Basic, TLS, or None)  
-- Allowed Key Usages  
-- Validity Period  
-![EST Profile Form Fields](images/est_profile_form_fields.png)
+A form will appear with the following fields:
 
-## Save the EST Profile
-*(Include instructions for validation and saving.)*
-- Review the profile settings.  
-- Click **Save** to confirm.  
-- The profile appears in the list view after creation.  
-![EST Profile Saved Confirmation](images/est_profile_saved_confirmation.png)
+- **Name** – Enter a unique name for the EST profile.
+    
+- **Connector (Dropdown)** – Select the connector to be associated with this EST profile.
+    
+- **Description** – Provide a brief description of the EST profile’s purpose.
+    
+- **Status** – Choose whether the profile should be Active or Inactive.
 
-## Post-Creation
-*(Paste the section describing post-creation verification, testing, or integration.)*
-- Test the profile using an EST client.  
-- Monitor logs for enrollment requests.  
-- Verify certificate issuance flow.  
-![EST Profile Test Results](images/est_profile_test_results.png)
+### 3. Save the Profile
+
+After completing the form, click the **Create Profile** button.
+
+### 4. Post-Creation
+
+The new EST profile will appear in the EST Profiles List with its details.  
+Administrators can later edit, disable, or delete the profile as needed.
+
+
+
+
+
+
+
+
+

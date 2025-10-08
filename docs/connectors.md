@@ -95,10 +95,21 @@ To configure a new connector in CLM:
 - End Entity Profile
     
 - Certificate Profile
-## Connector Details
-*(Paste content explaining the connector detail view, configuration parameters, and how to manage or edit existing connectors.)*
+
 ![Connector Details Page](images/connector_details.png)
 
-## Connector Status and Logs
-*(Include information about connector status monitoring, activity logs, or error reporting.)*
+**Crypto Engine Connector**
+
+- URL
+    
+- Client ID
+    
+- Client Secret
+
 ![Connector Logs](images/connector_logs.png)
+4. **Save the Connector**
+    
+    - After completing the configuration, click the **Create Connector** button.
+        
+    - The new connector will appear in the **Connectors List**.
+    

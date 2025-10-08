@@ -1,52 +1,121 @@
 # Certificate Management
 
-## Overview
-*(Paste the full Certificate Management Overview text from the PDF — describe how CLM handles issued certificates, their lifecycle management, and related operations.)*
+The **Certificate Management** module allows administrators to view, monitor, and manage all issued certificates across tenants. This ensures that active certificates remain compliant, expiring certificates are renewed on time, and any certificates requiring attention are handled proactively.
 
 ## Accessing Certificate Management
-*(Insert the detailed instructions for accessing the Certificate Management module in the CLM Admin Portal.)*
+
+From the **sidebar menu**, navigate to **Certificate Management**.
+
+The Certificate Management page opens, displaying an overview of all certificates in the system.
 ![Certificate Management Page Overview](images/certificate_management_page_overview.png)
 
+### Certificate Management Overview
+
+At the top of the page, administrators can view summary information displayed in cards:
+
+- **Total Tenants** – The number of tenants that currently have issued certificates.
+    
+- **Total Certificates** – The total number of certificates issued and stored in the system.
+    
+- **Active Certificates** – The number of currently valid and active certificates.
+    
+- **Need Attention** – The number of certificates that are nearing expiry, revoked, or have compliance issues.
+
 ## Search and Filter
-*(Paste the explanation of search and filter features for managing certificates.)*
-- Use the search bar to find certificates by Common Name, Serial Number, or Subject DN.  
-- Apply filters for status (Active, Expired, Revoked), validity period, or issuing CA.  
-![Certificate Management Search and Filter](images/certificate_management_search_filter.png)
+
+Below the summary cards, a **Search and Filter** section allows administrators to:
+
+- Search certificates by domain, tenant, serial number, or status.
+    
+- Apply filters (e.g., Active, Expiring Soon, Revoked, Expired).
+
 
 ## Certificates List
-*(Paste the content describing the list view for certificates — include all relevant columns and actions.)*
-- Common Name  
-- Serial Number  
-- Issuer  
-- Expiry Date  
-- Status  
-- Actions (View, Renew, Revoke, Download)
-![Certificates List](images/certificates_list.png)
+
+The **Certificates List Table** provides detailed information about each certificate, typically including:
+
+- **Certificate Name / Common Name**
+    
+- **Tenant**
+    
+- **Serial Number**
+    
+- **Type** (e.g., SSL/TLS, Client, Code Signing)
+    
+- **Issued On / Expiry Date**
+    
+- **Status** (Active, Expired, Revoked, Needs Attention)
+    
+- **Actions** (View, Renew, Revoke, Download)
+    
+
+This centralized view helps administrators ensure full visibility into the lifecycle of all certificates managed by the CLM system.
 
 ## Creating a New Certificate
-*(Paste the complete step-by-step process for manually creating or issuing a new certificate, converting numbered steps into bullet points.)*
-- Click **Add Certificate** or **Create New Certificate**.  
-- Provide certificate details such as Common Name, Subject DN, and validity period.  
-- Select the certificate profile and crypto source.  
-- Specify key usage and extended key usage fields as needed.  
-- Save to issue the certificate.  
+
+To issue a new certificate in CLM:
+
+1. **Navigate to the Certificates Page**  
+    From the sidebar, select **Certificates**.  
+    On the top-right corner of the page, click the **Issue Certificate** button.
 ![Create Certificate Form](images/create_certificate_form.png)
+2. **Fill in the Certificate Form**  
+    A form will appear with the following fields:
+    
+
+- **Certificate Purpose (Dropdown)** – Select the purpose of the certificate (e.g., TLS Authentication, Document Signing, Encryption).
+    
+- **Certificate Authority (Dropdown)** – Choose the Certificate Authority that will issue this certificate.
+    
+- **Certificate Request (Dropdown)** – Select the related certificate request that this certificate will be issued against.
+    
+
+3. **Create the Certificate**  
+    After completing the form, click the **Create Certificate** button.
+    
+4. **Post-Creation**  
+    The new certificate will be added to the Certificates List.  
+    Certificates can later be renewed, revoked, or reissued as required.
+
 
 ## Managing Certificates
-*(Paste the content explaining certificate lifecycle actions — renewals, revocations, downloads, and view details.)*
-- Open an existing certificate from the list.  
-- Review its details, validity, and usage.  
-- Choose **Renew** to issue a replacement certificate before expiry.  
-- Select **Revoke** to invalidate a certificate immediately.  
-- Download certificate or bundle (PEM/PFX) as required.  
+
+After a certificate has been generated in CLM, administrators can perform additional actions such as downloading, renewing, revoking, and reviewing certificate history.
+
 ![Manage Certificates](images/manage_certificates.png)
 
-## Certificate Details
-*(Paste additional details from the PDF about the certificate detail view or audit trail.)*
-- View the certificate chain and signing CA.  
-- Check key usage, policies, and audit information.  
+1. **Viewing Certificate Details**  
+    From the Certificates List, click the **View** button on a certificate.  
+    A popup will open displaying detailed certificate information.  
+    In this popup, admins can also access the **Download Certificate** button to download the issued certificate.
+    
+2. **Renewing a Certificate**  
+    To renew a certificate, click the **Renew** button from the certificate actions.  
+    The renewal process will generate a new certificate based on the original request and configuration.
+    
+3. **Revoking a Certificate**  
+    To revoke a certificate, click the **Revoke** button.  
+    A popup will appear with the following fields:
+    
+
+- **Select Reason (Dropdown)** – Choose the reason for revocation.
+    
+- **Certificate Authority (Dropdown)** – Select the CA responsible for revocation.
+    
+- **Reason Message** – Optionally provide additional details.
+    
+
+After filling in the details, click the **Revoke Certificate** button to complete the revocation.
 ![Certificate Details Page](images/certificate_details_page.png)
 
-## Certificate Renewal Workflow
-*(Include any special section from the PDF covering renewal workflows, approval stages, or automation.)*
-![Certificate Renewal Workflow](images/certificate_renewal_workflow.png)
+4. **Viewing Certificate History**  
+    Each certificate maintains a full history of actions (creation, renewal, revocation, etc.).  
+    Admins can open the **Certificate History** section to review all events associated with the certificate.
+    ![Certificate Renewal Workflow](images/certificate_renewal_workflow.png)
+
+
+
+
+
+
+

@@ -1,6 +1,35 @@
 site_name: CLM Admin Guide
-site_url: https://dictalabs.github.io/clm-admin-guide/
 theme:
   name: material
+  theme_dir: docs/custom_theme
+  logo: images/logo.png
+  favicon: images/favicon.png
+
+extra_css:
+  - extra.css
+
+extra:
+  generator: false  # This disables the "Made with Material for MkDocs" footer
+  footer: "© 2025 Dictalabs. All rights reserved."
+
+extra_javascript:
+  - extra.js  # Make sure to point to the correct location of extra.js
+
+copyright: "© 2025 Dictalabs. All rights reserved."
+
+# Navigation
 nav:
   - Home: index.md
+  - Tenants: tenants.md
+  - Roles: roles.md
+  - Users: users.md
+  - Connectors: connectors.md
+  - Crypto Sources: crypto_sources.md
+  - Key Management: key_management.md
+  - Certificate Requests: certificate_requests.md
+  - Certificate Management: certificate_management.md
+  - SCEP Server: scep_server.md
+  - ACME Server: acme_server.md
+  - EST Server: est_server.md
+  - CMP Server: cmp_server.md
+  - Reports: reports.md

@@ -89,7 +89,7 @@ Administrators can add a new crypto source (connector) to manage keys and certif
 
 ![Create Crypto Source Page](images/crypto_source_azure.png)
 
-3. **Click Create Connector** to save the new crypto source.
+5. **Click Create Connector** to save the new crypto source.
     
     - The crypto source will now appear in the list of available connectors.
         
