@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../key_management/">
-      
-      
-        <link rel="next" href="../certificate_management/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Certificate Requests - CLM Admin Guide</title>
+        <title>Managing Audit Logs - CLM Admin Guide</title>
       
     
     
@@ -64,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#certificate-requests" class="md-skip">
+        <a href="#managing-audit-logs" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Certificate Requests
+              Managing Audit Logs
             
           </span>
         </div>
@@ -328,30 +324,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Certificate Requests
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../certificate_requests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,77 +336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-certificate-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessing Certificate Requests
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Accessing Certificate Requests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests List
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-certificate-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a New Certificate Request
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -582,51 +487,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-certificate-requests" class="md-nav__link">
+  <a href="#operation-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing Certificate Requests
+      Operation Logs
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Accessing Certificate Requests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests List
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-certificate-request" class="md-nav__link">
+  <a href="#discovery-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a New Certificate Request
+      Discovery Logs
     </span>
   </a>
   
@@ -647,109 +519,91 @@
                   
 
 
-<h1 id="certificate-requests">Certificate Requests</h1>
-<p>The <strong>Certificate Requests</strong> module allows administrators to view, approve, or reject certificate enrollment requests submitted by tenants or integrated systems. This ensures that all certificate issuance remains controlled and compliant with organizational policies.</p>
-<h2 id="accessing-certificate-requests">Accessing Certificate Requests</h2>
-<p>From the <strong>sidebar menu</strong>, navigate to <strong>Certificate Requests</strong>.</p>
-<p>The Certificate Requests page opens, displaying an overview of all pending and processed requests.</p>
-<p><img alt="Certificate Requests Page Overview" src="../images/certificate_requests_page_overview.png" /></p>
-<h3 id="certificate-requests-overview">Certificate Requests Overview</h3>
-<p>At the top of the page, administrators can view summary information displayed in cards:</p>
-<ul>
-<li>
-<p><strong>Total Tenants</strong> – The number of tenants that have submitted certificate requests.</p>
-</li>
-<li>
-<p><strong>Total Requests</strong> – The total number of certificate requests received in the system.</p>
-</li>
-<li>
-<p><strong>Pending Approval</strong> – The number of requests awaiting administrator review.</p>
-</li>
-</ul>
-<h3 id="search-and-filter">Search and Filter</h3>
-<p>Below the summary cards, a <strong>Search and Filter</strong> section allows administrators to:</p>
-<ul>
-<li>
-<p>Search certificate requests by request ID, tenant, domain, or status.</p>
-</li>
-<li>
-<p>Apply filters (e.g., by status or Tenant).</p>
-</li>
-</ul>
-<h3 id="certificate-requests-list">Certificate Requests List</h3>
-<p>The <strong>Certificate Requests List Table</strong> provides detailed information about each request, including:</p>
-<ul>
-<li>
-<p><strong>Name</strong></p>
-</li>
-<li>
-<p><strong>Tenant</strong></p>
-</li>
-<li>
-<p><strong>Key</strong></p>
-</li>
-<li>
-<p><strong>Protocol</strong></p>
-</li>
-<li>
-<p><strong>Status</strong> (Pending, Approved, Rejected)</p>
-</li>
-<li>
-<p><strong>Creation Date</strong></p>
-</li>
-<li>
-<p><strong>Actions</strong> (e.g., View, Delete)</p>
-</li>
-</ul>
-<p>This centralized view helps administrators efficiently manage and control certificate issuance workflows across the CLM system.</p>
-<h2 id="creating-a-new-certificate-request">Creating a New Certificate Request</h2>
-<p>To create a new certificate request in CLM, follow these steps:</p>
+<h1 id="managing-audit-logs">Managing Audit Logs</h1>
+<p>The <strong>Audit</strong> section provides administrators with visibility into user activities, system operations, and discovery scans. Audit logs are organized into two categories: <strong>Operation Logs</strong> and <strong>Discovery Logs</strong></p>
+<h3 id="operation-logs">Operation Logs</h3>
+<p><strong>Description</strong><br />
+Operation logs capture all user activities and system operations performed within CLM.</p>
+<p><strong>Accessing Operation Logs</strong></p>
 <ol>
-<li><strong>Navigate to the Certificate Requests Page</strong></li>
+<li>
+<p>Navigate to <strong>Audit &gt; Operation Logs</strong>.</p>
+</li>
+<li>
+<p>The <strong>Operation Logs</strong> page opens.</p>
+</li>
 </ol>
-<p>From the sidebar, select <strong>Certificate Requests</strong>.</p>
-<p>On the top-right corner of the page, click the <strong>New Request</strong> button.
-<img alt="Create Certificate Request Form" src="../images/create_certificate_request_form.png" /></p>
-<ol>
-<li><strong>Fill in the Certificate Request Form</strong></li>
-</ol>
-<p>A form will open with the following fields:</p>
+<p><img alt="Audit Logs Page Overview" src="../images/audit_logs_page_overview.png" /></p>
+<p><strong>Operation Logs Screen</strong></p>
 <ul>
 <li>
-<p><strong>Common Name</strong> – Enter the primary domain or identifier for the certificate (e.g., <code>example.com</code>).</p>
+<p>A <strong>Search and Filter</strong> section allows administrators to refine log results.</p>
 </li>
 <li>
-<p><strong>Select Key (Dropdown)</strong> – Choose the cryptographic key that will be used with this certificate.</p>
+<p>Below this section, a <strong>list of operation logs</strong> is displayed, typically including details such as:</p>
+<ul>
+<li>
+<p>User</p>
 </li>
 <li>
-<p><strong>Target Tenant (Dropdown)</strong> – Select the tenant for which the certificate will be issued.</p>
-<p>The certificate will be issued for the selected tenant.</p>
+<p>Operation Type</p>
 </li>
 <li>
-<p><strong>Organization</strong> – Enter the legal name of the organization.</p>
+<p>Status (Success/Failure)</p>
 </li>
 <li>
-<p><strong>Organizational Unit</strong> – Specify the department or unit within the organization.</p>
+<p>Ip Address</p>
 </li>
 <li>
-<p><strong>City</strong> – Enter the city where the organization is based.</p>
-</li>
-<li>
-<p><strong>State</strong> – Enter the state or province of the organization.</p>
-</li>
-<li>
-<p><strong>Country</strong> – Provide the two-letter ISO country code (e.g., US, PK).</p>
-</li>
-<li>
-<p><strong>Submit the Request</strong></p>
+<p>Actions (Veiw the request)</p>
 </li>
 </ul>
-<p>After completing the form, click the <strong>Submit Request</strong> button.</p>
+</li>
+</ul>
+<p>This view helps track user actions and system changes for auditing and compliance purposes.</p>
+<h3 id="discovery-logs">Discovery Logs</h3>
+<p><strong>Description</strong><br />
+Discovery logs record the results of system scans and findings, providing insights into detected certificates, services, or assets.</p>
+<p><strong>Accessing Discovery Logs</strong></p>
 <ol>
-<li><strong>Post-Creation</strong></li>
+<li>
+<p>Navigate to <strong>Audit &gt; Discovery Logs</strong>.</p>
+</li>
+<li>
+<p>The <strong>Discovery Logs</strong> page opens.</p>
+</li>
 </ol>
-<p>The new request will appear in the <strong>Certificate Requests List Table</strong> with the status <strong>Pending Approval</strong>.<br />
-An administrator can then review the request and take the appropriate action (Approve or Reject).</p>
+<p><img alt="Audit Logs Overview" src="../images/Discovery_logs_overview.png" /></p>
+<p><strong>Discovery Logs Screen</strong></p>
+<ul>
+<li>
+<p>A <strong>Search and Filter</strong> section allows administrators to refine log results.</p>
+</li>
+<li>
+<p>Below this section, a <strong>list of discovery logs</strong> is displayed, typically including:</p>
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Type</p>
+</li>
+<li>
+<p>Date</p>
+</li>
+<li>
+<p>Status (Active/Expired/Invalid)</p>
+</li>
+<li>
+<p>Timeout (s)</p>
+</li>
+<li>
+<p>Actions</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>This helps administrators monitor automated discovery scans and review system findings efficiently.</p>
 
 
 

@@ -397,20 +397,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#accessing-certificate-management" class="md-nav__link">
     <span class="md-ellipsis">
       Accessing Certificate Management
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Accessing Certificate Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-management-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate Management Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -445,24 +451,6 @@
   <a href="#managing-certificates" class="md-nav__link">
     <span class="md-ellipsis">
       Managing Certificates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certificate-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Details
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certificate-renewal-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Renewal Workflow
     </span>
   </a>
   
@@ -563,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reports.md" class="md-nav__link">
+      <a href="../reports/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,20 +591,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#accessing-certificate-management" class="md-nav__link">
     <span class="md-ellipsis">
       Accessing Certificate Management
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Accessing Certificate Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-management-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate Management Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -656,24 +650,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#certificate-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Details
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certificate-renewal-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Renewal Workflow
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -690,49 +666,131 @@
 
 
 <h1 id="certificate-management">Certificate Management</h1>
-<h2 id="overview">Overview</h2>
-<p><em>(Paste the full Certificate Management Overview text from the PDF — describe how CLM handles issued certificates, their lifecycle management, and related operations.)</em></p>
+<p>The <strong>Certificate Management</strong> module allows administrators to view, monitor, and manage all issued certificates across tenants. This ensures that active certificates remain compliant, expiring certificates are renewed on time, and any certificates requiring attention are handled proactively.</p>
 <h2 id="accessing-certificate-management">Accessing Certificate Management</h2>
-<p><em>(Insert the detailed instructions for accessing the Certificate Management module in the CLM Admin Portal.)</em>
-<img alt="Certificate Management Page Overview" src="images/certificate_management_page_overview.png" /></p>
+<p>From the <strong>sidebar menu</strong>, navigate to <strong>Certificate Management</strong>.</p>
+<p>The Certificate Management page opens, displaying an overview of all certificates in the system.
+<img alt="Certificate Management Page Overview" src="../images/certificate_management_page_overview.png" /></p>
+<h3 id="certificate-management-overview">Certificate Management Overview</h3>
+<p>At the top of the page, administrators can view summary information displayed in cards:</p>
+<ul>
+<li>
+<p><strong>Total Tenants</strong> – The number of tenants that currently have issued certificates.</p>
+</li>
+<li>
+<p><strong>Total Certificates</strong> – The total number of certificates issued and stored in the system.</p>
+</li>
+<li>
+<p><strong>Active Certificates</strong> – The number of currently valid and active certificates.</p>
+</li>
+<li>
+<p><strong>Need Attention</strong> – The number of certificates that are nearing expiry, revoked, or have compliance issues.</p>
+</li>
+</ul>
 <h2 id="search-and-filter">Search and Filter</h2>
-<p><em>(Paste the explanation of search and filter features for managing certificates.)</em>
-- Use the search bar to find certificates by Common Name, Serial Number, or Subject DN.<br />
-- Apply filters for status (Active, Expired, Revoked), validity period, or issuing CA.<br />
-<img alt="Certificate Management Search and Filter" src="images/certificate_management_search_filter.png" /></p>
+<p>Below the summary cards, a <strong>Search and Filter</strong> section allows administrators to:</p>
+<ul>
+<li>
+<p>Search certificates by domain, tenant, serial number, or status.</p>
+</li>
+<li>
+<p>Apply filters (e.g., Active, Expiring Soon, Revoked, Expired).</p>
+</li>
+</ul>
 <h2 id="certificates-list">Certificates List</h2>
-<p><em>(Paste the content describing the list view for certificates — include all relevant columns and actions.)</em>
-- Common Name<br />
-- Serial Number<br />
-- Issuer<br />
-- Expiry Date<br />
-- Status<br />
-- Actions (View, Renew, Revoke, Download)
-<img alt="Certificates List" src="images/certificates_list.png" /></p>
+<p>The <strong>Certificates List Table</strong> provides detailed information about each certificate, typically including:</p>
+<ul>
+<li>
+<p><strong>Certificate Name / Common Name</strong></p>
+</li>
+<li>
+<p><strong>Tenant</strong></p>
+</li>
+<li>
+<p><strong>Serial Number</strong></p>
+</li>
+<li>
+<p><strong>Type</strong> (e.g., SSL/TLS, Client, Code Signing)</p>
+</li>
+<li>
+<p><strong>Issued On / Expiry Date</strong></p>
+</li>
+<li>
+<p><strong>Status</strong> (Active, Expired, Revoked, Needs Attention)</p>
+</li>
+<li>
+<p><strong>Actions</strong> (View, Renew, Revoke, Download)</p>
+</li>
+</ul>
+<p>This centralized view helps administrators ensure full visibility into the lifecycle of all certificates managed by the CLM system.</p>
 <h2 id="creating-a-new-certificate">Creating a New Certificate</h2>
-<p><em>(Paste the complete step-by-step process for manually creating or issuing a new certificate, converting numbered steps into bullet points.)</em>
-- Click <strong>Add Certificate</strong> or <strong>Create New Certificate</strong>.<br />
-- Provide certificate details such as Common Name, Subject DN, and validity period.<br />
-- Select the certificate profile and crypto source.<br />
-- Specify key usage and extended key usage fields as needed.<br />
-- Save to issue the certificate.<br />
-<img alt="Create Certificate Form" src="images/create_certificate_form.png" /></p>
+<p>To issue a new certificate in CLM:</p>
+<ol>
+<li><strong>Navigate to the Certificates Page</strong><br />
+    From the sidebar, select <strong>Certificates</strong>.<br />
+    On the top-right corner of the page, click the <strong>Issue Certificate</strong> button.
+<img alt="Create Certificate Form" src="../images/create_certificate_form.png" /></li>
+<li>
+<p><strong>Fill in the Certificate Form</strong><br />
+    A form will appear with the following fields:</p>
+</li>
+<li>
+<p><strong>Certificate Purpose (Dropdown)</strong> – Select the purpose of the certificate (e.g., TLS Authentication, Document Signing, Encryption).</p>
+</li>
+<li>
+<p><strong>Certificate Authority (Dropdown)</strong> – Choose the Certificate Authority that will issue this certificate.</p>
+</li>
+<li>
+<p><strong>Certificate Request (Dropdown)</strong> – Select the related certificate request that this certificate will be issued against.</p>
+</li>
+<li>
+<p><strong>Create the Certificate</strong><br />
+    After completing the form, click the <strong>Create Certificate</strong> button.</p>
+</li>
+<li>
+<p><strong>Post-Creation</strong><br />
+    The new certificate will be added to the Certificates List.<br />
+    Certificates can later be renewed, revoked, or reissued as required.</p>
+</li>
+</ol>
 <h2 id="managing-certificates">Managing Certificates</h2>
-<p><em>(Paste the content explaining certificate lifecycle actions — renewals, revocations, downloads, and view details.)</em>
-- Open an existing certificate from the list.<br />
-- Review its details, validity, and usage.<br />
-- Choose <strong>Renew</strong> to issue a replacement certificate before expiry.<br />
-- Select <strong>Revoke</strong> to invalidate a certificate immediately.<br />
-- Download certificate or bundle (PEM/PFX) as required.<br />
-<img alt="Manage Certificates" src="images/manage_certificates.png" /></p>
-<h2 id="certificate-details">Certificate Details</h2>
-<p><em>(Paste additional details from the PDF about the certificate detail view or audit trail.)</em>
-- View the certificate chain and signing CA.<br />
-- Check key usage, policies, and audit information.<br />
-<img alt="Certificate Details Page" src="images/certificate_details_page.png" /></p>
-<h2 id="certificate-renewal-workflow">Certificate Renewal Workflow</h2>
-<p><em>(Include any special section from the PDF covering renewal workflows, approval stages, or automation.)</em>
-<img alt="Certificate Renewal Workflow" src="images/certificate_renewal_workflow.png" /></p>
+<p>After a certificate has been generated in CLM, administrators can perform additional actions such as downloading, renewing, revoking, and reviewing certificate history.</p>
+<p><img alt="Manage Certificates" src="../images/manage_certificates.png" /></p>
+<ol>
+<li>
+<p><strong>Viewing Certificate Details</strong><br />
+    From the Certificates List, click the <strong>View</strong> button on a certificate.<br />
+    A popup will open displaying detailed certificate information.<br />
+    In this popup, admins can also access the <strong>Download Certificate</strong> button to download the issued certificate.</p>
+</li>
+<li>
+<p><strong>Renewing a Certificate</strong><br />
+    To renew a certificate, click the <strong>Renew</strong> button from the certificate actions.<br />
+    The renewal process will generate a new certificate based on the original request and configuration.</p>
+</li>
+<li>
+<p><strong>Revoking a Certificate</strong><br />
+    To revoke a certificate, click the <strong>Revoke</strong> button.<br />
+    A popup will appear with the following fields:</p>
+</li>
+<li>
+<p><strong>Select Reason (Dropdown)</strong> – Choose the reason for revocation.</p>
+</li>
+<li>
+<p><strong>Certificate Authority (Dropdown)</strong> – Select the CA responsible for revocation.</p>
+</li>
+<li>
+<p><strong>Reason Message</strong> – Optionally provide additional details.</p>
+</li>
+</ol>
+<p>After filling in the details, click the <strong>Revoke Certificate</strong> button to complete the revocation.
+<img alt="Certificate Details Page" src="../images/certificate_details_page.png" /></p>
+<ol>
+<li><strong>Viewing Certificate History</strong><br />
+    Each certificate maintains a full history of actions (creation, renewal, revocation, etc.).<br />
+    Admins can open the <strong>Certificate History</strong> section to review all events associated with the certificate.
+    <img alt="Certificate Renewal Workflow" src="../images/certificate_renewal_workflow.png" /></li>
+</ol>
 
 
 

@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../key_management/">
-      
-      
-        <link rel="next" href="../certificate_management/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Certificate Requests - CLM Admin Guide</title>
+        <title>Managing Compliance Profiles - CLM Admin Guide</title>
       
     
     
@@ -64,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#certificate-requests" class="md-skip">
+        <a href="#managing-compliance-profiles" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Certificate Requests
+              Managing Compliance Profiles
             
           </span>
         </div>
@@ -328,30 +324,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Certificate Requests
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../certificate_requests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,77 +336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-certificate-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessing Certificate Requests
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Accessing Certificate Requests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests List
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-certificate-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a New Certificate Request
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -582,51 +487,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-certificate-requests" class="md-nav__link">
+  <a href="#creating-a-compliance-rule" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing Certificate Requests
+      Creating a Compliance Rule
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Accessing Certificate Requests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#certificate-requests-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Requests List
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-certificate-request" class="md-nav__link">
+  <a href="#creating-a-compliance-profile" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a New Certificate Request
+      Creating a Compliance Profile
     </span>
   </a>
   
@@ -647,109 +519,294 @@
                   
 
 
-<h1 id="certificate-requests">Certificate Requests</h1>
-<p>The <strong>Certificate Requests</strong> module allows administrators to view, approve, or reject certificate enrollment requests submitted by tenants or integrated systems. This ensures that all certificate issuance remains controlled and compliant with organizational policies.</p>
-<h2 id="accessing-certificate-requests">Accessing Certificate Requests</h2>
-<p>From the <strong>sidebar menu</strong>, navigate to <strong>Certificate Requests</strong>.</p>
-<p>The Certificate Requests page opens, displaying an overview of all pending and processed requests.</p>
-<p><img alt="Certificate Requests Page Overview" src="../images/certificate_requests_page_overview.png" /></p>
-<h3 id="certificate-requests-overview">Certificate Requests Overview</h3>
-<p>At the top of the page, administrators can view summary information displayed in cards:</p>
+<h1 id="managing-compliance-profiles">Managing Compliance Profiles</h1>
+<p>View and manage compliance profiles with pre-request and post-issuance rules.</p>
+<p>In the sidebar, navigating to <strong>Compliance Profiles</strong> under the <strong>Compliance</strong> tab, the admin can see the following metrics displayed in cards on top:</p>
 <ul>
 <li>
-<p><strong>Total Tenants</strong> – The number of tenants that have submitted certificate requests.</p>
+<p><strong>Total Profiles</strong></p>
 </li>
 <li>
-<p><strong>Total Requests</strong> – The total number of certificate requests received in the system.</p>
+<p><strong>Active Rules</strong></p>
 </li>
 <li>
-<p><strong>Pending Approval</strong> – The number of requests awaiting administrator review.</p>
+<p><strong>Regulatory Profiles</strong></p>
 </li>
 </ul>
-<h3 id="search-and-filter">Search and Filter</h3>
-<p>Below the summary cards, a <strong>Search and Filter</strong> section allows administrators to:</p>
-<ul>
-<li>
-<p>Search certificate requests by request ID, tenant, domain, or status.</p>
-</li>
-<li>
-<p>Apply filters (e.g., by status or Tenant).</p>
-</li>
-</ul>
-<h3 id="certificate-requests-list">Certificate Requests List</h3>
-<p>The <strong>Certificate Requests List Table</strong> provides detailed information about each request, including:</p>
-<ul>
-<li>
-<p><strong>Name</strong></p>
-</li>
-<li>
-<p><strong>Tenant</strong></p>
-</li>
-<li>
-<p><strong>Key</strong></p>
-</li>
-<li>
-<p><strong>Protocol</strong></p>
-</li>
-<li>
-<p><strong>Status</strong> (Pending, Approved, Rejected)</p>
-</li>
-<li>
-<p><strong>Creation Date</strong></p>
-</li>
-<li>
-<p><strong>Actions</strong> (e.g., View, Delete)</p>
-</li>
-</ul>
-<p>This centralized view helps administrators efficiently manage and control certificate issuance workflows across the CLM system.</p>
-<h2 id="creating-a-new-certificate-request">Creating a New Certificate Request</h2>
-<p>To create a new certificate request in CLM, follow these steps:</p>
+<p>Below the cards, there are three tabs:</p>
 <ol>
-<li><strong>Navigate to the Certificate Requests Page</strong></li>
-</ol>
-<p>From the sidebar, select <strong>Certificate Requests</strong>.</p>
-<p>On the top-right corner of the page, click the <strong>New Request</strong> button.
-<img alt="Create Certificate Request Form" src="../images/create_certificate_request_form.png" /></p>
-<ol>
-<li><strong>Fill in the Certificate Request Form</strong></li>
-</ol>
-<p>A form will open with the following fields:</p>
+<li>
+<p><strong>Compliance Profiles</strong></p>
 <ul>
 <li>
-<p><strong>Common Name</strong> – Enter the primary domain or identifier for the certificate (e.g., <code>example.com</code>).</p>
+<p>Search and filter section where the user can search Compliance Profiles and apply filters.</p>
 </li>
 <li>
-<p><strong>Select Key (Dropdown)</strong> – Choose the cryptographic key that will be used with this certificate.</p>
-</li>
-<li>
-<p><strong>Target Tenant (Dropdown)</strong> – Select the tenant for which the certificate will be issued.</p>
-<p>The certificate will be issued for the selected tenant.</p>
-</li>
-<li>
-<p><strong>Organization</strong> – Enter the legal name of the organization.</p>
-</li>
-<li>
-<p><strong>Organizational Unit</strong> – Specify the department or unit within the organization.</p>
-</li>
-<li>
-<p><strong>City</strong> – Enter the city where the organization is based.</p>
-</li>
-<li>
-<p><strong>State</strong> – Enter the state or province of the organization.</p>
-</li>
-<li>
-<p><strong>Country</strong> – Provide the two-letter ISO country code (e.g., US, PK).</p>
-</li>
-<li>
-<p><strong>Submit the Request</strong></p>
+<p>A list of all Compliance Profiles is displayed below the search section.</p>
 </li>
 </ul>
-<p>After completing the form, click the <strong>Submit Request</strong> button.</p>
-<ol>
-<li><strong>Post-Creation</strong></li>
+</li>
 </ol>
-<p>The new request will appear in the <strong>Certificate Requests List Table</strong> with the status <strong>Pending Approval</strong>.<br />
-An administrator can then review the request and take the appropriate action (Approve or Reject).</p>
+<p><img alt="Compliance Page Overview" src="../images/compliance_page_overview.png" /></p>
+<ol>
+<li>
+<p><strong>Compliance Rules</strong></p>
+<ul>
+<li>
+<p>Search and filter section where the user can search Compliance Rules and apply filters.</p>
+</li>
+<li>
+<p>A list of all Compliance Rules is displayed below the search section.
+<img alt="Compliance Dashboard" src="../images/compliance_dashboard_Rules.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Analytics</strong></p>
+<ul>
+<li>
+<p>A graph showing <strong>Rule Execution Statistics</strong> with percentages for:</p>
+<ul>
+<li>
+<p>Rules Passed</p>
+</li>
+<li>
+<p>Rules with Warnings</p>
+</li>
+<li>
+<p>Rules Blocked</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Top Failing Rules</strong> are displayed with execution statistics for deeper insights.
+<img alt="Compliance Policies List" src="images/compliance_policies_list_2.png" /></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="creating-a-compliance-rule">Creating a Compliance Rule</h2>
+<p>In the <strong>Compliance Profiles</strong> screen, click the <strong>Create Rule</strong> button located at the top-right corner. A <strong>Create Rule</strong> form will open, allowing administrators to define rule details, configuration, and logic.</p>
+<p><img alt="Compliance Policies List" src="../images/compliance_policies_list_3.png" /></p>
+<p><strong>Basic Information</strong></p>
+<ul>
+<li>
+<p><strong>Rule Name</strong> – Enter a unique name for the compliance rule.</p>
+</li>
+<li>
+<p><strong>Category</strong> – Select or define the category (e.g., Key Policy, Algorithm Policy).</p>
+</li>
+<li>
+<p><strong>Description</strong> – Provide a brief explanation of the rule.</p>
+</li>
+</ul>
+<p><strong>Rule Configuration</strong></p>
+<ul>
+<li>
+<p><strong>Execution Phase (Dropdown)</strong> – Choose when the rule should apply: <em>Pre-Request</em> or <em>Post-Issuance</em>.</p>
+</li>
+<li>
+<p><strong>Severity Level (Dropdown)</strong> – Define the severity: <em>Warning</em>, <em>Blocking</em>, or <em>Informational</em>.</p>
+</li>
+<li>
+<p><strong>Action on Failure (Dropdown)</strong> – Specify the system action if the rule fails:</p>
+<ul>
+<li>
+<p>Log Only</p>
+</li>
+<li>
+<p>Deny Request</p>
+</li>
+<li>
+<p>Approve with Warning</p>
+</li>
+<li>
+<p>Send Notification</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Rule Logic</strong></p>
+<ul>
+<li>
+<p><strong>Condition</strong> – Define logical expressions using certificate attributes (e.g., <em>keySize &gt; 2048</em>, <em>algorithm = RSA</em>, <em>commonName != null</em>).</p>
+</li>
+<li>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li>
+<p><strong>Minimum Key Size (RSA)</strong> – Define minimum RSA key size.</p>
+</li>
+<li>
+<p><strong>Minimum Key Size (ECC)</strong> – Define minimum ECC key size.</p>
+</li>
+<li>
+<p><strong>Allowed Algorithms</strong> – Choose allowed algorithms (<em>RSA</em>, <em>ECDSA</em>).</p>
+</li>
+<li>
+<p><strong>Maximum Validity (days)</strong> – Set the maximum certificate validity period.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Create Rule</strong><br />
+Once all required details are filled, click <strong>Create Rule</strong> to save the compliance rule.</p>
+<h2 id="creating-a-compliance-profile">Creating a Compliance Profile</h2>
+<p>In the <strong>Compliance Profiles</strong> screen, click the <strong>Create Profile</strong> button located at the top-right corner. A <strong>Create Profile</strong> form will open, allowing administrators to configure compliance profiles with pre-request and post-issuance rules.</p>
+<p><img alt="Compliance Policies List" src="../images/compliance_policies_list_4.png" /></p>
+<p><strong>Basic Information</strong></p>
+<ul>
+<li>
+<p><strong>Profile Name</strong> – Enter a unique name for the compliance profile.</p>
+</li>
+<li>
+<p><strong>Passing Score</strong> – Set the minimum score required for a certificate to be considered compliant.</p>
+</li>
+<li>
+<p><strong>Description</strong> – Provide a brief explanation of the compliance profile.</p>
+</li>
+</ul>
+<p><strong>Pre-Request Rules</strong></p>
+<ul>
+<li>
+<p>Displays a list of available pre-request rules.</p>
+</li>
+<li>
+<p>Administrators can enable or disable each rule using a toggle switch.</p>
+</li>
+</ul>
+<p><strong>Post-Issuance Rules</strong></p>
+<ul>
+<li>
+<p>Displays a list of available post-issuance rules.</p>
+</li>
+<li>
+<p>Administrators can enable or disable each rule using a toggle switch.</p>
+</li>
+</ul>
+<p><strong>Profile Summary</strong></p>
+<ul>
+<li>
+<p><strong>Pre-Request Rules</strong> – Shows the number of pre-request rules enabled.</p>
+</li>
+<li>
+<p><strong>Post-Issuance Rules</strong> – Shows the number of post-issuance rules enabled.</p>
+</li>
+</ul>
+<p><strong>Create Profile</strong><br />
+After configuring the profile, click <strong>Create Profile</strong> to save it. The new compliance profile will then appear in the Compliance Profiles list.</p>
+<h1 id="discovery-ssl-tab">Discovery – SSL Tab</h1>
+<p>The <strong>SSL Discovery</strong> feature allows administrators to <strong>scan hosts for SSL certificates and retrieve details</strong> about them. This helps in monitoring certificate validity, identifying expired or weak certificates, and automating SSL asset discovery.</p>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>
+<p><strong>Purpose</strong>: To discover SSL certificates across hosts, IP ranges, subnets, or uploaded files.</p>
+</li>
+<li>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>
+<p>Inventory all SSL certificates in the network.</p>
+</li>
+<li>
+<p>Identify certificates nearing expiry.</p>
+</li>
+<li>
+<p>Detect weak or invalid SSL configurations.</p>
+</li>
+<li>
+<p>Automate SSL scanning for compliance and monitoring.
+<img alt="Compliance Policies List" src="../images/compliance_policies_list_5.png" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="create-ssl-discovery-task">Create SSL Discovery Task</h2>
+<p>When creating a new <strong>SSL Discovery Task</strong>, the admin must configure the following fields:</p>
+<h3 id="task-details">Task Details</h3>
+<ul>
+<li><strong>Task Name</strong> – Unique name for the discovery task.</li>
+</ul>
+<h3 id="discovery-type-discover-by">Discovery Type (Discover By)</h3>
+<p>Admin can select one of the following options:</p>
+<ol>
+<li>
+<p><strong>Hostname / IP Address</strong></p>
+<ul>
+<li>Field: <strong>Hostname / IP</strong> (Single host or IP to scan).</li>
+</ul>
+</li>
+<li>
+<p><strong>IP Address Range</strong></p>
+<ul>
+<li>
+<p>Fields:</p>
+<ul>
+<li>
+<p><strong>Start IP</strong></p>
+</li>
+<li>
+<p><strong>End IP</strong></p>
+</li>
+<li>
+<p><strong>Exclude IPs</strong> (one per line).</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>From File</strong></p>
+<ul>
+<li>
+<p>Field: <strong>Upload list file</strong></p>
+</li>
+<li>
+<p>Format: One per line → <code>host</code> or <code>host:port[,port]</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Subnet</strong></p>
+<ul>
+<li>
+<p>Fields:</p>
+<ul>
+<li>
+<p><strong>Network Base</strong></p>
+</li>
+<li>
+<p><strong>Mask</strong></p>
+</li>
+<li>
+<p><strong>Exclude IPs</strong> (one per line).</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="advanced-settings">Advanced Settings</h3>
+<ul>
+<li>
+<p><strong>Port(s)</strong> – Specify ports to scan (comma-separated).</p>
+</li>
+<li>
+<p><strong>Timeout</strong> – Timeout duration for scan requests.</p>
+</li>
+<li>
+<p><strong>Verify SSL (toggle)</strong> – If enabled, verifies SSL handshake.</p>
+</li>
+<li>
+<p><strong>Get Full Chain (toggle)</strong> – Retrieves full certificate chain (leaf + intermediates + root).</p>
+</li>
+<li>
+<p><strong>Include Expired (toggle)</strong> – Includes expired SSL certificates in the scan results.</p>
+</li>
+<li>
+<p><strong>Auto Discovery (toggle)</strong> – Enables automated recurring discovery based on schedule.</p>
+</li>
+</ul>
 
 
 
