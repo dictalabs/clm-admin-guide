@@ -1,0 +1,628 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dictalabs.github.io/clm-admin-guide/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>CLM Admin Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clm-admin-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="CLM Admin Guide" class="md-header__button md-logo" aria-label="CLM Admin Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CLM Admin Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="CLM Admin Guide" class="md-nav__button md-logo" aria-label="CLM Admin Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CLM Admin Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-clm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing CLM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recent-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recent Activities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-clm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing CLM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recent-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recent Activities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="clm-admin-guide">CLM Admin Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>The <strong>Certificate Life Management (CLM)</strong> web application is a centralized platform designed to streamline the complete lifecycle of digital certificates within an organization. It enables administrators to request, issue, monitor, renew, and revoke certificates through a secure, user-friendly interface.</p>
+<p>In modern IT environments, digital certificates are critical for securing communication, authenticating systems, and ensuring data integrity. Managing these certificates manually can be complex, error-prone, and risky—especially when dealing with large infrastructures or multiple certificate authorities (CAs). CLM addresses these challenges by offering:</p>
+<ul>
+<li>
+<p><strong>Centralized Management</strong> – A single interface to handle certificates from request to retirement.</p>
+</li>
+<li>
+<p><strong>Automation</strong> – Reduce manual effort by automating renewals, alerts, and status tracking.</p>
+</li>
+<li>
+<p><strong>Compliance &amp; Security</strong> – Enforce organizational policies, ensure timely renewals, and maintain audit trails for compliance.</p>
+</li>
+<li>
+<p><strong>Visibility &amp; Control</strong> – Gain real-time insights into certificate status, expiration timelines, and usage across systems.</p>
+</li>
+</ul>
+<p>The CLM web application is designed for <strong>administrators and security teams</strong> who are responsible for ensuring secure, uninterrupted operations of enterprise systems. By using CLM, admins can minimize downtime caused by expired certificates, mitigate security risks, and maintain compliance with industry standards.</p>
+<h2 id="accessing-clm">Accessing CLM</h2>
+<p>Administrators can access the <strong>Certificate Life Management (CLM)</strong> application through a standard web browser.</p>
+<ul>
+<li>
+<p><strong>URL:</strong> <code>https://clm.companyname.com</code></p>
+</li>
+<li>
+<p><strong>Supported Browsers:</strong> Latest versions of Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari.</p>
+</li>
+<li>
+<p><strong>Network Requirements:</strong> Ensure your device has network access to the CLM server and that any VPN or firewall settings allow secure HTTPS traffic.</p>
+</li>
+</ul>
+<p>For security purposes, always verify that you are connecting to the official company CLM URL and that the connection is established over <strong>HTTPS</strong>.</p>
+<h2 id="login">Login</h2>
+<p>After accessing the CLM application link, administrators are presented with the <strong>Login Page</strong>.
+<img alt="CLM Login Screen" src="images/clm_login.png" /></p>
+<ol>
+<li>
+<p><strong>Enter Credentials</strong></p>
+<ul>
+<li>
+<p>Provide your assigned <strong>Username</strong> and <strong>Password</strong> in the respective fields.</p>
+</li>
+<li>
+<p>If your organization has enabled <strong>Multi-Factor Authentication (MFA)</strong>, you will be prompted to complete the additional verification (such as entering a one-time code or approving a push notification).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Submit Login</strong></p>
+<ul>
+<li>Click on the <strong>Login</strong> button to proceed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Successful Login</strong></p>
+<ul>
+<li>Upon successful authentication, the system redirects you to the <strong>Dashboard</strong>, which is the starting point for all certificate management activities.</li>
+</ul>
+</li>
+<li>
+<p><strong>Unsuccessful Login</strong></p>
+<ul>
+<li>
+<p>If the credentials are incorrect, the system will display an error message.</p>
+</li>
+<li>
+<p>Ensure that the details are entered correctly. If the issue persists, contact the system administrator.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>For security reasons, the system may lock the account temporarily after multiple failed login attempts.</p>
+<h2 id="dashboard">Dashboard</h2>
+<p>After a successful login, the administrator is redirected to the <strong>CLM Dashboard</strong>. The dashboard provides a centralized view of certificate operations, protocol performance, compliance status, and recent activities. It serves as the primary workspace for monitoring the overall health and security of the certificate environment.</p>
+<p><img alt="Certificate Statistics" src="images/dashboard.png" /></p>
+<h3 id="certificate-statistics">Certificate Statistics</h3>
+<p>The certificate statistics panel displays an overview of the current state of certificates within the system, categorized as:</p>
+<ul>
+<li>
+<p><strong>Active</strong> – Certificates currently valid and in use.</p>
+</li>
+<li>
+<p><strong>Expiring Soon</strong> – Certificates approaching their expiry date (based on system-configured threshold).</p>
+</li>
+<li>
+<p><strong>Expired</strong> – Certificates that are no longer valid.</p>
+</li>
+<li>
+<p><strong>Revoked</strong> – Certificates that have been manually revoked or invalidated due to policy or security concerns.</p>
+</li>
+</ul>
+<h3 id="protocol-performance">Protocol Performance</h3>
+<p>This section provides insights into the performance and health of various certificate enrollment and management protocols supported by CLM, such as:</p>
+<ul>
+<li>
+<p><strong>ACME</strong></p>
+</li>
+<li>
+<p><strong>SCEP</strong></p>
+</li>
+<li>
+<p><strong>CMP</strong></p>
+</li>
+<li>
+<p><strong>EST</strong></p>
+</li>
+</ul>
+<p>Performance metrics include success rates, and number of request helping administrators quickly identify issues.</p>
+<h3 id="compliance-status">Compliance Status</h3>
+<p>The compliance panel provides an overview of the active compliance profile.</p>
+<ul>
+<li>
+<p>Displays the number of violations and their current status.</p>
+</li>
+<li>
+<p>Helps administrators ensure all certificates align with security policies and compliance requirements.</p>
+</li>
+</ul>
+<h3 id="recent-activities">Recent Activities</h3>
+<p>A real-time activity log summarizing the latest actions performed within CLM, such as:</p>
+<ul>
+<li>
+<p>Certificate requests and issuances.</p>
+</li>
+<li>
+<p>Renewals and revocations.</p>
+</li>
+<li>
+<p>Administrative changes.</p>
+</li>
+</ul>
+<p>This feature provides visibility into system usage and aids in auditing and troubleshooting.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

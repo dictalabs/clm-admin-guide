@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "50e6055fdd5654b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "5893e6b21476bd7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bf856cc2cf834cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/cmp_server.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "cmp_server"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "362b0562e5993178",
+    "type": "split",
+    "children": [
+      {
+        "id": "14d765c6c9d4ee56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9be767bcf30cf6c4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "402a1428ad89e249",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0ddf6ffc17cef23c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "04f8f5cb004e709b",
+    "type": "split",
+    "children": [
+      {
+        "id": "32253dbd814bbdef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c363b3d5338efac3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/cmp_server.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for cmp_server"
+            }
+          },
+          {
+            "id": "ac86606be25b9f4b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/cmp_server.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from cmp_server"
+            }
+          },
+          {
+            "id": "6b657bd5c87a9072",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "06ffe01591d0b464",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/cmp_server.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of cmp_server"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "8bf856cc2cf834cc",
+  "lastOpenFiles": [
+    "docs/est_server.md",
+    "docs/cmp_server.md",
+    "docs/New Text Document.txt",
+    "docs/acme_server.md",
+    "docs/scep_server.md",
+    "docs/certificate_management.md",
+    "docs/certificate_requests.md",
+    "docs/key_management.md",
+    "docs/connectors.md",
+    "docs/crypto_sources.md",
+    "docs/images/crypto_source_pkcs11.png",
+    "docs/images/crypto_source_aws.png",
+    "docs/images/Unconfirmed 503207.crdownload",
+    "docs/images/crypto_source_azure.png",
+    "docs/images/Unconfirmed 870838.crdownload",
+    "docs/images/crypto_source_configuration2.png",
+    "docs/images/Unconfirmed 132055.crdownload",
+    "docs/images/crypto_source_configuration.png",
+    "docs/images/Unconfirmed 851810.crdownload",
+    "docs/images/crypto_sources_page_overview.png",
+    "docs/images/Unconfirmed 178428.crdownload",
+    "docs/users.md",
+    "docs/images/create_user_form.png",
+    "docs/images/Unconfirmed 125857.crdownload",
+    "docs/images/users_page_overview.png",
+    "docs/images/Unconfirmed 616360.crdownload",
+    "docs/roles.md",
+    "site/search/search_index.json",
+    "site/search",
+    "site/assets/images/favicon.png",
+    "site/images/tenants_page_overview.png",
+    "docs/tenants.md",
+    "docs/index.md"
+  ]
+}
