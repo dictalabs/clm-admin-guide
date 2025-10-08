@@ -580,7 +580,7 @@
 </li>
 <li>
 <p><strong>Top Failing Rules</strong> are displayed with execution statistics for deeper insights.
-<img alt="Compliance Policies List" src="images/compliance_policies_list_2.png" /></p>
+<img alt="Compliance Policies List" src="../images/compliance_policies_list_Rules.png" /></p>
 </li>
 </ul>
 </li>
@@ -695,118 +695,6 @@ Once all required details are filled, click <strong>Create Rule</strong> to save
 </ul>
 <p><strong>Create Profile</strong><br />
 After configuring the profile, click <strong>Create Profile</strong> to save it. The new compliance profile will then appear in the Compliance Profiles list.</p>
-<h1 id="discovery-ssl-tab">Discovery – SSL Tab</h1>
-<p>The <strong>SSL Discovery</strong> feature allows administrators to <strong>scan hosts for SSL certificates and retrieve details</strong> about them. This helps in monitoring certificate validity, identifying expired or weak certificates, and automating SSL asset discovery.</p>
-<h2 id="overview">Overview</h2>
-<ul>
-<li>
-<p><strong>Purpose</strong>: To discover SSL certificates across hosts, IP ranges, subnets, or uploaded files.</p>
-</li>
-<li>
-<p><strong>Use Cases</strong>:</p>
-<ul>
-<li>
-<p>Inventory all SSL certificates in the network.</p>
-</li>
-<li>
-<p>Identify certificates nearing expiry.</p>
-</li>
-<li>
-<p>Detect weak or invalid SSL configurations.</p>
-</li>
-<li>
-<p>Automate SSL scanning for compliance and monitoring.
-<img alt="Compliance Policies List" src="../images/compliance_policies_list_5.png" /></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="create-ssl-discovery-task">Create SSL Discovery Task</h2>
-<p>When creating a new <strong>SSL Discovery Task</strong>, the admin must configure the following fields:</p>
-<h3 id="task-details">Task Details</h3>
-<ul>
-<li><strong>Task Name</strong> – Unique name for the discovery task.</li>
-</ul>
-<h3 id="discovery-type-discover-by">Discovery Type (Discover By)</h3>
-<p>Admin can select one of the following options:</p>
-<ol>
-<li>
-<p><strong>Hostname / IP Address</strong></p>
-<ul>
-<li>Field: <strong>Hostname / IP</strong> (Single host or IP to scan).</li>
-</ul>
-</li>
-<li>
-<p><strong>IP Address Range</strong></p>
-<ul>
-<li>
-<p>Fields:</p>
-<ul>
-<li>
-<p><strong>Start IP</strong></p>
-</li>
-<li>
-<p><strong>End IP</strong></p>
-</li>
-<li>
-<p><strong>Exclude IPs</strong> (one per line).</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>From File</strong></p>
-<ul>
-<li>
-<p>Field: <strong>Upload list file</strong></p>
-</li>
-<li>
-<p>Format: One per line → <code>host</code> or <code>host:port[,port]</code></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Subnet</strong></p>
-<ul>
-<li>
-<p>Fields:</p>
-<ul>
-<li>
-<p><strong>Network Base</strong></p>
-</li>
-<li>
-<p><strong>Mask</strong></p>
-</li>
-<li>
-<p><strong>Exclude IPs</strong> (one per line).</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="advanced-settings">Advanced Settings</h3>
-<ul>
-<li>
-<p><strong>Port(s)</strong> – Specify ports to scan (comma-separated).</p>
-</li>
-<li>
-<p><strong>Timeout</strong> – Timeout duration for scan requests.</p>
-</li>
-<li>
-<p><strong>Verify SSL (toggle)</strong> – If enabled, verifies SSL handshake.</p>
-</li>
-<li>
-<p><strong>Get Full Chain (toggle)</strong> – Retrieves full certificate chain (leaf + intermediates + root).</p>
-</li>
-<li>
-<p><strong>Include Expired (toggle)</strong> – Includes expired SSL certificates in the scan results.</p>
-</li>
-<li>
-<p><strong>Auto Discovery (toggle)</strong> – Enables automated recurring discovery based on schedule.</p>
-</li>
-</ul>
 
 
 
