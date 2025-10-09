@@ -1,7 +1,7 @@
 # CLM Admin Guide
 
 ## Overview
-The **Certificate Life Management (CLM)** web application is a centralized platform designed to streamline the complete lifecycle of digital certificates within an organization. It enables administrators to request, issue, monitor, renew, and revoke certificates through a secure, user-friendly interface.
+The **Certificate Life Management (CLM)** web application is a centralized platform designed to streamline the complete lifecycle of digital certificates within an organization. It enables administrators to request, issue, monitor, renew, and revoke certificates through a secure, user-friendly **interface.**
 
 In modern IT environments, digital certificates are critical for securing communication, authenticating systems, and ensuring data integrity. Managing these certificates manually can be complex, error-prone, and risky—especially when dealing with large infrastructures or multiple certificate authorities (CAs). CLM addresses these challenges by offering:
 
