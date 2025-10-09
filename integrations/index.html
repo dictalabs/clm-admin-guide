@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../compliance/">
+        <link rel="prev" href="../cmp_server/">
       
       
-        <link rel="next" href="../scep_server/">
+        <link rel="next" href="../reports/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Discovery - CLM Admin Guide</title>
+        <title>API Integration - CLM Admin Guide</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#discovery-ssl-tab" class="md-skip">
+        <a href="#api-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Discovery
+              API Integration
             
           </span>
         </div>
@@ -459,32 +459,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Discovery
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../discovery/" class="md-nav__link">
         
   
   
@@ -495,77 +473,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-ssl-discovery-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create SSL Discovery Task
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Create SSL Discovery Task">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#task-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Task Details
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discovery-type-discover-by" class="md-nav__link">
-    <span class="md-ellipsis">
-      Discovery Type (Discover By)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Settings
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -711,10 +618,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../integrations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Integration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -725,6 +654,191 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#csc-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSC Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-of-csc-for-signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage of CSC for Signing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2info" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2authlogin" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/auth/login
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2credentialslist" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/credentials/list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2credentialsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/credentials/info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2signaturessignhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/signatures/signHash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing API Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing API Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing API Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-keys-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Keys Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search and Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-keys-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Keys List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating API Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating API Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigate-to-the-api-key-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate to the API Key Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-in-the-api-key-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fill in the API Key Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-the-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save the API Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-api-keys-for-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using API Keys for Integration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -844,46 +958,109 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#csc-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      CSC Configuration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-ssl-discovery-task" class="md-nav__link">
+  <a href="#usage-of-csc-for-signing" class="md-nav__link">
     <span class="md-ellipsis">
-      Create SSL Discovery Task
+      Usage of CSC for Signing
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create SSL Discovery Task">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2info" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2authlogin" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/auth/login
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2credentialslist" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/credentials/list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2credentialsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/credentials/info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cscv2signaturessignhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      /csc/v2/signatures/signHash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing API Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing API Keys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#task-details" class="md-nav__link">
+  <a href="#accessing-api-keys" class="md-nav__link">
     <span class="md-ellipsis">
-      Task Details
+      Accessing API Keys
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#discovery-type-discover-by" class="md-nav__link">
+  <a href="#api-keys-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Discovery Type (Discover By)
+      API Keys Overview
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
+  <a href="#search-and-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      Advanced Settings
+      Search and Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-keys-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Keys List
     </span>
   </a>
   
@@ -891,6 +1068,57 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating API Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating API Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigate-to-the-api-key-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate to the API Key Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-in-the-api-key-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fill in the API Key Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-the-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save the API Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-api-keys-for-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using API Keys for Integration
+    </span>
+  </a>
   
 </li>
       
@@ -910,118 +1138,134 @@
 
 
 
-<h1 id="discovery-ssl-tab">Discovery-SSL Tab</h1>
-<p>The <strong>SSL Discovery</strong> feature allows administrators to <strong>scan hosts for SSL certificates and retrieve details</strong> about them. This helps in monitoring certificate validity, identifying expired or weak certificates, and automating SSL asset discovery.</p>
-<h2 id="overview">Overview</h2>
+<h1 id="api-integration">API Integration</h1>
+<p>This section explains how to integrate external systems with the CLM (Certificate Lifecycle Management) platform using its APIs. The platform provides two primary integration capabilities to meet diverse business needs:</p>
 <ul>
 <li>
-<p><strong>Purpose</strong>: To discover SSL certificates across hosts, IP ranges, subnets, or uploaded files.</p>
+<p><strong>CSC Signing APIs</strong> – Integrate remote digital signing capabilities directly into your own applications and workflows.</p>
 </li>
 <li>
-<p><strong>Use Cases</strong>:</p>
+<p><strong>CLM Data APIs</strong> – Retrieve, manage, and synchronize certificate-related data within your external systems.</p>
+</li>
+</ul>
+<h3 id="csc-configuration">CSC Configuration</h3>
+<p>In the <strong>CSC Configuration</strong> tab, administrators can set up and manage CSC providers.<br />
+<img alt="CSC Configuration Overview" src="../images/csc.png" />
+The configuration form includes the following fields:</p>
 <ul>
-<li>
-<p>Inventory all SSL certificates in the network.</p>
-</li>
-<li>
-<p>Identify certificates nearing expiry.</p>
-</li>
-<li>
-<p>Detect weak or invalid SSL configurations.</p>
-</li>
-<li>
-<p>Automate SSL scanning for compliance and monitoring.</p>
-</li>
+<li><strong>Name</strong> – The name of the CSC provider.</li>
+<li><strong>Region</strong> – The operational region of the provider.</li>
+<li><strong>Logo</strong> – Upload or set the logo for easy identification.</li>
+<li><strong>Language</strong> – Select the preferred language for communication.</li>
+<li><strong>Authentication Type</strong> – Choose the authentication mechanism.</li>
+<li><strong>Description</strong> – Provide additional details about the CSC configuration.</li>
 </ul>
-</li>
-</ul>
-<p><img alt="Discovery Page Overview" src="../images/discovery_page_overview.png" /></p>
-<h2 id="create-ssl-discovery-task">Create SSL Discovery Task</h2>
-<p>When creating a new <strong>SSL Discovery Task</strong>, the admin must configure the following fields:</p>
-<h3 id="task-details">Task Details</h3>
+<h3 id="usage-of-csc-for-signing">Usage of CSC for Signing</h3>
+<p>Below are the supported CSC endpoints with their request methods, authentication details, and usage descriptions.</p>
+<hr />
+<h3 id="cscv2info">/csc/v2/info</h3>
+<p><strong>Description:</strong><br />
+Retrieves general information about the CSC service, such as capabilities, supported algorithms, and service metadata.</p>
+<p><strong>Method:</strong> POST<br />
+<strong>Authentication:</strong> None<br />
+<strong>Request Body:</strong> <em>(Empty)</em><br />
+<strong>Response:</strong> Returns service information and configuration details.</p>
+<hr />
+<h3 id="cscv2authlogin">/csc/v2/auth/login</h3>
+<p><strong>Description:</strong><br />
+Authenticates the user and retrieves an access token used for subsequent CSC API calls.</p>
+<p><strong>Method:</strong> POST<br />
+<strong>Authentication:</strong> Basic Authentication (username, password)<br />
+<strong>Request Body:</strong> <em>(Empty)</em><br />
+<strong>Response:</strong> Returns an access token that must be included in the Authorization header of the following API requests.</p>
+<hr />
+<h3 id="cscv2credentialslist">/csc/v2/credentials/list</h3>
+<p><strong>Description:</strong><br />
+Fetches a list of available credentials (certificates) that the authenticated user can use for signing.</p>
+<p><strong>Method:</strong> POST<br />
+<strong>Authentication:</strong> Bearer Token (Access Token from /auth/login)<br />
+<strong>Request Body:</strong> <em>(Empty)</em><br />
+<strong>Response:</strong> Returns a list of credentials, including credentialID, type, and associated metadata.</p>
+<hr />
+<h3 id="cscv2credentialsinfo">/csc/v2/credentials/info</h3>
+<p><strong>Description:</strong><br />
+Retrieves detailed information about a specific credential.</p>
+<p><strong>Method:</strong> POST<br />
+<strong>Authentication:</strong> Bearer Token (Access Token from /auth/login)<br />
+<strong>Request Body (JSON):</strong></p>
+<p><code>{   "credentialID": "string" }</code></p>
+<p><strong>Response:</strong> Returns details such as key type, issuer, validity period, and supported signing algorithms.</p>
+<hr />
+<h3 id="cscv2signaturessignhash">/csc/v2/signatures/signHash</h3>
+<p><strong>Description:</strong><br />
+Performs a digital signature operation on provided hash values using a selected credential.</p>
+<p><strong>Method:</strong> POST<br />
+<strong>Authentication:</strong> Bearer Token (Access Token from /auth/login)<br />
+<strong>Request Body (JSON):</strong></p>
+<p><code>{   "credentialID": "string",   "hashes": ["base64_encoded_hash"],   "signAlgo": "signAlgo_OID"  }</code></p>
+<p><strong>Response:</strong> Returns the signature (Base64-encoded signed hash) .</p>
+<h3 id="managing-api-keys">Managing API Keys</h3>
+<p>View and manage API keys used for external system integration with CLM.</p>
+<h4 id="accessing-api-keys">Accessing API Keys</h4>
+<p>From the sidebar menu, navigate to <strong>API Keys</strong> under the <strong>Integration</strong> section.</p>
+<p>The <strong>API Keys</strong> page opens, showing an overview of all generated API keys in the system.
+<img alt="API key Overview" src="../images/apikey.png" /></p>
+<h4 id="api-keys-overview">API Keys Overview</h4>
+<p>At the top of the page, administrators can view summary information displayed in cards:</p>
 <ul>
-<li><strong>Task Name</strong> – Unique name for the discovery task.</li>
+<li><strong>Total Requests</strong> – Total number of API requests made using all keys.</li>
+<li><strong>Active Keys</strong> – Number of currently active API keys.</li>
+<li><strong>Error Rate</strong> – Percentage of failed or unauthorized API requests.</li>
 </ul>
-<h3 id="discovery-type-discover-by">Discovery Type (Discover By)</h3>
-<p>Admin can select one of the following options:</p>
-<ol>
-<li>
-<p><strong>Hostname / IP Address</strong></p>
+<h4 id="search-and-filter">Search and Filter</h4>
+<p>Below the summary cards, a <strong>Search and Filter</strong> section allows administrators to:</p>
 <ul>
-<li>Field: <strong>Hostname / IP</strong> (Single host or IP to scan).</li>
+<li>Search API keys by name or keyword.</li>
+<li>Apply filters such as status, permissions, or activity date.</li>
 </ul>
-</li>
-<li>
-<p><strong>IP Address Range</strong></p>
+<h4 id="api-keys-list">API Keys List</h4>
+<p>The <strong>API Keys List Table</strong> provides detailed information for each API key, including:</p>
 <ul>
-<li>
-<p>Fields:</p>
+<li><strong>Name</strong> – The assigned name of the API key.</li>
+<li><strong>API Key</strong> – The unique token string used for integration.</li>
+<li><strong>Status</strong> – Indicates whether the key is Active or Inactive.</li>
+<li><strong>Permissions</strong> – Modules or scopes the key is authorized to access.</li>
+<li><strong>Rate Limit</strong> – Maximum number of requests allowed within the defined period.</li>
+<li><strong>Last Used</strong> – Timestamp of the most recent request made using the key.</li>
+<li><strong>Actions</strong> – Options to view, edit, regenerate, or revoke the API key.</li>
+</ul>
+<p>This view enables administrators to efficiently monitor and manage API usage across all integrations.</p>
+<h3 id="generating-api-keys">Generating API Keys</h3>
+<p>API keys in CLM allow secure integration of external systems with CLM services. Administrators can generate API keys with controlled permissions, validity, and access rules.</p>
+<h4 id="navigate-to-the-api-key-page">Navigate to the API Key Page</h4>
+<p>From the sidebar menu, go to <strong>API Keys</strong>.<br />
+On the top-right corner of the page, click the <strong>Generate Key</strong> button.</p>
+<h4 id="fill-in-the-api-key-form">Fill in the API Key Form</h4>
+<p>A form will open with the following fields:</p>
 <ul>
-<li>
-<p><strong>Start IP</strong></p>
-</li>
-<li>
-<p><strong>End IP</strong></p>
-</li>
-<li>
-<p><strong>Exclude IPs</strong> (one per line).</p>
-</li>
+<li><strong>Key Name</strong> – Enter a unique name for the API key.</li>
+<li><strong>Description</strong> – Provide a short description of the key’s purpose.</li>
+<li><strong>Expires At</strong> – Select the key expiration period:<ul>
+<li><strong>30 Days</strong></li>
+<li><strong>60 Days</strong></li>
+<li><strong>Never</strong></li>
+<li><strong>Custom</strong> – Choose a specific expiration date manually.</li>
 </ul>
 </li>
+<li><strong>Permissions</strong> – Select modules or features this API key can access by checking/unchecking options in the permissions list.</li>
+<li><strong>Rate Limit (Requests)</strong> – Define the number of requests allowed for this API key.</li>
+<li><strong>Per (Time)</strong> – Choose the time unit for rate limiting (Hours, Minutes, or Days).</li>
+<li><strong>IP Whitelist</strong> – Specify one or more IP addresses allowed to use this API key.
+<img alt="Generate api key" src="../images/Addapikey.png" /></li>
 </ul>
-</li>
-<li>
-<p><strong>From File</strong></p>
-<ul>
-<li>
-<p>Field: <strong>Upload list file</strong></p>
-</li>
-<li>
-<p>Format: One per line → <code>host</code> or <code>host:port[,port]</code></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Subnet</strong></p>
-<ul>
-<li>
-<p>Fields:</p>
-<ul>
-<li>
-<p><strong>Network Base</strong></p>
-</li>
-<li>
-<p><strong>Mask</strong></p>
-</li>
-<li>
-<p><strong>Exclude IPs</strong> (one per line).</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="advanced-settings">Advanced Settings</h3>
-<ul>
-<li>
-<p><strong>Port(s)</strong> – Specify ports to scan (comma-separated).</p>
-</li>
-<li>
-<p><strong>Timeout</strong> – Timeout duration for scan requests.</p>
-</li>
-<li>
-<p><strong>Verify SSL (toggle)</strong> – If enabled, verifies SSL handshake.</p>
-</li>
-<li>
-<p><strong>Get Full Chain (toggle)</strong> – Retrieves full certificate chain (leaf + intermediates + root).</p>
-</li>
-<li>
-<p><strong>Include Expired (toggle)</strong> – Includes expired SSL certificates in the scan results.</p>
-</li>
-<li>
-<p><strong>Auto Discovery (toggle)</strong> – Enables automated recurring discovery based on schedule.</p>
-</li>
-</ul>
+<h4 id="save-the-api-key">Save the API Key</h4>
+<p>After completing the form, click the <strong>Generate Key</strong> button.</p>
+<h3 id="using-api-keys-for-integration">Using API Keys for Integration</h3>
+<p>Once an API key is generated, administrators can share it with authorized users or external systems that need to communicate with CLM services.</p>
+<p>External applications can use the API key to securely call CLM’s REST APIs, available in the <strong>CLM API Swagger</strong> interface.</p>
+<p>To authenticate API requests, include the generated API key in the <strong>Authorization</strong> header as follows:</p>
+<p><code>Authorization: Bearer &lt;your-api-key&gt;</code></p>
+<p>This allows external systems to invoke CLM endpoints such as certificate management, tenant data, compliance operations, and other available modules — based on the permissions assigned to the API key.</p>
 
 
 
