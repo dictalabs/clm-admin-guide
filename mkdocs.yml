@@ -35,6 +35,7 @@ nav:
     - ACME Server: acme_server.md
     - EST Server: est_server.md
     - CMP Server: cmp_server.md
+  - API Integration: integrations.md
   - Reports: reports.md
   - Notifications: notifications.md
   - Audit Logs: logs.md
