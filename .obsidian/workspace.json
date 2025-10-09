@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/schedulers.md",
+                "file": "docs/settings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "schedulers"
+              "title": "settings"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/schedulers.md",
+                "file": "docs/settings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for schedulers"
+              "title": "Backlinks for settings"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/schedulers.md",
+                "file": "docs/settings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from schedulers"
+              "title": "Outgoing links from settings"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/schedulers.md",
+                "file": "docs/settings.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of schedulers"
+              "title": "Outline of settings"
             }
           }
         ]
@@ -171,47 +171,46 @@
   },
   "active": "8bf856cc2cf834cc",
   "lastOpenFiles": [
-    "docs/images/settings_page_overview.png",
-    "docs/images/schedulers_page_overview.png",
-    "docs/images/schedulers_creating.png",
-    "docs/images/scep_server_page_overview.png",
-    "docs/images/reports_page_overview.png",
-    "docs/images/reports_dashboard_4.png",
-    "docs/images/reports_dashboard_3.png",
-    "docs/images/reports_dashboard_1.png",
-    "docs/images/notifications_page_overview.png",
-    "docs/images/notifications_dashboard_Add.png",
-    "docs/images/navigate_cmp_server_page.png",
-    "docs/docs.zip",
-    "docs/remaining.zip",
-    "docs/settings.md",
     "docs/schedulers.md",
-    "docs/New Text Document.txt",
-    "docs/logs.md",
+    "docs/settings.md",
+    "docs/users.md",
+    "site/acme_server/index.html",
+    "site/acme_server",
+    "site/404.html",
+    "site/assets/javascripts/lunr/min/lunr.fi.min.js",
+    "site/assets/javascripts/lunr/min/lunr.es.min.js",
+    "site/assets/javascripts/lunr/min/lunr.el.min.js",
+    "site/assets/javascripts/lunr/min/lunr.du.min.js",
+    "site/assets/javascripts/lunr/min/lunr.de.min.js",
+    "site/assets/javascripts/lunr/min/lunr.da.min.js",
+    "site/assets/javascripts/lunr/min/lunr.ar.min.js",
+    "docs/tenants.md",
+    "docs/scep_server.md",
     "docs/reports.md",
     "docs/notifications.md",
+    "docs/logs.md",
+    "docs/key_management.md",
+    "docs/index.md",
+    "docs/est_server.md",
     "docs/discovery.md",
+    "docs/crypto_sources.md",
+    "docs/connectors.md",
     "docs/compliance.md",
+    "site/assets/images/favicon.png",
+    "site/images/users_page_overview.png",
+    "site/images/tenants_page_overview.png",
+    "site/images/settings_page_overview.png",
+    "site/images/schedulers_page_overview.png",
+    "site/images/schedulers_creating.png",
+    "site/images/scep_server_page_overview.png",
+    "site/images/roles_page_overview.png",
+    "site/images/reports_page_overview.png",
+    "site/images/reports_dashboard_4.png",
     "docs/cmp_server.md",
     "docs/remaining/compliance.md",
-    "docs/remaining/New Text Document.txt",
-    "docs/remaining",
-    "docs/New folder",
-    "site/search/search_index.json",
-    "site/search",
-    "site/users/index.html",
-    "site/users",
-    "docs/est_server.md",
     "docs/acme_server.md",
-    "docs/scep_server.md",
     "docs/certificate_management.md",
     "docs/certificate_requests.md",
-    "docs/key_management.md",
-    "docs/connectors.md",
-    "docs/crypto_sources.md",
-    "docs/users.md",
-    "docs/roles.md",
-    "docs/tenants.md",
-    "docs/index.md"
+    "docs/roles.md"
   ]
 }

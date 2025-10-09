@@ -20,16 +20,22 @@ copyright: "© 2025 Dictalabs. All rights reserved."
 # Navigation
 nav:
   - Home: index.md
-  - Tenants: tenants.md
-  - Roles: roles.md
-  - Users: users.md
+  - RBAC:
+    - Tenants: tenants.md
+    - Roles: roles.md
+    - Users: users.md
   - Connectors: connectors.md
   - Crypto Sources: crypto_sources.md
   - Key Management: key_management.md
   - Certificate Requests: certificate_requests.md
   - Certificate Management: certificate_management.md
-  - SCEP Server: scep_server.md
-  - ACME Server: acme_server.md
-  - EST Server: est_server.md
-  - CMP Server: cmp_server.md
+  - Discovery: discovery.md
+  - Protocols:
+    - SCEP Server: scep_server.md
+    - ACME Server: acme_server.md
+    - EST Server: est_server.md
+    - CMP Server: cmp_server.md
   - Reports: reports.md
+  - Notifications: notifications.md
+  - Audit Logs: logs.md
+  - Settings: settings.md
