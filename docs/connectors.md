@@ -107,9 +107,8 @@ To configure a new connector in CLM:
 - Client Secret
 
 ![Connector Logs](images/connector_logs.png)
-4. **Save the Connector**
-    
-    - After completing the configuration, click the **Create Connector** button.
-        
-    - The new connector will appear in the **Connectors List**.
-    
+
+**Save the Connector**
+
+- After completing the configuration, click the **Create Connector** button.
+- The new connector will appear in the **Connectors List**.
