@@ -29,6 +29,7 @@ nav:
   - Key Management: key_management.md
   - Certificate Requests: certificate_requests.md
   - Certificate Management: certificate_management.md
+  - Compliance: compliance.md
   - Discovery: discovery.md
   - Protocols:
     - SCEP Server: scep_server.md

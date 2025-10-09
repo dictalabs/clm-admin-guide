@@ -83,8 +83,45 @@ Performs a digital signature operation on provided hash values using a selected 
 `{   "credentialID": "string",   "hashes": ["base64_encoded_hash"],   "signAlgo": "signAlgo_OID"  }`
 
 **Response:** Returns the signature (Base64-encoded signed hash) .
+### Managing API Keys
 
-### Generating and Using API Keys
+View and manage API keys used for external system integration with CLM.
+
+#### Accessing API Keys
+
+From the sidebar menu, navigate to **API Keys** under the **Integration** section.
+
+The **API Keys** page opens, showing an overview of all generated API keys in the system.
+![API key Overview](images/apikey.png)
+
+#### API Keys Overview
+
+At the top of the page, administrators can view summary information displayed in cards:
+
+- **Total Requests** – Total number of API requests made using all keys.
+- **Active Keys** – Number of currently active API keys.
+- **Error Rate** – Percentage of failed or unauthorized API requests.
+#### Search and Filter
+
+Below the summary cards, a **Search and Filter** section allows administrators to:
+
+- Search API keys by name or keyword.
+- Apply filters such as status, permissions, or activity date.
+#### API Keys List
+
+The **API Keys List Table** provides detailed information for each API key, including:
+
+- **Name** – The assigned name of the API key.
+- **API Key** – The unique token string used for integration.
+- **Status** – Indicates whether the key is Active or Inactive.
+- **Permissions** – Modules or scopes the key is authorized to access.
+- **Rate Limit** – Maximum number of requests allowed within the defined period.
+- **Last Used** – Timestamp of the most recent request made using the key.
+- **Actions** – Options to view, edit, regenerate, or revoke the API key.
+
+This view enables administrators to efficiently monitor and manage API usage across all integrations.
+
+### Generating API Keys
 
 API keys in CLM allow secure integration of external systems with CLM services. Administrators can generate API keys with controlled permissions, validity, and access rules.
 
