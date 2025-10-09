@@ -20,6 +20,7 @@ copyright: "© 2025 Dictalabs. All rights reserved."
 # Navigation
 nav:
   - Home: index.md
+  - Install CLM: install.md
   - RBAC:
     - Tenants: tenants.md
     - Roles: roles.md
