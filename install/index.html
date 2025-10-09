@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../cmp_server/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../reports/">
+        <link rel="next" href="../tenants/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>API Integration - CLM Admin Guide</title>
+        <title>Install CLM - CLM Admin Guide</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-integration" class="md-skip">
+        <a href="#clm-deployment-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Integration
+              Install CLM
             
           </span>
         </div>
@@ -208,10 +208,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Install CLM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -220,6 +240,245 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-minimum-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Minimum Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pre-requisites-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Pre-Requisites Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Pre-Requisites Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install zip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-unzip-clm-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Unzip CLM Package
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-docker-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Docker Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Docker Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-31-add-dockers-official-gpg-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3.1: Add Docker’s Official GPG Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-32-add-docker-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3.2: Add Docker Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-33-install-docker-engine-and-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3.3: Install Docker Engine and Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-34-allow-docker-to-run-without-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3.4: Allow Docker to Run Without Sudo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-install-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Install NGINX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. DNS Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nginx-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. NGINX Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. NGINX Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-61-configure-nginx-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6.1: Configure NGINX Sites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ssl-certificates-setup-lets-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. SSL Certificates Setup (Let’s Encrypt)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. SSL Certificates Setup (Let’s Encrypt)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-71-install-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7.1: Install Certbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-72-generate-ssl-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7.2: Generate SSL Certificates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-73-verify-and-enable-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7.3: Verify and Enable NGINX
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-clm-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. CLM Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. CLM Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-81-frontend-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8.1: Frontend (Web Application)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-82-backend-server-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8.2: Backend (Server Application)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Verification
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -599,30 +858,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    API Integration
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,191 +870,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#csc-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      CSC Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage-of-csc-for-signing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage of CSC for Signing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2info" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/info
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2authlogin" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/auth/login
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2credentialslist" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/credentials/list
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2credentialsinfo" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/credentials/info
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2signaturessignhash" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/signatures/signHash
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-api-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing API Keys
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Managing API Keys">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#accessing-api-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessing API Keys
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-keys-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Keys Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-keys-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Keys List
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generating-api-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generating API Keys
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Generating API Keys">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#navigate-to-the-api-key-page" class="md-nav__link">
-    <span class="md-ellipsis">
-      Navigate to the API Key Page
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fill-in-the-api-key-form" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fill in the API Key Form
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#save-the-api-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      Save the API Key
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-api-keys-for-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using API Keys for Integration
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -927,109 +981,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#csc-configuration" class="md-nav__link">
+  <a href="#1-minimum-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      CSC Configuration
+      1. Minimum Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage-of-csc-for-signing" class="md-nav__link">
+  <a href="#2-pre-requisites-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage of CSC for Signing
+      2. Pre-Requisites Setup
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2info" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/info
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2authlogin" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/auth/login
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2credentialslist" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/credentials/list
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2credentialsinfo" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/credentials/info
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cscv2signaturessignhash" class="md-nav__link">
-    <span class="md-ellipsis">
-      /csc/v2/signatures/signHash
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-api-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing API Keys
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Managing API Keys">
+    <nav class="md-nav" aria-label="2. Pre-Requisites Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#accessing-api-keys" class="md-nav__link">
+  <a href="#step-1-install-zip" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing API Keys
+      Step 1: Install zip
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-keys-overview" class="md-nav__link">
+  <a href="#step-2-unzip-clm-package" class="md-nav__link">
     <span class="md-ellipsis">
-      API Keys Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-keys-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Keys List
+      Step 2: Unzip CLM Package
     </span>
   </a>
   
@@ -1041,37 +1023,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generating-api-keys" class="md-nav__link">
+  <a href="#3-docker-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Generating API Keys
+      3. Docker Installation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Generating API Keys">
+    <nav class="md-nav" aria-label="3. Docker Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#navigate-to-the-api-key-page" class="md-nav__link">
+  <a href="#step-31-add-dockers-official-gpg-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Navigate to the API Key Page
+      Step 3.1: Add Docker’s Official GPG Key
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fill-in-the-api-key-form" class="md-nav__link">
+  <a href="#step-32-add-docker-repository" class="md-nav__link">
     <span class="md-ellipsis">
-      Fill in the API Key Form
+      Step 3.2: Add Docker Repository
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#save-the-api-key" class="md-nav__link">
+  <a href="#step-33-install-docker-engine-and-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Save the API Key
+      Step 3.3: Install Docker Engine and Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-34-allow-docker-to-run-without-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3.4: Allow Docker to Run Without Sudo
     </span>
   </a>
   
@@ -1083,9 +1074,126 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-api-keys-for-integration" class="md-nav__link">
+  <a href="#4-install-nginx" class="md-nav__link">
     <span class="md-ellipsis">
-      Using API Keys for Integration
+      4. Install NGINX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. DNS Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nginx-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. NGINX Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. NGINX Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-61-configure-nginx-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6.1: Configure NGINX Sites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ssl-certificates-setup-lets-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. SSL Certificates Setup (Let’s Encrypt)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. SSL Certificates Setup (Let’s Encrypt)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-71-install-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7.1: Install Certbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-72-generate-ssl-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7.2: Generate SSL Certificates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-73-verify-and-enable-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7.3: Verify and Enable NGINX
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-clm-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. CLM Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. CLM Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-81-frontend-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8.1: Frontend (Web Application)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-82-backend-server-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8.2: Backend (Server Application)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Verification
     </span>
   </a>
   
@@ -1106,134 +1214,168 @@
                   
 
 
-<h1 id="api-integration">API Integration</h1>
-<p>This section explains how to integrate external systems with the CLM (Certificate Lifecycle Management) platform using its APIs. The platform provides two primary integration capabilities to meet diverse business needs:</p>
+<h1 id="clm-deployment-guide"><strong>CLM Deployment Guide</strong></h1>
+<p>This guide provides a step-by-step walkthrough for installing <strong>vScrawl</strong> on an in-house server. The installation process is automated through a setup script but requires administrator input and consent at various stages. Follow this guide carefully to ensure a successful installation.</p>
+<hr />
+<h2 id="1-minimum-requirements"><strong>1. Minimum Requirements</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operating System</strong></td>
+<td>Ubuntu 24.04.1 LTS</td>
+</tr>
+<tr>
+<td><strong>CPU</strong></td>
+<td>8 cores</td>
+</tr>
+<tr>
+<td><strong>Memory (RAM)</strong></td>
+<td>16 GB</td>
+</tr>
+<tr>
+<td><strong>Disk Space</strong></td>
+<td>200 GB</td>
+</tr>
+<tr>
+<td><strong>Required Software</strong></td>
+<td>Docker, NGINX</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-pre-requisites-setup"><strong>2. Pre-Requisites Setup</strong></h2>
+<p>Before deploying CLM, ensure that the following tools and configurations are set up.</p>
+<h3 id="step-1-install-zip"><strong>Step 1: Install zip</strong></h3>
+<p><code>sudo apt update &amp;&amp; sudo apt install zip -y</code></p>
+<h3 id="step-2-unzip-clm-package"><strong>Step 2: Unzip CLM Package</strong></h3>
+<p>Unzip the deployment package provided by your administrator.</p>
+<p><code>unzip clm-package.zip</code></p>
+<hr />
+<h2 id="3-docker-installation"><strong>3. Docker Installation</strong></h2>
+<p>The CLM backend and frontend run as Docker containers. Follow the steps below to install Docker.</p>
+<h3 id="step-31-add-dockers-official-gpg-key"><strong>Step 3.1: Add Docker’s Official GPG Key</strong></h3>
+<p><code>sudo apt-get update</code>
+<code>sudo apt-get install ca-certificates curl</code>
+<code>sudo install -m 0755 -d /etc/apt/keyrings</code>
+<code>sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc</code>
+<code>sudo chmod a+r /etc/apt/keyrings/docker.asc</code></p>
+<h3 id="step-32-add-docker-repository"><strong>Step 3.2: Add Docker Repository</strong></h3>
+<p><code>echo \   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \   https://download.docker.com/linux/ubuntu \   $(. /etc/os-release &amp;&amp; echo "$VERSION_CODENAME") stable" | \   sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code>
+<code>sudo apt-get update</code></p>
+<h3 id="step-33-install-docker-engine-and-compose"><strong>Step 3.3: Install Docker Engine and Compose</strong></h3>
+<p><code>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y</code></p>
+<h3 id="step-34-allow-docker-to-run-without-sudo"><strong>Step 3.4: Allow Docker to Run Without Sudo</strong></h3>
+<p><code>sudo groupadd docker</code>
+<code>sudo usermod -aG docker $USER</code>
+<code>newgrp docker</code></p>
+<hr />
+<h2 id="4-install-nginx"><strong>4. Install NGINX</strong></h2>
+<p>Install and configure <strong>NGINX</strong> as a reverse proxy for your CLM services.</p>
+<p><code>sudo apt install nginx -y</code></p>
+<hr />
+<h2 id="5-dns-configuration"><strong>5. DNS Configuration</strong></h2>
+<p>Create the following <strong>DNS entries</strong> for your CLM environment (replace YOURDOMAIN.com with your actual domain):</p>
+<p><code>scep.YOURDOMAIN.com</code></p>
+<p><code>cmp.clm.YOURDOMAIN.com</code></p>
+<p><code>acme.YOURDOMAIN.com</code></p>
+<p><code>api.clm.YOURDOMAIN.com</code></p>
+<p><code>app.clm.YOURDOMAIN.com</code></p>
+<p><code>est.YOURDOMAIN.com</code></p>
+<hr />
+<h2 id="6-nginx-configuration"><strong>6. NGINX Configuration</strong></h2>
+<h3 id="step-61-configure-nginx-sites"><strong>Step 6.1: Configure NGINX Sites</strong></h3>
 <ul>
 <li>
-<p><strong>CSC Signing APIs</strong> – Integrate remote digital signing capabilities directly into your own applications and workflows.</p>
+<p>Sample NGINX configuration files are provided in the NGINX-Sample-Files directory.</p>
 </li>
 <li>
-<p><strong>CLM Data APIs</strong> – Retrieve, manage, and synchronize certificate-related data within your external systems.</p>
+<p>Copy them to /etc/nginx/sites-available/.</p>
 </li>
 </ul>
-<h3 id="csc-configuration">CSC Configuration</h3>
-<p>In the <strong>CSC Configuration</strong> tab, administrators can set up and manage CSC providers.<br />
-<img alt="CSC Configuration Overview" src="../images/csc.png" />
-The configuration form includes the following fields:</p>
+<p><code>sudo cp NGINX-Sample-Files/* /etc/nginx/sites-available/</code></p>
 <ul>
-<li><strong>Name</strong> – The name of the CSC provider.</li>
-<li><strong>Region</strong> – The operational region of the provider.</li>
-<li><strong>Logo</strong> – Upload or set the logo for easy identification.</li>
-<li><strong>Language</strong> – Select the preferred language for communication.</li>
-<li><strong>Authentication Type</strong> – Choose the authentication mechanism.</li>
-<li><strong>Description</strong> – Provide additional details about the CSC configuration.</li>
+<li>
+<p>Edit each file and replace all instances of YOURDOMAIN with your actual domain.</p>
+</li>
+<li>
+<p>Create symbolic links to enable the sites:</p>
+</li>
 </ul>
-<h3 id="usage-of-csc-for-signing">Usage of CSC for Signing</h3>
-<p>Below are the supported CSC endpoints with their request methods, authentication details, and usage descriptions.</p>
+<p><code>sudo ln -s /etc/nginx/sites-available/scep.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
+<p><code>sudo ln -s /etc/nginx/sites-available/cmp.clm.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
+<p><code>sudo ln -s /etc/nginx/sites-available/acme.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
+<p><code>sudo ln -s /etc/nginx/sites-available/api.clm.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
+<p><code>sudo ln -s /etc/nginx/sites-available/app.clm.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
+<p><code>sudo ln -s /etc/nginx/sites-available/est.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
 <hr />
-<h3 id="cscv2info">/csc/v2/info</h3>
-<p><strong>Description:</strong><br />
-Retrieves general information about the CSC service, such as capabilities, supported algorithms, and service metadata.</p>
-<p><strong>Method:</strong> POST<br />
-<strong>Authentication:</strong> None<br />
-<strong>Request Body:</strong> <em>(Empty)</em><br />
-<strong>Response:</strong> Returns service information and configuration details.</p>
+<h2 id="7-ssl-certificates-setup-lets-encrypt"><strong>7. SSL Certificates Setup (Let’s Encrypt)</strong></h2>
+<h3 id="step-71-install-certbot"><strong>Step 7.1: Install Certbot</strong></h3>
+<p><code>sudo apt install certbot python3-certbot-nginx -y</code></p>
+<h3 id="step-72-generate-ssl-certificates"><strong>Step 7.2: Generate SSL Certificates</strong></h3>
+<p>Run the following commands for each domain:</p>
+<p><code>sudo certbot certonly --standalone -d scep.YOURDOMAIN.com</code></p>
+<p><code>sudo certbot certonly --standalone -d cmp.clm.YOURDOMAIN.com</code></p>
+<p><code>sudo certbot certonly --standalone -d acme.YOURDOMAIN.com</code></p>
+<p><code>sudo certbot certonly --standalone -d api.clm.YOURDOMAIN.com</code></p>
+<p><code>sudo certbot certonly --standalone -d app.clm.YOURDOMAIN.com</code></p>
+<p><code>sudo certbot certonly --standalone -d est.YOURDOMAIN.com</code></p>
+<h3 id="step-73-verify-and-enable-nginx"><strong>Step 7.3: Verify and Enable NGINX</strong></h3>
+<p><code>sudo nginx -t sudo service nginx start</code></p>
 <hr />
-<h3 id="cscv2authlogin">/csc/v2/auth/login</h3>
-<p><strong>Description:</strong><br />
-Authenticates the user and retrieves an access token used for subsequent CSC API calls.</p>
-<p><strong>Method:</strong> POST<br />
-<strong>Authentication:</strong> Basic Authentication (username, password)<br />
-<strong>Request Body:</strong> <em>(Empty)</em><br />
-<strong>Response:</strong> Returns an access token that must be included in the Authorization header of the following API requests.</p>
+<h2 id="8-clm-deployment"><strong>8. CLM Deployment</strong></h2>
+<h3 id="step-81-frontend-web-application"><strong>Step 8.1: Frontend (Web Application)</strong></h3>
+<ol>
+<li>
+<p>Navigate to the <strong>clm-web-app</strong> directory:</p>
+<p><code>cd clm-web-app</code></p>
+</li>
+<li>
+<p>Update the config.json file with your <strong>Backend API URL</strong> (e.g., https://api.clm.YOURDOMAIN.com).</p>
+</li>
+<li>
+<p>Pull and start the containers:</p>
+<p><code>docker compose pull docker compose up -d</code></p>
+</li>
+</ol>
 <hr />
-<h3 id="cscv2credentialslist">/csc/v2/credentials/list</h3>
-<p><strong>Description:</strong><br />
-Fetches a list of available credentials (certificates) that the authenticated user can use for signing.</p>
-<p><strong>Method:</strong> POST<br />
-<strong>Authentication:</strong> Bearer Token (Access Token from /auth/login)<br />
-<strong>Request Body:</strong> <em>(Empty)</em><br />
-<strong>Response:</strong> Returns a list of credentials, including credentialID, type, and associated metadata.</p>
-<hr />
-<h3 id="cscv2credentialsinfo">/csc/v2/credentials/info</h3>
-<p><strong>Description:</strong><br />
-Retrieves detailed information about a specific credential.</p>
-<p><strong>Method:</strong> POST<br />
-<strong>Authentication:</strong> Bearer Token (Access Token from /auth/login)<br />
-<strong>Request Body (JSON):</strong></p>
-<p><code>{   "credentialID": "string" }</code></p>
-<p><strong>Response:</strong> Returns details such as key type, issuer, validity period, and supported signing algorithms.</p>
-<hr />
-<h3 id="cscv2signaturessignhash">/csc/v2/signatures/signHash</h3>
-<p><strong>Description:</strong><br />
-Performs a digital signature operation on provided hash values using a selected credential.</p>
-<p><strong>Method:</strong> POST<br />
-<strong>Authentication:</strong> Bearer Token (Access Token from /auth/login)<br />
-<strong>Request Body (JSON):</strong></p>
-<p><code>{   "credentialID": "string",   "hashes": ["base64_encoded_hash"],   "signAlgo": "signAlgo_OID"  }</code></p>
-<p><strong>Response:</strong> Returns the signature (Base64-encoded signed hash) .</p>
-<h3 id="managing-api-keys">Managing API Keys</h3>
-<p>View and manage API keys used for external system integration with CLM.</p>
-<h4 id="accessing-api-keys">Accessing API Keys</h4>
-<p>From the sidebar menu, navigate to <strong>API Keys</strong> under the <strong>Integration</strong> section.</p>
-<p>The <strong>API Keys</strong> page opens, showing an overview of all generated API keys in the system.
-<img alt="API key Overview" src="../images/apikey.png" /></p>
-<h4 id="api-keys-overview">API Keys Overview</h4>
-<p>At the top of the page, administrators can view summary information displayed in cards:</p>
+<h3 id="step-82-backend-server-application"><strong>Step 8.2: Backend (Server Application)</strong></h3>
+<ol>
+<li>
+<p>Navigate to the <strong>clm-server</strong> directory:</p>
+<p><code>cd clm-server</code></p>
+</li>
+<li>
+<p>Edit the .env file to configure:</p>
 <ul>
-<li><strong>Total Requests</strong> – Total number of API requests made using all keys.</li>
-<li><strong>Active Keys</strong> – Number of currently active API keys.</li>
-<li><strong>Error Rate</strong> – Percentage of failed or unauthorized API requests.</li>
-</ul>
-<h4 id="search-and-filter">Search and Filter</h4>
-<p>Below the summary cards, a <strong>Search and Filter</strong> section allows administrators to:</p>
-<ul>
-<li>Search API keys by name or keyword.</li>
-<li>Apply filters such as status, permissions, or activity date.</li>
-</ul>
-<h4 id="api-keys-list">API Keys List</h4>
-<p>The <strong>API Keys List Table</strong> provides detailed information for each API key, including:</p>
-<ul>
-<li><strong>Name</strong> – The assigned name of the API key.</li>
-<li><strong>API Key</strong> – The unique token string used for integration.</li>
-<li><strong>Status</strong> – Indicates whether the key is Active or Inactive.</li>
-<li><strong>Permissions</strong> – Modules or scopes the key is authorized to access.</li>
-<li><strong>Rate Limit</strong> – Maximum number of requests allowed within the defined period.</li>
-<li><strong>Last Used</strong> – Timestamp of the most recent request made using the key.</li>
-<li><strong>Actions</strong> – Options to view, edit, regenerate, or revoke the API key.</li>
-</ul>
-<p>This view enables administrators to efficiently monitor and manage API usage across all integrations.</p>
-<h3 id="generating-api-keys">Generating API Keys</h3>
-<p>API keys in CLM allow secure integration of external systems with CLM services. Administrators can generate API keys with controlled permissions, validity, and access rules.</p>
-<h4 id="navigate-to-the-api-key-page">Navigate to the API Key Page</h4>
-<p>From the sidebar menu, go to <strong>API Keys</strong>.<br />
-On the top-right corner of the page, click the <strong>Generate Key</strong> button.</p>
-<h4 id="fill-in-the-api-key-form">Fill in the API Key Form</h4>
-<p>A form will open with the following fields:</p>
-<ul>
-<li><strong>Key Name</strong> – Enter a unique name for the API key.</li>
-<li><strong>Description</strong> – Provide a short description of the key’s purpose.</li>
-<li><strong>Expires At</strong> – Select the key expiration period:<ul>
-<li><strong>30 Days</strong></li>
-<li><strong>60 Days</strong></li>
-<li><strong>Never</strong></li>
-<li><strong>Custom</strong> – Choose a specific expiration date manually.</li>
+<li>
+<p><strong>URLs</strong> for frontend, backend, and EJBCA</p>
+</li>
+<li>
+<p><strong>Keycloak</strong> authentication</p>
+</li>
+<li>
+<p><strong>SMTP server</strong> for email notifications</p>
+</li>
 </ul>
 </li>
-<li><strong>Permissions</strong> – Select modules or features this API key can access by checking/unchecking options in the permissions list.</li>
-<li><strong>Rate Limit (Requests)</strong> – Define the number of requests allowed for this API key.</li>
-<li><strong>Per (Time)</strong> – Choose the time unit for rate limiting (Hours, Minutes, or Days).</li>
-<li><strong>IP Whitelist</strong> – Specify one or more IP addresses allowed to use this API key.
-<img alt="Generate api key" src="../images/Addapikey.png" /></li>
+<li>
+<p>Pull and start backend containers:</p>
+<p><code>docker compose pull docker compose up -d</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="9-verification"><strong>9. Verification</strong></h2>
+<p>After deployment:</p>
+<ul>
+<li>Access <strong>CLM UI</strong> at:<br />
+    https://app.clm.YOURDOMAIN.com</li>
 </ul>
-<h4 id="save-the-api-key">Save the API Key</h4>
-<p>After completing the form, click the <strong>Generate Key</strong> button.</p>
-<h3 id="using-api-keys-for-integration">Using API Keys for Integration</h3>
-<p>Once an API key is generated, administrators can share it with authorized users or external systems that need to communicate with CLM services.</p>
-<p>External applications can use the API key to securely call CLM’s REST APIs, available in the <strong>CLM API Swagger</strong> interface.</p>
-<p>To authenticate API requests, include the generated API key in the <strong>Authorization</strong> header as follows:</p>
-<p><code>Authorization: Bearer &lt;your-api-key&gt;</code></p>
-<p>This allows external systems to invoke CLM endpoints such as certificate management, tenant data, compliance operations, and other available modules — based on the permissions assigned to the API key.</p>
 
 
 
