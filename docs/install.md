@@ -4,7 +4,7 @@ This guide provides a step-by-step walkthrough for installing **vScrawl** on an 
 
 ---
 
-## **1. Minimum Requirements**
+## **1. System Requirements**
 
 
 | Resource              | Specification      |

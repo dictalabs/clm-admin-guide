@@ -154,7 +154,7 @@ After completing the form, click the **Generate Key** button.
 
 Once an API key is generated, administrators can share it with authorized users or external systems that need to communicate with CLM services.
 
-External applications can use the API key to securely call CLM’s REST APIs, available in the **CLM API Swagger** interface.
+External applications can use the API key to securely call CLM’s REST APIs, documented at: https://YOURDOMAIN/docs.
 
 To authenticate API requests, include the generated API key in the **Authorization** header as follows:
 
