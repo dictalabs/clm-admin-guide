@@ -4,7 +4,8 @@ This guide provides a step-by-step walkthrough for installing **vScrawl** on an 
 
 ---
 
-## **1. Minimum Requirements**
+## Install on Single Evaluation Server
+### **1. Minimum Requirements**
 
 
 | Resource              | Specification      |
@@ -17,15 +18,15 @@ This guide provides a step-by-step walkthrough for installing **vScrawl** on an 
 
 ---
 
-## **2. Pre-Requisites Setup**
+### **2. Pre-Requisites Setup**
 
 Before deploying CLM, ensure that the following tools and configurations are set up.
 
-### **Step 1: Install zip**
+#### **Step 1: Install zip**
 
 `sudo apt update && sudo apt install zip -y`
 
-### **Step 2: Unzip CLM Package**
+#### **Step 2: Unzip CLM Package**
 
 Unzip the deployment package provided by your administrator.
 
@@ -33,27 +34,27 @@ Unzip the deployment package provided by your administrator.
 
 ---
 
-## **3. Docker Installation**
+### **3. Docker Installation**
 
 The CLM backend and frontend run as Docker containers. Follow the steps below to install Docker.
 
-### **Step 3.1: Add Docker’s Official GPG Key**
+#### **Step 3.1: Add Docker’s Official GPG Key**
 
 `sudo apt-get update`
 `sudo apt-get install ca-certificates curl`
 `sudo install -m 0755 -d /etc/apt/keyrings`
 `sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`
 `sudo chmod a+r /etc/apt/keyrings/docker.asc`
-### **Step 3.2: Add Docker Repository**
+#### **Step 3.2: Add Docker Repository**
 
 `echo \   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \   https://download.docker.com/linux/ubuntu \   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
 `sudo apt-get update`
 
-### **Step 3.3: Install Docker Engine and Compose**
+#### **Step 3.3: Install Docker Engine and Compose**
 
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y`
 
-### **Step 3.4: Allow Docker to Run Without Sudo**
+#### **Step 3.4: Allow Docker to Run Without Sudo**
 
 `sudo groupadd docker`
 `sudo usermod -aG docker $USER`
@@ -61,7 +62,7 @@ The CLM backend and frontend run as Docker containers. Follow the steps below to
 
 ---
 
-## **4. Install NGINX**
+### **4. Install NGINX**
 
 Install and configure **NGINX** as a reverse proxy for your CLM services.
 
@@ -69,7 +70,7 @@ Install and configure **NGINX** as a reverse proxy for your CLM services.
 
 ---
 
-## **5. DNS Configuration**
+### **5. DNS Configuration**
 
 Create the following **DNS entries** for your CLM environment (replace YOURDOMAIN.com with your actual domain):
 
@@ -87,7 +88,7 @@ Create the following **DNS entries** for your CLM environment (replace YOURDOMAI
 
 ---
 
-## **6. NGINX Configuration**
+### **6. NGINX Configuration**
 
 ### **Step 6.1: Configure NGINX Sites**
 
@@ -118,13 +119,13 @@ Create the following **DNS entries** for your CLM environment (replace YOURDOMAI
 
 ---
 
-## **7. SSL Certificates Setup (Let’s Encrypt)**
+### **7. SSL Certificates Setup (Let’s Encrypt)**
 
-### **Step 7.1: Install Certbot**
+#### **Step 7.1: Install Certbot**
 
 `sudo apt install certbot python3-certbot-nginx -y`
 
-### **Step 7.2: Generate SSL Certificates**
+#### **Step 7.2: Generate SSL Certificates**
 
 Run the following commands for each domain:
 
@@ -140,15 +141,15 @@ Run the following commands for each domain:
 
 `sudo certbot certonly --standalone -d est.YOURDOMAIN.com`
 
-### **Step 7.3: Verify and Enable NGINX**
+#### **Step 7.3: Verify and Enable NGINX**
 
 `sudo nginx -t sudo service nginx start`
 
 ---
 
-## **8. CLM Deployment**
+### **8. CLM Deployment**
 
-### **Step 8.1: Frontend (Web Application)**
+#### **Step 8.1: Frontend (Web Application)**
 
 1. Navigate to the **clm-web-app** directory:
     
@@ -163,7 +164,7 @@ Run the following commands for each domain:
 
 ---
 
-### **Step 8.2: Backend (Server Application)**
+#### **Step 8.2: Backend (Server Application)**
 
 1. Navigate to the **clm-server** directory:
     
@@ -184,7 +185,7 @@ Run the following commands for each domain:
 
 ---
 
-## **9. Verification**
+### **9. Verification**
 
 After deployment:
 
@@ -193,7 +194,7 @@ After deployment:
 
 ## **Production Deployment**
 
-## Pre-Requisites
+### 1. Pre-Requisites
 In order to deploy CLM on cloud following pre-requisites should be kept in mind.
 
 - 6 DNS URL Entries for Frontend and Backend APIs.
@@ -215,7 +216,7 @@ In order to deploy CLM on cloud following pre-requisites should be kept in mind.
 - Each backend server and frontend server requires Docker Engine because frontend app and backend services would run inside Docker Containers.
     
 
-## License
+### 2. License
 
 A license file issue by product owner will be required for each separate backend server.
 
@@ -232,7 +233,7 @@ Each backend server will be running
 
 No license required for Postgresql Database instance or Frontend. License is required only for CLM API service to run.
 
-## VPC/VNet Creation on Cloud
+### 3. VPC/VNet Creation on Cloud
 
 First of all on any cloud you will first have to create a project on GCP/Hetzner or VPC/VNET on AWS/Azure
 
@@ -242,9 +243,9 @@ Here’s how you can use that **automatic deployment option** instead of creatin
 
 ---
 
-## ⚡ **Automatic VPC Creation (Recommended for Quick Setup)**
+### 4. **Automatic VPC Creation (Recommended for Quick Setup)**
 
-### 🪜 Steps (AWS Console)
+#### Steps (AWS Console)
 
 1. **Open AWS Management Console** → Go to **VPC Dashboard**  
     🔗 [https://console.aws.amazon.com/vpc](https://console.aws.amazon.com/vpc "https://console.aws.amazon.com/vpc")
@@ -255,15 +256,15 @@ Here’s how you can use that **automatic deployment option** instead of creatin
     
 4. Under **Resources to create**, you’ll see:
     
-    - ✅ VPC
+    - VPC
         
-    - ✅ 2 Availability Zones
+    - 2 Availability Zones
         
-    - ✅ Public and Private subnets
+    - Public and Private subnets
         
-    - ✅ Internet Gateway
+    - Internet Gateway
         
-    - ✅ NAT Gateway (optional)
+    - NAT Gateway (optional)
         
 5. Configure the options:
     
@@ -290,17 +291,17 @@ Here’s how you can use that **automatic deployment option** instead of creatin
 
 ---
 
-🧩 What AWS Automatically Creates
+What AWS Automatically Creates
 
-|   |   |   |
-|---|---|---|
-|Resource|Example Name|Purpose|
-|**VPC**|`my-vpc`|10.0.0.0/16 network|
-|**Public Subnets**|`PublicSubnet1`, `PublicSubnet2`|For internet-facing resources|
-|**Private Subnets**|`PrivateSubnet1`, `PrivateSubnet2`|For internal workloads|
-|**Route Tables**|`PublicRT`, `PrivateRT`|Auto-routed accordingly|
-|**Internet Gateway**|`my-vpc-igw`|For public subnet internet access|
-|**NAT Gateway (optional)**|`my-vpc-natgw`|For outbound traffic from private subnets|
+|                            |                                    |                                           |
+| -------------------------- | ---------------------------------- | ----------------------------------------- |
+| Resource                   | Example Name                       | Purpose                                   |
+| **VPC**                    | `my-vpc`                           | 10.0.0.0/16 network                       |
+| **Public Subnets**         | `PublicSubnet1`, `PublicSubnet2`   | For internet-facing resources             |
+| **Private Subnets**        | `PrivateSubnet1`, `PrivateSubnet2` | For internal workloads                    |
+| **Route Tables**           | `PublicRT`, `PrivateRT`            | Auto-routed accordingly                   |
+| **Internet Gateway**       | `my-vpc-igw`                       | For public subnet internet access         |
+| **NAT Gateway (optional)** | `my-vpc-natgw`                     | For outbound traffic from private subnets |
 
 ---
 
@@ -310,9 +311,9 @@ In under a minute, AWS deploys a **fully working VPC network** with two public a
 
 Similarly you can create any VNet on Azure or VPC on GCP or cloud service provider of your choice.
 
-## Application Load Balancer
+### 5. Application Load Balancer
 
-### Requirements
+#### Requirements
 
 1 Application Load Balancer required in public subnet for 1 DNS URL of Frontend
 
@@ -332,21 +333,21 @@ Similarly you can create any VNet on Azure or VPC on GCP or cloud service provid
 
 Create 6 Application Load Balancers and 6 Target Groups
 
-|   |   |   |
-|---|---|---|
-|**DNS**|**Application Load Balancer**|**Target Group**|
-|[app.clm.example.com](http://test.app.clm.dictalabs.com/ "http://test.app.clm.dictalabs.com").|Frontend ALB|Frontend Target Group|
-|[api.clm.example.com](http://test.api.clm.dictalabs.com/ "http://test.api.clm.dictalabs.com").|Backend CLM API|Backend CLM API Target Group|
-|[acme.clm.example.com](http://test.acme.clm.dictalabs.com/ "http://test.acme.clm.dictalabs.com").|Backend ACME API|Backend ACME API|
-|[scep.clm.example.com](http://test.scep.clm.dictalabs.com/ "http://test.scep.clm.dictalabs.com").|Backend SCEP API|Backend SCEP API|
-|[est.clm.example.com](http://test.est.clm.dictalabs.com/ "http://test.est.clm.dictalabs.com").|Backend EST API|Backend EST API|
-|[cmp.clm.example.com](http://test.cmp.clm.dictalabs.com/ "http://test.cmp.clm.dictalabs.com").|Backend CMP API|Backend CMP API|
+|                                                                                                   |                               |                              |
+| ------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------- |
+| **DNS**                                                                                           | **Application Load Balancer** | **Target Group**             |
+| [app.clm.example.com](http://test.app.clm.dictalabs.com/ "http://test.app.clm.dictalabs.com").    | Frontend ALB                  | Frontend Target Group        |
+| [api.clm.example.com](http://test.api.clm.dictalabs.com/ "http://test.api.clm.dictalabs.com").    | Backend CLM API               | Backend CLM API Target Group |
+| [acme.clm.example.com](http://test.acme.clm.dictalabs.com/ "http://test.acme.clm.dictalabs.com"). | Backend ACME API              | Backend ACME API             |
+| [scep.clm.example.com](http://test.scep.clm.dictalabs.com/ "http://test.scep.clm.dictalabs.com"). | Backend SCEP API              | Backend SCEP API             |
+| [est.clm.example.com](http://test.est.clm.dictalabs.com/ "http://test.est.clm.dictalabs.com").    | Backend EST API               | Backend EST API              |
+| [cmp.clm.example.com](http://test.cmp.clm.dictalabs.com/ "http://test.cmp.clm.dictalabs.com").    | Backend CMP API               | Backend CMP API              |
 
-### Firewall/Security Groups
+#### Firewall/Security Groups
 
 Allow TCP port 5432 from Backend Server IP network like 10.0.0.0/16
 
-## Target Groups
+### Target Groups
 
 Define 6 Target Groups for 6 URLs
 
@@ -362,7 +363,7 @@ Health Check Path
 
 /login/health
 
-## Backend CLM API Target Group
+### 6. Backend CLM API Target Group
 
 As shown in Diagram Backend Server runs clm api service.
 
@@ -374,7 +375,7 @@ Health Check Path
 
 /health
 
-### Backend ACME API
+#### Backend ACME API
 
 As shown in Diagram Backend Server runs acme service.
 
@@ -386,7 +387,7 @@ Health Check Path
 
 /health
 
-### Backend SCEP API
+#### Backend SCEP API
 
 As shown in Diagram Backend Server runs scep service.
 
@@ -398,7 +399,7 @@ Health Check Path
 
 /health
 
-### Backend EST API
+#### Backend EST API
 
 As shown in Diagram Backend Server runs est service.
 
@@ -410,7 +411,7 @@ Health Check Path
 
 /health
 
-### Backend CMP API
+#### Backend CMP API
 
 As shown in Diagram Backend server runs cmp service.
 
@@ -422,7 +423,7 @@ Health Check Path
 
 /health
 
-## Endpoint URLs
+### 7. Endpoint URLs
 
 Note Down the Endpoint URLs of Application Load Balancers.
 
@@ -430,31 +431,31 @@ DNS Entries
 
 Create 6 DNS entries on your DNS registrar (e.g., godaddy, namecheap)
 
-|   |   |
-|---|---|
-|**DNS CNAME**|**Endpoint of Application Load Balancer**|
-|[app.clm.example.com](http://test.app.clm.dictalabs.com/ "http://test.app.clm.dictalabs.com").|Endpoint DNS name of Frontend ALB|
-|[api.clm.example.com](http://test.api.clm.dictalabs.com/ "http://test.api.clm.dictalabs.com").|Endpoint DNS name of Backend CLM API ALB|
-|[acme.clm.example.com](http://test.acme.clm.dictalabs.com/ "http://test.acme.clm.dictalabs.com").|Endpoint DNS name of Backend ACME API|
-|[scep.clm.example.com](http://test.scep.clm.dictalabs.com/ "http://test.scep.clm.dictalabs.com").|Endpoint DNS name of Backend SCEP API|
-|[est.clm.example.com](http://test.est.clm.dictalabs.com/ "http://test.est.clm.dictalabs.com").|Endpoint DNS name of Backend EST API|
-|[cmp.clm.example.com](http://test.cmp.clm.dictalabs.com/ "http://test.cmp.clm.dictalabs.com").|Endpoint DNS name of Backend CMP API|
+|                                                                                                   |                                           |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| **DNS CNAME**                                                                                     | **Endpoint of Application Load Balancer** |
+| [app.clm.example.com](http://test.app.clm.dictalabs.com/ "http://test.app.clm.dictalabs.com").    | Endpoint DNS name of Frontend ALB         |
+| [api.clm.example.com](http://test.api.clm.dictalabs.com/ "http://test.api.clm.dictalabs.com").    | Endpoint DNS name of Backend CLM API ALB  |
+| [acme.clm.example.com](http://test.acme.clm.dictalabs.com/ "http://test.acme.clm.dictalabs.com"). | Endpoint DNS name of Backend ACME API     |
+| [scep.clm.example.com](http://test.scep.clm.dictalabs.com/ "http://test.scep.clm.dictalabs.com"). | Endpoint DNS name of Backend SCEP API     |
+| [est.clm.example.com](http://test.est.clm.dictalabs.com/ "http://test.est.clm.dictalabs.com").    | Endpoint DNS name of Backend EST API      |
+| [cmp.clm.example.com](http://test.cmp.clm.dictalabs.com/ "http://test.cmp.clm.dictalabs.com").    | Endpoint DNS name of Backend CMP API      |
 
 OR
 
 In case your Application Load Balancers use Public IP addresses instead of DNS names.
 
-|   |   |
-|---|---|
-|**DNS A record**|**Endpoint of Application Load Balancer**|
-|[app.clm.example.com](http://test.app.clm.dictalabs.com/ "http://test.app.clm.dictalabs.com").|Public IP Address of Frontend ALB|
-|[api.clm.example.com](http://test.api.clm.dictalabs.com/ "http://test.api.clm.dictalabs.com").|Public IP Address of Backend CLM API ALB|
-|[acme.clm.example.com](http://test.acme.clm.dictalabs.com/ "http://test.acme.clm.dictalabs.com").|Public IP Address of Backend ACME API|
-|[scep.clm.example.com](http://test.scep.clm.dictalabs.com/ "http://test.scep.clm.dictalabs.com").|Public IP Address of Backend SCEP API|
-|[est.clm.example.com](http://test.est.clm.dictalabs.com/ "http://test.est.clm.dictalabs.com").|Public IP Address of Backend EST API|
-|[cmp.clm.example.com](http://test.cmp.clm.dictalabs.com/ "http://test.cmp.clm.dictalabs.com").|Public IP Address of Backend CMP API|
+|                                                                                                   |                                           |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| **DNS A record**                                                                                  | **Endpoint of Application Load Balancer** |
+| [app.clm.example.com](http://test.app.clm.dictalabs.com/ "http://test.app.clm.dictalabs.com").    | Public IP Address of Frontend ALB         |
+| [api.clm.example.com](http://test.api.clm.dictalabs.com/ "http://test.api.clm.dictalabs.com").    | Public IP Address of Backend CLM API ALB  |
+| [acme.clm.example.com](http://test.acme.clm.dictalabs.com/ "http://test.acme.clm.dictalabs.com"). | Public IP Address of Backend ACME API     |
+| [scep.clm.example.com](http://test.scep.clm.dictalabs.com/ "http://test.scep.clm.dictalabs.com"). | Public IP Address of Backend SCEP API     |
+| [est.clm.example.com](http://test.est.clm.dictalabs.com/ "http://test.est.clm.dictalabs.com").    | Public IP Address of Backend EST API      |
+| [cmp.clm.example.com](http://test.cmp.clm.dictalabs.com/ "http://test.cmp.clm.dictalabs.com").    | Public IP Address of Backend CMP API      |
 
-## Postgres Database Setup
+### 8. Postgres Database Setup
 
 For Postgres Setup create a DB instance with a
 
@@ -481,33 +482,33 @@ default Postgres port 5432
 
 If your cloud provider just creates a postgres instance with default username postgres, database postgres with some password you set. Then you will have to install a psql client on your machine or a cloud server.
 
-### DB User and DB Creation
+#### DB User and DB Creation
 
  Step-by-Step (via `psql`)
 
- 1️⃣ Connect to your PostgreSQL server as an admin (e.g., `postgres` or master user)
+ 1. Connect to your PostgreSQL server as an admin (e.g., `postgres` or master user)
 
-`psql -h psql -h database-instance-IP-addres -U postgres -d postgres -U postgres`
+	`psql -h psql -h database-instance-IP-addres -U postgres -d postgres -U postgres`
 
- by default postgres db instance has a default user 'postgres'
+	 by default postgres db instance has a default user 'postgres'
 
-2️⃣ Create the database
+2. Create the database
 
- `CREATE DATABASE clm_db;`
+	 `CREATE DATABASE clm_db;`
 
-3️⃣ Create the user and assign password
+3. Create the user and assign password
 
-`CREATE USER clm_user WITH PASSWORD 'clm_password';`
+	`CREATE USER clm_user WITH PASSWORD 'clm_password';`
 
-4️⃣ Grant privileges on the database
+4. Grant privileges on the database
 
- `GRANT ALL PRIVILEGES ON DATABASE clm_db TO clm_user;`
+	 `GRANT ALL PRIVILEGES ON DATABASE clm_db TO clm_user;`
 
- 5️⃣ (Optional but Recommended) Make `clm_user` the owner of that database
+ 5. (Optional but Recommended) Make `clm_user` the owner of that database
 
- `ALTER DATABASE clm_db OWNER TO clm_user;`
+	 `ALTER DATABASE clm_db OWNER TO clm_user;`
 
- 6️⃣ Verify
+ 6. Verify
 
 List Databases
 
@@ -517,9 +518,9 @@ List Databases
 
 `\du`
 
- 7️⃣ Exit `psql` 
+ 7. Exit `psql` 
 
-`\q`
+	`\q`
 
 Now test login
 
@@ -529,7 +530,7 @@ Now test login
 
 Enter password for example in this guide we are using “clm_password”.
 
-## Frontend Server Deployment
+### 9. Frontend Server Deployment
 
 System Requirements
 
@@ -544,11 +545,10 @@ System Requirements
 - Firewall/Security Group allowed ports = SSH, TCP port 8080
     
 
-## High Availability
+### 10. High Availability
 
 It is recommended to have atleast two frontend servers in different availability zones on (Cloud Service Provider of your choice) for hight availability.  
   
-
 ### Pre-requisite Configuration
 
 On each Frontend Ubuntu Server  
@@ -592,7 +592,7 @@ Install zip
 
 `apt install zip -y`
 
-## Backend Server Deployment
+### 11. Backend Server Deployment
 
 System Requirements
 
@@ -606,11 +606,11 @@ System Requirements
     
 - Firewall/Security Group allowed ports = SSH, TCP ports 8000, 8001, 8002, 8003, 18080
 
-## High Availability
+### 12. High Availability
 
 It is recommended to have at least two backend servers in different availability zones on (Cloud Service Provider of your choice) for high availability.
 
-### Pre-requisite Configuration
+#### Pre-requisite Configuration
 
 On each backend Ubuntu Server  
 Install Docker using
@@ -653,17 +653,17 @@ Install zip
 
 `apt install zip -y`
 
-## Register Servers to Target Groups
+### 13. Register Servers to Target Groups
 
 Register Servers to Target Groups of ALBs (Application Load Balancers)
 
 Register frontend servers to Frontend Target Group.
 
-Register all backend servers in each Backend Target Group. Same backend servers will be part of all Backent Target Groups.
+Register all backend servers in each Backend Target Group. Same backend servers will be part of all Backend Target Groups.
 
-## Frontend Server Application Configuration
+### 14. Frontend Server Application Configuration
 
-### CLM Web App Package
+#### CLM Web App Package
 
 Copy clm-web-app.zip to server for example in /home/clm-frontend using SCP with any tool like winSCP.
 
@@ -671,7 +671,7 @@ unzip clm-web-app.zip
 
 go to directory clm-web-app
 
-### Enviornment Variables
+#### Environment Variables
 
 edit config.json and write backend api domain.
 
@@ -691,15 +691,15 @@ To view logs of a backend service you can use following command and to stop view
 
 `docker logs -f clm-web-app`
 
-## Backend Server Application Configuration
+### 14. Backend Server Application Configuration
 
 ### CLM Server Package
 
-Copy clm-server.zip to server for example in /home/clm-backend using SCP with any tool like winSCP.
+Copy clm-package.zip to server for example in /home/clm-backend using SCP with any tool like winSCP.
 
-unzip clm-server.zip
+unzip clm-package.zip
 
-go to directory clm-server
+go to directory clm-package
 
 ### Licensing
 
@@ -712,7 +712,7 @@ You will get system-uuid like this
 
 Share this OS ID with Dictalabs to acquire license file **license.lic.xml** for this server and copy license file in the same directory.
 
-### Environment Varialbles
+#### Environment Varialbles
 
 edit .env and set Environment variables.
 
