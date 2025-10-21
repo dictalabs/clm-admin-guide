@@ -30,7 +30,7 @@ Before deploying CLM, ensure that the following tools and configurations are set
 
 Unzip the deployment package provided by your administrator.
 
-`unzip clm-package.zip`
+`unzip clm-package-v1.0.zip`
 
 ---
 
@@ -153,7 +153,7 @@ Run the following commands for each domain:
 
 1. Navigate to the **clm-web-app** directory:
     
-    `cd clm-web-app`
+    `cd clm-package-v1.0/clm-package-evaluation/clm-web-app`
     
 2. Update the config.json file with your **Backend API URL** (e.g., https://api.clm.YOURDOMAIN.com).
     
@@ -168,7 +168,7 @@ Run the following commands for each domain:
 
 1. Navigate to the **clm-server** directory:
     
-    `cd clm-server`
+    `cd clm-package-v1.0/clm-package-evaluation/clm-server`
     
 2. Edit the .env file to configure:
     
@@ -239,11 +239,12 @@ First of all on any cloud you will first have to create a project on GCP/Hetzner
 
 Yes — AWS now gives you an option to **automatically create a VPC** with **public and private subnets across multiple Availability Zones** using its **VPC Wizard** or the **“VPC with subnets”** template.
 
-Here’s how you can use that **automatic deployment option** instead of creating everything manually 👇
+Here’s how you can use that **automatic deployment option** instead of creating everything manually.
 
 ---
 
 ### 4. **Automatic VPC Creation (Recommended for Quick Setup)**
+AWS Cloud is being used as example in the below installation steps.  You may generalize it based on your preferred cloud service provider
 
 #### Steps (AWS Console)
 
@@ -649,9 +650,9 @@ sudo usermod -aG docker $USER
 ```
 
 
-Install zip
+Install unzip
 
-`apt install zip -y`
+`apt install unzip -y`
 
 ### 13. Register Servers to Target Groups
 
@@ -665,11 +666,11 @@ Register all backend servers in each Backend Target Group. Same backend servers 
 
 #### CLM Web App Package
 
-Copy clm-web-app.zip to server for example in /home/clm-frontend using SCP with any tool like winSCP.
+Copy clm-package-v1.0.zip to server for example in /home/clm-frontend using SCP with any tool like winSCP.
 
-unzip clm-web-app.zip
+unzip clm-package-v1.0.zip
 
-go to directory clm-web-app
+go to directory clm-package-v1.0/clm-package-production/clm-web-app
 
 #### Environment Variables
 
@@ -695,11 +696,11 @@ To view logs of a backend service you can use following command and to stop view
 
 ### CLM Server Package
 
-Copy clm-package.zip to server for example in /home/clm-backend using SCP with any tool like winSCP.
+Copy clm-package-v1.0.zip to server for example in /home/clm-backend using SCP with any tool like winSCP.
 
-unzip clm-package.zip
+unzip clm-package-v1.0.zip
 
-go to directory clm-package
+go to directory clm-package-v1.0/clm-package-production/clm-server
 
 ### Licensing
 
@@ -710,9 +711,9 @@ You will get system-uuid like this
 **OS ID: deff8676-a68f-4662-a30b-c7485e3e3ff9**  
 **Share this OS ID with Dictalabs to acquire license file for this deployment.**
 
-Share this OS ID with Dictalabs to acquire license file **license.lic.xml** for this server and copy license file in the same directory.
+Share this OS ID with Dictalabs Support (support@dictalabs.com) to acquire license file **license.lic.xml** for this server and copy license file in the same directory.
 
-#### Environment Varialbles
+#### Environment Variables
 
 edit .env and set Environment variables.
 
@@ -734,7 +735,7 @@ Set Keycloak parameters provided by Keycloak service provider (for example Dicta
 
 Set EJBCA connector URL (for example Dictalabs provided EJBCA)
 
-`EJBCA_CONNECTOR=http://144.126.224.110:8004`
+`EJBCA_CONNECTOR=http://YourDomain.com:8004`
 
 To run all the backend services run the following command
 
