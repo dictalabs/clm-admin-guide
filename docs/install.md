@@ -24,7 +24,7 @@ Before deploying CLM, ensure that the following tools and configurations are set
 
 #### **Step 1: Install zip**
 
-`sudo apt update && sudo apt install zip -y`
+`sudo apt update && sudo apt install unzip -y`
 
 #### **Step 2: Unzip CLM Package**
 
