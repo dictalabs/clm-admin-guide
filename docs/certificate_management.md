@@ -7,7 +7,7 @@ The **Certificate Management** module allows administrators to view, monitor, an
 From the **sidebar menu**, navigate to **Certificate Management**.
 
 The Certificate Management page opens, displaying an overview of all certificates in the system.
-![Certificate Management Page Overview](images/certificate_management_page_overview.png)
+![[clm-admin-guide/docs/images/certificate_requests_page_overview.png|Certificate Management Page Overview]]
 
 ### Certificate Management Overview
 
@@ -77,6 +77,33 @@ To issue a new certificate in CLM:
     The new certificate will be added to the Certificates List.  
     Certificates can later be renewed, revoked, or reissued as required.
 
+## Importing Certificates
+
+The **Certificate Import** feature allows administrators to upload and import certificates individually or in bulk. This is useful for onboarding existing certificates into the system efficiently while ensuring only valid and secure files are accepted.
+
+### Accessing the Import Feature
+
+- Navigate to the **Certificates** page.
+    
+- Click the **Import Certificate** button located at the top-right corner.
+
+**Supported Upload Types**
+The system supports multiple import methods:
+
+- **Single Certificate File** – Upload one certificate file.
+	
+- **Multiple Certificate Files** – Upload multiple certificate files in a single request.
+	 
+- **ZIP Archive (.zip)** – Upload a ZIP file containing multiple certificate files.
+	
+- **Certificate Chain File (PEM)** – Upload a `.pem` file containing multiple certificates (multiple `BEGIN CERTIFICATE` blocks).
+
+**Supported File Formats**
+Only the following file formats are supported:
+
+- `.cer`
+- `.der`
+- `.pem`
 
 ## Managing Certificates
 

@@ -4,7 +4,7 @@ This guide provides a step-by-step walkthrough for installing **vScrawl** on an 
 
 ---
 
-## Install on Single Evaluation Server
+## **Install on Single Evaluation Server**
 ### **1. Minimum Requirements**
 
 
