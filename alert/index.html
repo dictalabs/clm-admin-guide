@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../certificate_requests/">
-      
-      
-        <link rel="next" href="../compliance/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Certificate Management - CLM Admin Guide</title>
+        <title>Managing Alerts - CLM Admin Guide</title>
       
     
     
@@ -64,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#certificate-management" class="md-skip">
+        <a href="#managing-alerts" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Certificate Management
+              Managing Alerts
             
           </span>
         </div>
@@ -413,30 +409,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Certificate Management
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../certificate_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,110 +421,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-certificate-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessing Certificate Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Accessing Certificate Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#certificate-management-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Management Overview
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certificates-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificates List
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a New Certificate
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#importing-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importing Certificates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Importing Certificates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#accessing-the-import-feature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessing the Import Feature
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Certificates
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -866,26 +738,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-certificate-management" class="md-nav__link">
+  <a href="#alerts-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing Certificate Management
+      Alerts Overview
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Accessing Certificate Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#certificate-management-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certificate Management Overview
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -899,37 +756,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#certificates-list" class="md-nav__link">
+  <a href="#alerts-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Certificates List
+      Alerts List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-certificate" class="md-nav__link">
+  <a href="#creating-a-new-alert" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a New Certificate
+      Creating a New Alert
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#importing-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importing Certificates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Importing Certificates">
+    <nav class="md-nav" aria-label="Creating a New Alert">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#accessing-the-import-feature" class="md-nav__link">
+  <a href="#1-navigate-to-the-alerts-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing the Import Feature
+      1. Navigate to the Alerts Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fill-in-the-alert-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fill in the Alert Form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-save-the-alert" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Save the Alert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-post-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Post-Creation
     </span>
   </a>
   
@@ -937,15 +812,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-certificates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Certificates
-    </span>
-  </a>
   
 </li>
       
@@ -964,175 +830,101 @@
                   
 
 
-<h1 id="certificate-management">Certificate Management</h1>
-<p>The <strong>Certificate Management</strong> module allows administrators to view, monitor, and manage all issued certificates across tenants. This ensures that active certificates remain compliant, expiring certificates are renewed on time, and any certificates requiring attention are handled proactively.</p>
-<h2 id="accessing-certificate-management">Accessing Certificate Management</h2>
-<p>From the <strong>sidebar menu</strong>, navigate to <strong>Certificate Management</strong>.</p>
-<p>The Certificate Management page opens, displaying an overview of all certificates in the system.
-![[clm-admin-guide/docs/images/certificate_requests_page_overview.png|Certificate Management Page Overview]]</p>
-<h3 id="certificate-management-overview">Certificate Management Overview</h3>
-<p>At the top of the page, administrators can view summary information displayed in cards:</p>
+<h1 id="managing-alerts">Managing Alerts</h1>
+<p>The <strong>Alerts</strong> section allows administrators to configure and monitor system alerts such as reminders and scheduled reports.</p>
+<p>![[alerts_page_overview.png]]</p>
+<h3 id="alerts-overview">Alerts Overview</h3>
+<p>At the top of the <strong>Alerts</strong> page, administrators can view summary information displayed in cards:</p>
 <ul>
 <li>
-<p><strong>Total Tenants</strong> – The number of tenants that currently have issued certificates.</p>
+<p><strong>Total Alerts</strong> – The total number of alerts configured in the system.</p>
 </li>
 <li>
-<p><strong>Total Certificates</strong> – The total number of certificates issued and stored in the system.</p>
+<p><strong>Active Alerts</strong> – The number of currently active alerts.</p>
 </li>
 <li>
-<p><strong>Active Certificates</strong> – The number of currently valid and active certificates.</p>
-</li>
-<li>
-<p><strong>Need Attention</strong> – The number of certificates that are nearing expiry, revoked, or have compliance issues.</p>
+<p><strong>Daily Alerts(Is Daily Run)</strong> – The number of alerts scheduled to run daily.</p>
 </li>
 </ul>
-<h2 id="search-and-filter">Search and Filter</h2>
+<h3 id="search-and-filter">Search and Filter</h3>
 <p>Below the summary cards, a <strong>Search and Filter</strong> section allows administrators to:</p>
 <ul>
 <li>
-<p>Search certificates by domain, tenant, serial number, or status.</p>
+<p>Search alerts by name or keyword.</p>
 </li>
 <li>
-<p>Apply filters (e.g., Active, Expiring Soon, Revoked, Expired).</p>
+<p>Search alerts by provider name.</p>
+</li>
+<li>
+<p>Apply filters such as:</p>
+<ul>
+<li>Active</li>
+<li>Inactive</li>
+</ul>
 </li>
 </ul>
-<h2 id="certificates-list">Certificates List</h2>
-<p>The <strong>Certificates List Table</strong> provides detailed information about each certificate, typically including:</p>
+<h3 id="alerts-list">Alerts List</h3>
+<p>The alerts list displays all configured alerts in a table format, typically including:</p>
 <ul>
 <li>
-<p><strong>Certificate Name / Common Name</strong></p>
+<p><strong>Alert Name</strong></p>
 </li>
 <li>
-<p><strong>Tenant</strong></p>
+<p><strong>Description</strong></p>
 </li>
 <li>
-<p><strong>Serial Number</strong></p>
+<p><strong>Instance Provider</strong></p>
 </li>
 <li>
-<p><strong>Type</strong> (e.g., SSL/TLS, Client, Code Signing)</p>
+<p><strong>Notify Before (Days)</strong></p>
 </li>
 <li>
-<p><strong>Issued On / Expiry Date</strong></p>
+<p><strong>Status</strong> (Active/Inactive)</p>
 </li>
 <li>
-<p><strong>Status</strong> (Active, Expired, Revoked, Needs Attention)</p>
+<p><strong>Created At</strong></p>
 </li>
 <li>
-<p><strong>Actions</strong> (View, Renew, Revoke, Download)</p>
+<p><strong>Actions</strong> (e.g. Edit, or Delete)</p>
 </li>
 </ul>
-<p>This centralized view helps administrators ensure full visibility into the lifecycle of all certificates managed by the CLM system.</p>
-<h2 id="creating-a-new-certificate">Creating a New Certificate</h2>
-<p>To issue a new certificate in CLM:</p>
-<ol>
-<li><strong>Navigate to the Certificates Page</strong><br />
-    From the sidebar, select <strong>Certificates</strong>.<br />
-    On the top-right corner of the page, click the <strong>Issue Certificate</strong> button.
-<img alt="Create Certificate Form" src="../images/create_certificate_form.png" /></li>
-<li>
-<p><strong>Fill in the Certificate Form</strong><br />
-    A form will appear with the following fields:</p>
-</li>
-<li>
-<p><strong>Certificate Purpose (Dropdown)</strong> – Select the purpose of the certificate (e.g., TLS Authentication, Document Signing, Encryption).</p>
-</li>
-<li>
-<p><strong>Certificate Authority (Dropdown)</strong> – Choose the Certificate Authority that will issue this certificate.</p>
-</li>
-<li>
-<p><strong>Certificate Request (Dropdown)</strong> – Select the related certificate request that this certificate will be issued against.</p>
-</li>
-<li>
-<p><strong>Create the Certificate</strong><br />
-    After completing the form, click the <strong>Create Certificate</strong> button.</p>
-</li>
-<li>
-<p><strong>Post-Creation</strong><br />
-    The new certificate will be added to the Certificates List.<br />
-    Certificates can later be renewed, revoked, or reissued as required.</p>
-</li>
-</ol>
-<h2 id="importing-certificates">Importing Certificates</h2>
-<p>The <strong>Certificate Import</strong> feature allows administrators to upload and import certificates individually or in bulk. This is useful for onboarding existing certificates into the system efficiently while ensuring only valid and secure files are accepted.</p>
-<h3 id="accessing-the-import-feature">Accessing the Import Feature</h3>
+<p>This view helps administrators manage and maintain system-wide alert settings effectively.</p>
+<h2 id="creating-a-new-alert">Creating a New Alert</h2>
+<p>To configure a new alert in CLM, follow these steps:</p>
+<h3 id="1-navigate-to-the-alerts-page">1. Navigate to the Alerts Page</h3>
+<p>From the sidebar menu, select <strong>Alerts</strong>.</p>
+<p>On the top-right corner of the page, click the <strong>Add Alert</strong> button.</p>
+<p>![[alerts_dashboard_Add.png]]</p>
+<h3 id="2-fill-in-the-alert-form">2. Fill in the Alert Form</h3>
+<p>A form will open with the following fields:</p>
 <ul>
 <li>
-<p>Navigate to the <strong>Certificates</strong> page.</p>
+<p><strong>Alert Name</strong> – Enter a unique name for the alert.</p>
 </li>
 <li>
-<p>Click the <strong>Import Certificate</strong> button located at the top-right corner.</p>
+<p><strong>Description</strong> – Provide a short description of the alert.</p>
+</li>
+<li>
+<p><strong>Instance Provider (Dropdown)</strong> – Select the instance/provider associated with this alert.</p>
+</li>
+<li>
+<p><strong>Notify Before (Days)</strong> – Specify the number of days before the event or expiry when the alert should be triggered.</p>
+</li>
+<li>
+<p>Daily Send Time – Specify the time of day to send daily alerts (HH:MM).</p>
+</li>
+<li>
+<p>Notification emails – Enter the email addresses to receive alerts (maximum of 5).</p>
+</li>
+<li>
+<p><strong>Status (Dropdown)</strong> – Choose whether the alert is Active or Inactive. </p>
 </li>
 </ul>
-<p><strong>Supported Upload Types</strong>
-The system supports multiple import methods:</p>
-<ul>
-<li>
-<p><strong>Single Certificate File</strong> – Upload one certificate file.</p>
-</li>
-<li>
-<p><strong>Multiple Certificate Files</strong> – Upload multiple certificate files in a single request.</p>
-</li>
-<li>
-<p><strong>ZIP Archive (.zip)</strong> – Upload a ZIP file containing multiple certificate files.</p>
-</li>
-<li>
-<p><strong>Certificate Chain File (PEM)</strong> – Upload a <code>.pem</code> file containing multiple certificates (multiple <code>BEGIN CERTIFICATE</code> blocks).</p>
-</li>
-</ul>
-<p><strong>Supported File Formats</strong>
-Only the following file formats are supported:</p>
-<ul>
-<li><code>.cer</code></li>
-<li><code>.der</code></li>
-<li><code>.pem</code></li>
-</ul>
-<p><strong>For ZIP uploads:</strong></p>
-<ul>
-<li>
-<p>All files inside the archive must be in supported formats.</p>
-</li>
-<li>
-<p>If any unsupported file is detected, the entire upload will be rejected.</p>
-</li>
-</ul>
-<h2 id="managing-certificates">Managing Certificates</h2>
-<p>After a certificate has been generated in CLM, administrators can perform additional actions such as downloading, renewing, revoking, and reviewing certificate history.</p>
-<p><img alt="Manage Certificates" src="../images/manage_certificates.png" /></p>
-<ol>
-<li>
-<p><strong>Viewing Certificate Details</strong><br />
-    From the Certificates List, click the <strong>View</strong> button on a certificate.<br />
-    A popup will open displaying detailed certificate information.<br />
-    In this popup, admins can also access the <strong>Download Certificate</strong> button to download the issued certificate.</p>
-</li>
-<li>
-<p><strong>Renewing a Certificate</strong><br />
-    To renew a certificate, click the <strong>Renew</strong> button from the certificate actions.<br />
-    The renewal process will generate a new certificate based on the original request and configuration.</p>
-</li>
-<li>
-<p><strong>Revoking a Certificate</strong><br />
-    To revoke a certificate, click the <strong>Revoke</strong> button.<br />
-    A popup will appear with the following fields:</p>
-</li>
-<li>
-<p><strong>Select Reason (Dropdown)</strong> – Choose the reason for revocation.</p>
-</li>
-<li>
-<p><strong>Certificate Authority (Dropdown)</strong> – Select the CA responsible for revocation.</p>
-</li>
-<li>
-<p><strong>Reason Message</strong> – Optionally provide additional details.</p>
-</li>
-</ol>
-<p>After filling in the details, click the <strong>Revoke Certificate</strong> button to complete the revocation.
-<img alt="Certificate Details Page" src="../images/certificate_details_page.png" /></p>
-<ol>
-<li><strong>Viewing Certificate History</strong><br />
-    Each certificate maintains a full history of actions (creation, renewal, revocation, etc.).<br />
-    Admins can open the <strong>Certificate History</strong> section to review all events associated with the certificate.
-    <img alt="Certificate Renewal Workflow" src="../images/certificate_renewal_workflow.png" /></li>
-</ol>
+<h3 id="3-save-the-alert">3. Save the Alert</h3>
+<p>After completing the form, click the <strong>Create</strong> button.</p>
+<h3 id="4-post-creation">4. Post-Creation</h3>
+<p>The new alert will appear in the <strong>Alerts List</strong>.<br />
+Administrators can manage the alert by viewing, editing, disabling, or deleting it as needed.</p>
 
 
 
