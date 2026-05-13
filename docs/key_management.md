@@ -36,7 +36,7 @@ The **keys list table** provides detailed information about each key, typically 
 
 - **Key Name**
     
-- **Algorithm** (e.g., RSA, ECDSA)
+- **Algorithm** (e.g., RSA, ECDSA, EdDSA (Edwards Curve))
     
 - **Key Size / Curve**
     
@@ -79,9 +79,9 @@ A form will open with the following fields:
     
 - **Crypto Source (Dropdown)** – Select the configured crypto source (e.g., HSM, AWS KMS, Azure Key Vault) where the key will be stored or generated.
     
-- **Algorithm (Dropdown)** – Choose the algorithm for the key (e.g., RSA, ECDSA).
+- **Algorithm (Dropdown)** – Choose the algorithm for the key (e.g., RSA, ECDSA, EdDSA (Edwards Curve)).
     
-- **Key Size (Dropdown)** – Select the key size or curve, depending on the chosen algorithm (e.g., 2048/3072/4096 for RSA, or P-256/P-384 for ECDSA).
+- **Key Size (Dropdown)** – Select the key size or curve, depending on the chosen algorithm (e.g., 2048/3072/4096 for RSA, or P-256/P-384 for ECDSA, or ED25519/ED448 for EdDSA (Edwards Curve)).
 
 ![Create Key Form](images/create_key_form.png)
 
