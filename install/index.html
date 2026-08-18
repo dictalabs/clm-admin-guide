@@ -12,11 +12,14 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../tenants/">
+        <link rel="next" href="../organizations/">
+      
+      
+        
       
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -24,7 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -38,8 +44,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -51,11 +57,17 @@
 
     
     
-    
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -106,16 +118,44 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -128,11 +168,18 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -147,6 +194,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -194,9 +242,16 @@
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -223,9 +278,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Install CLM
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -234,16 +296,25 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Install CLM
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -252,14 +323,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#install-on-single-evaluation-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Install on Single Evaluation Server
+      
+        Install on Single Evaluation Server
+      
     </span>
   </a>
   
@@ -269,7 +342,9 @@
           <li class="md-nav__item">
   <a href="#1-minimum-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Minimum Requirements
+      
+        1. Minimum Requirements
+      
     </span>
   </a>
   
@@ -278,7 +353,9 @@
           <li class="md-nav__item">
   <a href="#2-pre-requisites-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Pre-Requisites Setup
+      
+        2. Pre-Requisites Setup
+      
     </span>
   </a>
   
@@ -288,7 +365,9 @@
           <li class="md-nav__item">
   <a href="#step-1-install-zip" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Install zip
+      
+        Step 1: Install zip
+      
     </span>
   </a>
   
@@ -297,7 +376,9 @@
           <li class="md-nav__item">
   <a href="#step-2-unzip-clm-package" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Unzip CLM Package
+      
+        Step 2: Unzip CLM Package
+      
     </span>
   </a>
   
@@ -311,7 +392,9 @@
           <li class="md-nav__item">
   <a href="#3-docker-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Docker Installation
+      
+        3. Docker Installation
+      
     </span>
   </a>
   
@@ -321,7 +404,9 @@
           <li class="md-nav__item">
   <a href="#step-31-add-dockers-official-gpg-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.1: Add Docker’s Official GPG Key
+      
+        Step 3.1: Add Docker’s Official GPG Key
+      
     </span>
   </a>
   
@@ -330,7 +415,9 @@
           <li class="md-nav__item">
   <a href="#step-32-add-docker-repository" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.2: Add Docker Repository
+      
+        Step 3.2: Add Docker Repository
+      
     </span>
   </a>
   
@@ -339,7 +426,9 @@
           <li class="md-nav__item">
   <a href="#step-33-install-docker-engine-and-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.3: Install Docker Engine and Compose
+      
+        Step 3.3: Install Docker Engine and Compose
+      
     </span>
   </a>
   
@@ -348,7 +437,9 @@
           <li class="md-nav__item">
   <a href="#step-34-allow-docker-to-run-without-sudo" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.4: Allow Docker to Run Without Sudo
+      
+        Step 3.4: Allow Docker to Run Without Sudo
+      
     </span>
   </a>
   
@@ -362,7 +453,9 @@
           <li class="md-nav__item">
   <a href="#4-install-nginx" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Install NGINX
+      
+        4. Install NGINX
+      
     </span>
   </a>
   
@@ -371,7 +464,9 @@
           <li class="md-nav__item">
   <a href="#5-dns-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      5. DNS Configuration
+      
+        5. DNS Configuration
+      
     </span>
   </a>
   
@@ -380,7 +475,9 @@
           <li class="md-nav__item">
   <a href="#6-nginx-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      6. NGINX Configuration
+      
+        6. NGINX Configuration
+      
     </span>
   </a>
   
@@ -389,7 +486,9 @@
           <li class="md-nav__item">
   <a href="#step-61-configure-nginx-sites" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6.1: Configure NGINX Sites
+      
+        Step 6.1: Configure NGINX Sites
+      
     </span>
   </a>
   
@@ -398,7 +497,9 @@
           <li class="md-nav__item">
   <a href="#7-ssl-certificates-setup-lets-encrypt" class="md-nav__link">
     <span class="md-ellipsis">
-      7. SSL Certificates Setup (Let’s Encrypt)
+      
+        7. SSL Certificates Setup (Let’s Encrypt)
+      
     </span>
   </a>
   
@@ -408,7 +509,9 @@
           <li class="md-nav__item">
   <a href="#step-71-install-certbot" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7.1: Install Certbot
+      
+        Step 7.1: Install Certbot
+      
     </span>
   </a>
   
@@ -417,7 +520,9 @@
           <li class="md-nav__item">
   <a href="#step-72-generate-ssl-certificates" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7.2: Generate SSL Certificates
+      
+        Step 7.2: Generate SSL Certificates
+      
     </span>
   </a>
   
@@ -426,7 +531,9 @@
           <li class="md-nav__item">
   <a href="#step-73-verify-and-enable-nginx" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7.3: Verify and Enable NGINX
+      
+        Step 7.3: Verify and Enable NGINX
+      
     </span>
   </a>
   
@@ -440,7 +547,9 @@
           <li class="md-nav__item">
   <a href="#8-clm-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      8. CLM Deployment
+      
+        8. CLM Deployment
+      
     </span>
   </a>
   
@@ -450,7 +559,9 @@
           <li class="md-nav__item">
   <a href="#step-81-frontend-web-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 8.1: Frontend (Web Application)
+      
+        Step 8.1: Frontend (Web Application)
+      
     </span>
   </a>
   
@@ -459,7 +570,9 @@
           <li class="md-nav__item">
   <a href="#step-82-backend-server-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 8.2: Backend (Server Application)
+      
+        Step 8.2: Backend (Server Application)
+      
     </span>
   </a>
   
@@ -473,7 +586,9 @@
           <li class="md-nav__item">
   <a href="#9-verification" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Verification
+      
+        9. Verification
+      
     </span>
   </a>
   
@@ -487,7 +602,9 @@
         <li class="md-nav__item">
   <a href="#production-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      Production Deployment
+      
+        Production Deployment
+      
     </span>
   </a>
   
@@ -497,7 +614,9 @@
           <li class="md-nav__item">
   <a href="#1-pre-requisites" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Pre-Requisites
+      
+        1. Pre-Requisites
+      
     </span>
   </a>
   
@@ -506,7 +625,9 @@
           <li class="md-nav__item">
   <a href="#2-license" class="md-nav__link">
     <span class="md-ellipsis">
-      2. License
+      
+        2. License
+      
     </span>
   </a>
   
@@ -515,7 +636,9 @@
           <li class="md-nav__item">
   <a href="#3-vpcvnet-creation-on-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      3. VPC/VNet Creation on Cloud
+      
+        3. VPC/VNet Creation on Cloud
+      
     </span>
   </a>
   
@@ -524,7 +647,9 @@
           <li class="md-nav__item">
   <a href="#4-automatic-vpc-creation-recommended-for-quick-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Automatic VPC Creation (Recommended for Quick Setup)
+      
+        4. Automatic VPC Creation (Recommended for Quick Setup)
+      
     </span>
   </a>
   
@@ -534,7 +659,9 @@
           <li class="md-nav__item">
   <a href="#steps-aws-console" class="md-nav__link">
     <span class="md-ellipsis">
-      Steps (AWS Console)
+      
+        Steps (AWS Console)
+      
     </span>
   </a>
   
@@ -548,7 +675,9 @@
           <li class="md-nav__item">
   <a href="#5-application-load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Application Load Balancer
+      
+        5. Application Load Balancer
+      
     </span>
   </a>
   
@@ -558,7 +687,9 @@
           <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      
+        Requirements
+      
     </span>
   </a>
   
@@ -567,7 +698,9 @@
           <li class="md-nav__item">
   <a href="#firewallsecurity-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      Firewall/Security Groups
+      
+        Firewall/Security Groups
+      
     </span>
   </a>
   
@@ -581,7 +714,9 @@
           <li class="md-nav__item">
   <a href="#target-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      Target Groups
+      
+        Target Groups
+      
     </span>
   </a>
   
@@ -590,7 +725,9 @@
           <li class="md-nav__item">
   <a href="#frontend-target-group" class="md-nav__link">
     <span class="md-ellipsis">
-      Frontend Target Group
+      
+        Frontend Target Group
+      
     </span>
   </a>
   
@@ -599,7 +736,9 @@
           <li class="md-nav__item">
   <a href="#6-backend-clm-api-target-group" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Backend CLM API Target Group
+      
+        6. Backend CLM API Target Group
+      
     </span>
   </a>
   
@@ -609,7 +748,9 @@
           <li class="md-nav__item">
   <a href="#backend-acme-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend ACME API
+      
+        Backend ACME API
+      
     </span>
   </a>
   
@@ -618,7 +759,9 @@
           <li class="md-nav__item">
   <a href="#backend-scep-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend SCEP API
+      
+        Backend SCEP API
+      
     </span>
   </a>
   
@@ -627,7 +770,9 @@
           <li class="md-nav__item">
   <a href="#backend-est-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend EST API
+      
+        Backend EST API
+      
     </span>
   </a>
   
@@ -636,7 +781,9 @@
           <li class="md-nav__item">
   <a href="#backend-cmp-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend CMP API
+      
+        Backend CMP API
+      
     </span>
   </a>
   
@@ -650,7 +797,9 @@
           <li class="md-nav__item">
   <a href="#7-endpoint-urls" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Endpoint URLs
+      
+        7. Endpoint URLs
+      
     </span>
   </a>
   
@@ -659,7 +808,9 @@
           <li class="md-nav__item">
   <a href="#8-postgres-database-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Postgres Database Setup
+      
+        8. Postgres Database Setup
+      
     </span>
   </a>
   
@@ -669,7 +820,9 @@
           <li class="md-nav__item">
   <a href="#db-user-and-db-creation" class="md-nav__link">
     <span class="md-ellipsis">
-      DB User and DB Creation
+      
+        DB User and DB Creation
+      
     </span>
   </a>
   
@@ -683,7 +836,9 @@
           <li class="md-nav__item">
   <a href="#9-frontend-server-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Frontend Server Deployment
+      
+        9. Frontend Server Deployment
+      
     </span>
   </a>
   
@@ -692,7 +847,9 @@
           <li class="md-nav__item">
   <a href="#10-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      10. High Availability
+      
+        10. High Availability
+      
     </span>
   </a>
   
@@ -701,7 +858,9 @@
           <li class="md-nav__item">
   <a href="#pre-requisite-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-requisite Configuration
+      
+        Pre-requisite Configuration
+      
     </span>
   </a>
   
@@ -710,7 +869,9 @@
           <li class="md-nav__item">
   <a href="#11-backend-server-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      11. Backend Server Deployment
+      
+        11. Backend Server Deployment
+      
     </span>
   </a>
   
@@ -719,7 +880,9 @@
           <li class="md-nav__item">
   <a href="#12-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      12. High Availability
+      
+        12. High Availability
+      
     </span>
   </a>
   
@@ -729,7 +892,9 @@
           <li class="md-nav__item">
   <a href="#pre-requisite-configuration_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-requisite Configuration
+      
+        Pre-requisite Configuration
+      
     </span>
   </a>
   
@@ -743,7 +908,9 @@
           <li class="md-nav__item">
   <a href="#13-register-servers-to-target-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      13. Register Servers to Target Groups
+      
+        13. Register Servers to Target Groups
+      
     </span>
   </a>
   
@@ -752,7 +919,9 @@
           <li class="md-nav__item">
   <a href="#14-frontend-server-application-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      14. Frontend Server Application Configuration
+      
+        14. Frontend Server Application Configuration
+      
     </span>
   </a>
   
@@ -762,7 +931,9 @@
           <li class="md-nav__item">
   <a href="#clm-web-app-package" class="md-nav__link">
     <span class="md-ellipsis">
-      CLM Web App Package
+      
+        CLM Web App Package
+      
     </span>
   </a>
   
@@ -771,7 +942,9 @@
           <li class="md-nav__item">
   <a href="#environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Variables
+      
+        Environment Variables
+      
     </span>
   </a>
   
@@ -785,7 +958,9 @@
           <li class="md-nav__item">
   <a href="#14-backend-server-application-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      14. Backend Server Application Configuration
+      
+        14. Backend Server Application Configuration
+      
     </span>
   </a>
   
@@ -794,7 +969,9 @@
           <li class="md-nav__item">
   <a href="#clm-server-package" class="md-nav__link">
     <span class="md-ellipsis">
-      CLM Server Package
+      
+        CLM Server Package
+      
     </span>
   </a>
   
@@ -803,7 +980,9 @@
           <li class="md-nav__item">
   <a href="#licensing" class="md-nav__link">
     <span class="md-ellipsis">
-      Licensing
+      
+        Licensing
+      
     </span>
   </a>
   
@@ -813,7 +992,9 @@
           <li class="md-nav__item">
   <a href="#environment-variables_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Variables
+      
+        Environment Variables
+      
     </span>
   </a>
   
@@ -847,19 +1028,32 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     RBAC
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -868,7 +1062,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            RBAC
+            
+  
+    RBAC
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -879,12 +1077,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../tenants/" class="md-nav__link">
+      <a href="../organizations/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Tenants
+    
+  
+    Organizations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -903,9 +1108,16 @@
       <a href="../roles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Roles
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -921,12 +1133,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../users/" class="md-nav__link">
+      <a href="../operators/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Users
+    
+  
+    Operators
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -952,9 +1171,16 @@
       <a href="../connectors/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Connectors
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -972,9 +1198,16 @@
       <a href="../crypto_sources/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Crypto Sources
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -992,9 +1225,16 @@
       <a href="../key_management/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Key Management
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1012,9 +1252,16 @@
       <a href="../certificate_requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Certificate Requests
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1029,12 +1276,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../certificate_management/" class="md-nav__link">
+      <a href="../certificates/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Certificate Management
+    
+  
+    Certificates
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1049,12 +1303,46 @@
   
   
     <li class="md-nav__item">
-      <a href="../compliance/" class="md-nav__link">
+      <a href="../approvals/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Compliance
+    
+  
+    Approvals
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance_profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance Profiles
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1072,9 +1360,16 @@
       <a href="../discovery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Discovery
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1092,28 +1387,45 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Protocols
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
-            Protocols
+            
+  
+    Protocols
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1127,9 +1439,16 @@
       <a href="../scep_server/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SCEP Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1148,9 +1467,16 @@
       <a href="../acme_server/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     ACME Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1169,9 +1495,16 @@
       <a href="../est_server/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     EST Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1190,9 +1523,16 @@
       <a href="../cmp_server/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CMP Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1215,12 +1555,100 @@
   
   
     <li class="md-nav__item">
-      <a href="../integrations/" class="md-nav__link">
+      <a href="../mdm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    API Integration
+    
+  
+    MDM
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../active_directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Active Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csc_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSC Configuration
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1238,9 +1666,16 @@
       <a href="../reports/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reports
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1255,12 +1690,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../notifications/" class="md-nav__link">
+      <a href="../alerts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Notifications
+    
+  
+    Alerts
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1275,12 +1717,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../logs/" class="md-nav__link">
+      <a href="../audit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Audit Logs
+    
+  
+    Audit
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1298,9 +1747,16 @@
       <a href="../settings/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1318,9 +1774,16 @@
       <a href="../user_profile/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     User Profile
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1341,7 +1804,9 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -1350,14 +1815,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#install-on-single-evaluation-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Install on Single Evaluation Server
+      
+        Install on Single Evaluation Server
+      
     </span>
   </a>
   
@@ -1367,7 +1834,9 @@
           <li class="md-nav__item">
   <a href="#1-minimum-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Minimum Requirements
+      
+        1. Minimum Requirements
+      
     </span>
   </a>
   
@@ -1376,7 +1845,9 @@
           <li class="md-nav__item">
   <a href="#2-pre-requisites-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Pre-Requisites Setup
+      
+        2. Pre-Requisites Setup
+      
     </span>
   </a>
   
@@ -1386,7 +1857,9 @@
           <li class="md-nav__item">
   <a href="#step-1-install-zip" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Install zip
+      
+        Step 1: Install zip
+      
     </span>
   </a>
   
@@ -1395,7 +1868,9 @@
           <li class="md-nav__item">
   <a href="#step-2-unzip-clm-package" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Unzip CLM Package
+      
+        Step 2: Unzip CLM Package
+      
     </span>
   </a>
   
@@ -1409,7 +1884,9 @@
           <li class="md-nav__item">
   <a href="#3-docker-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Docker Installation
+      
+        3. Docker Installation
+      
     </span>
   </a>
   
@@ -1419,7 +1896,9 @@
           <li class="md-nav__item">
   <a href="#step-31-add-dockers-official-gpg-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.1: Add Docker’s Official GPG Key
+      
+        Step 3.1: Add Docker’s Official GPG Key
+      
     </span>
   </a>
   
@@ -1428,7 +1907,9 @@
           <li class="md-nav__item">
   <a href="#step-32-add-docker-repository" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.2: Add Docker Repository
+      
+        Step 3.2: Add Docker Repository
+      
     </span>
   </a>
   
@@ -1437,7 +1918,9 @@
           <li class="md-nav__item">
   <a href="#step-33-install-docker-engine-and-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.3: Install Docker Engine and Compose
+      
+        Step 3.3: Install Docker Engine and Compose
+      
     </span>
   </a>
   
@@ -1446,7 +1929,9 @@
           <li class="md-nav__item">
   <a href="#step-34-allow-docker-to-run-without-sudo" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3.4: Allow Docker to Run Without Sudo
+      
+        Step 3.4: Allow Docker to Run Without Sudo
+      
     </span>
   </a>
   
@@ -1460,7 +1945,9 @@
           <li class="md-nav__item">
   <a href="#4-install-nginx" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Install NGINX
+      
+        4. Install NGINX
+      
     </span>
   </a>
   
@@ -1469,7 +1956,9 @@
           <li class="md-nav__item">
   <a href="#5-dns-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      5. DNS Configuration
+      
+        5. DNS Configuration
+      
     </span>
   </a>
   
@@ -1478,7 +1967,9 @@
           <li class="md-nav__item">
   <a href="#6-nginx-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      6. NGINX Configuration
+      
+        6. NGINX Configuration
+      
     </span>
   </a>
   
@@ -1487,7 +1978,9 @@
           <li class="md-nav__item">
   <a href="#step-61-configure-nginx-sites" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6.1: Configure NGINX Sites
+      
+        Step 6.1: Configure NGINX Sites
+      
     </span>
   </a>
   
@@ -1496,7 +1989,9 @@
           <li class="md-nav__item">
   <a href="#7-ssl-certificates-setup-lets-encrypt" class="md-nav__link">
     <span class="md-ellipsis">
-      7. SSL Certificates Setup (Let’s Encrypt)
+      
+        7. SSL Certificates Setup (Let’s Encrypt)
+      
     </span>
   </a>
   
@@ -1506,7 +2001,9 @@
           <li class="md-nav__item">
   <a href="#step-71-install-certbot" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7.1: Install Certbot
+      
+        Step 7.1: Install Certbot
+      
     </span>
   </a>
   
@@ -1515,7 +2012,9 @@
           <li class="md-nav__item">
   <a href="#step-72-generate-ssl-certificates" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7.2: Generate SSL Certificates
+      
+        Step 7.2: Generate SSL Certificates
+      
     </span>
   </a>
   
@@ -1524,7 +2023,9 @@
           <li class="md-nav__item">
   <a href="#step-73-verify-and-enable-nginx" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 7.3: Verify and Enable NGINX
+      
+        Step 7.3: Verify and Enable NGINX
+      
     </span>
   </a>
   
@@ -1538,7 +2039,9 @@
           <li class="md-nav__item">
   <a href="#8-clm-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      8. CLM Deployment
+      
+        8. CLM Deployment
+      
     </span>
   </a>
   
@@ -1548,7 +2051,9 @@
           <li class="md-nav__item">
   <a href="#step-81-frontend-web-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 8.1: Frontend (Web Application)
+      
+        Step 8.1: Frontend (Web Application)
+      
     </span>
   </a>
   
@@ -1557,7 +2062,9 @@
           <li class="md-nav__item">
   <a href="#step-82-backend-server-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 8.2: Backend (Server Application)
+      
+        Step 8.2: Backend (Server Application)
+      
     </span>
   </a>
   
@@ -1571,7 +2078,9 @@
           <li class="md-nav__item">
   <a href="#9-verification" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Verification
+      
+        9. Verification
+      
     </span>
   </a>
   
@@ -1585,7 +2094,9 @@
         <li class="md-nav__item">
   <a href="#production-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      Production Deployment
+      
+        Production Deployment
+      
     </span>
   </a>
   
@@ -1595,7 +2106,9 @@
           <li class="md-nav__item">
   <a href="#1-pre-requisites" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Pre-Requisites
+      
+        1. Pre-Requisites
+      
     </span>
   </a>
   
@@ -1604,7 +2117,9 @@
           <li class="md-nav__item">
   <a href="#2-license" class="md-nav__link">
     <span class="md-ellipsis">
-      2. License
+      
+        2. License
+      
     </span>
   </a>
   
@@ -1613,7 +2128,9 @@
           <li class="md-nav__item">
   <a href="#3-vpcvnet-creation-on-cloud" class="md-nav__link">
     <span class="md-ellipsis">
-      3. VPC/VNet Creation on Cloud
+      
+        3. VPC/VNet Creation on Cloud
+      
     </span>
   </a>
   
@@ -1622,7 +2139,9 @@
           <li class="md-nav__item">
   <a href="#4-automatic-vpc-creation-recommended-for-quick-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Automatic VPC Creation (Recommended for Quick Setup)
+      
+        4. Automatic VPC Creation (Recommended for Quick Setup)
+      
     </span>
   </a>
   
@@ -1632,7 +2151,9 @@
           <li class="md-nav__item">
   <a href="#steps-aws-console" class="md-nav__link">
     <span class="md-ellipsis">
-      Steps (AWS Console)
+      
+        Steps (AWS Console)
+      
     </span>
   </a>
   
@@ -1646,7 +2167,9 @@
           <li class="md-nav__item">
   <a href="#5-application-load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Application Load Balancer
+      
+        5. Application Load Balancer
+      
     </span>
   </a>
   
@@ -1656,7 +2179,9 @@
           <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      
+        Requirements
+      
     </span>
   </a>
   
@@ -1665,7 +2190,9 @@
           <li class="md-nav__item">
   <a href="#firewallsecurity-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      Firewall/Security Groups
+      
+        Firewall/Security Groups
+      
     </span>
   </a>
   
@@ -1679,7 +2206,9 @@
           <li class="md-nav__item">
   <a href="#target-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      Target Groups
+      
+        Target Groups
+      
     </span>
   </a>
   
@@ -1688,7 +2217,9 @@
           <li class="md-nav__item">
   <a href="#frontend-target-group" class="md-nav__link">
     <span class="md-ellipsis">
-      Frontend Target Group
+      
+        Frontend Target Group
+      
     </span>
   </a>
   
@@ -1697,7 +2228,9 @@
           <li class="md-nav__item">
   <a href="#6-backend-clm-api-target-group" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Backend CLM API Target Group
+      
+        6. Backend CLM API Target Group
+      
     </span>
   </a>
   
@@ -1707,7 +2240,9 @@
           <li class="md-nav__item">
   <a href="#backend-acme-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend ACME API
+      
+        Backend ACME API
+      
     </span>
   </a>
   
@@ -1716,7 +2251,9 @@
           <li class="md-nav__item">
   <a href="#backend-scep-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend SCEP API
+      
+        Backend SCEP API
+      
     </span>
   </a>
   
@@ -1725,7 +2262,9 @@
           <li class="md-nav__item">
   <a href="#backend-est-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend EST API
+      
+        Backend EST API
+      
     </span>
   </a>
   
@@ -1734,7 +2273,9 @@
           <li class="md-nav__item">
   <a href="#backend-cmp-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Backend CMP API
+      
+        Backend CMP API
+      
     </span>
   </a>
   
@@ -1748,7 +2289,9 @@
           <li class="md-nav__item">
   <a href="#7-endpoint-urls" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Endpoint URLs
+      
+        7. Endpoint URLs
+      
     </span>
   </a>
   
@@ -1757,7 +2300,9 @@
           <li class="md-nav__item">
   <a href="#8-postgres-database-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Postgres Database Setup
+      
+        8. Postgres Database Setup
+      
     </span>
   </a>
   
@@ -1767,7 +2312,9 @@
           <li class="md-nav__item">
   <a href="#db-user-and-db-creation" class="md-nav__link">
     <span class="md-ellipsis">
-      DB User and DB Creation
+      
+        DB User and DB Creation
+      
     </span>
   </a>
   
@@ -1781,7 +2328,9 @@
           <li class="md-nav__item">
   <a href="#9-frontend-server-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Frontend Server Deployment
+      
+        9. Frontend Server Deployment
+      
     </span>
   </a>
   
@@ -1790,7 +2339,9 @@
           <li class="md-nav__item">
   <a href="#10-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      10. High Availability
+      
+        10. High Availability
+      
     </span>
   </a>
   
@@ -1799,7 +2350,9 @@
           <li class="md-nav__item">
   <a href="#pre-requisite-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-requisite Configuration
+      
+        Pre-requisite Configuration
+      
     </span>
   </a>
   
@@ -1808,7 +2361,9 @@
           <li class="md-nav__item">
   <a href="#11-backend-server-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      11. Backend Server Deployment
+      
+        11. Backend Server Deployment
+      
     </span>
   </a>
   
@@ -1817,7 +2372,9 @@
           <li class="md-nav__item">
   <a href="#12-high-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      12. High Availability
+      
+        12. High Availability
+      
     </span>
   </a>
   
@@ -1827,7 +2384,9 @@
           <li class="md-nav__item">
   <a href="#pre-requisite-configuration_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-requisite Configuration
+      
+        Pre-requisite Configuration
+      
     </span>
   </a>
   
@@ -1841,7 +2400,9 @@
           <li class="md-nav__item">
   <a href="#13-register-servers-to-target-groups" class="md-nav__link">
     <span class="md-ellipsis">
-      13. Register Servers to Target Groups
+      
+        13. Register Servers to Target Groups
+      
     </span>
   </a>
   
@@ -1850,7 +2411,9 @@
           <li class="md-nav__item">
   <a href="#14-frontend-server-application-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      14. Frontend Server Application Configuration
+      
+        14. Frontend Server Application Configuration
+      
     </span>
   </a>
   
@@ -1860,7 +2423,9 @@
           <li class="md-nav__item">
   <a href="#clm-web-app-package" class="md-nav__link">
     <span class="md-ellipsis">
-      CLM Web App Package
+      
+        CLM Web App Package
+      
     </span>
   </a>
   
@@ -1869,7 +2434,9 @@
           <li class="md-nav__item">
   <a href="#environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Variables
+      
+        Environment Variables
+      
     </span>
   </a>
   
@@ -1883,7 +2450,9 @@
           <li class="md-nav__item">
   <a href="#14-backend-server-application-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      14. Backend Server Application Configuration
+      
+        14. Backend Server Application Configuration
+      
     </span>
   </a>
   
@@ -1892,7 +2461,9 @@
           <li class="md-nav__item">
   <a href="#clm-server-package" class="md-nav__link">
     <span class="md-ellipsis">
-      CLM Server Package
+      
+        CLM Server Package
+      
     </span>
   </a>
   
@@ -1901,7 +2472,9 @@
           <li class="md-nav__item">
   <a href="#licensing" class="md-nav__link">
     <span class="md-ellipsis">
-      Licensing
+      
+        Licensing
+      
     </span>
   </a>
   
@@ -1911,7 +2484,9 @@
           <li class="md-nav__item">
   <a href="#environment-variables_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Variables
+      
+        Environment Variables
+      
     </span>
   </a>
   
@@ -1937,16 +2512,18 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
-<h1 id="clm-deployment-guide"><strong>CLM Deployment Guide</strong></h1>
-<p>This guide provides a step-by-step walkthrough for installing <strong>vScrawl</strong> on an in-house server. The installation process is automated through a setup script but requires administrator input and consent at various stages. Follow this guide carefully to ensure a successful installation.</p>
+
+<h1 id="clm-deployment-guide"><strong>CLM Deployment Guide</strong><a class="headerlink" href="#clm-deployment-guide" title="Permanent link">&para;</a></h1>
+<p>This guide provides a step-by-step walkthrough for installing <strong>CLM</strong> on an in-house server. The installation process is automated through a setup script but requires administrator input and consent at various stages. Follow this guide carefully to ensure a successful installation.</p>
 <hr />
-<h2 id="install-on-single-evaluation-server"><strong>Install on Single Evaluation Server</strong></h2>
-<h3 id="1-minimum-requirements"><strong>1. Minimum Requirements</strong></h3>
+<h2 id="install-on-single-evaluation-server"><strong>Install on Single Evaluation Server</strong><a class="headerlink" href="#install-on-single-evaluation-server" title="Permanent link">&para;</a></h2>
+<h3 id="1-minimum-requirements"><strong>1. Minimum Requirements</strong><a class="headerlink" href="#1-minimum-requirements" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1978,37 +2555,37 @@
 </tbody>
 </table>
 <hr />
-<h3 id="2-pre-requisites-setup"><strong>2. Pre-Requisites Setup</strong></h3>
+<h3 id="2-pre-requisites-setup"><strong>2. Pre-Requisites Setup</strong><a class="headerlink" href="#2-pre-requisites-setup" title="Permanent link">&para;</a></h3>
 <p>Before deploying CLM, ensure that the following tools and configurations are set up.</p>
-<h4 id="step-1-install-zip"><strong>Step 1: Install zip</strong></h4>
+<h4 id="step-1-install-zip"><strong>Step 1: Install zip</strong><a class="headerlink" href="#step-1-install-zip" title="Permanent link">&para;</a></h4>
 <p><code>sudo apt update &amp;&amp; sudo apt install unzip -y</code></p>
-<h4 id="step-2-unzip-clm-package"><strong>Step 2: Unzip CLM Package</strong></h4>
+<h4 id="step-2-unzip-clm-package"><strong>Step 2: Unzip CLM Package</strong><a class="headerlink" href="#step-2-unzip-clm-package" title="Permanent link">&para;</a></h4>
 <p>Unzip the deployment package provided by your administrator.</p>
 <p><code>unzip clm-package-v1.0.zip</code></p>
 <hr />
-<h3 id="3-docker-installation"><strong>3. Docker Installation</strong></h3>
+<h3 id="3-docker-installation"><strong>3. Docker Installation</strong><a class="headerlink" href="#3-docker-installation" title="Permanent link">&para;</a></h3>
 <p>The CLM backend and frontend run as Docker containers. Follow the steps below to install Docker.</p>
-<h4 id="step-31-add-dockers-official-gpg-key"><strong>Step 3.1: Add Docker’s Official GPG Key</strong></h4>
+<h4 id="step-31-add-dockers-official-gpg-key"><strong>Step 3.1: Add Docker’s Official GPG Key</strong><a class="headerlink" href="#step-31-add-dockers-official-gpg-key" title="Permanent link">&para;</a></h4>
 <p><code>sudo apt-get update</code>
 <code>sudo apt-get install ca-certificates curl</code>
 <code>sudo install -m 0755 -d /etc/apt/keyrings</code>
 <code>sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc</code>
 <code>sudo chmod a+r /etc/apt/keyrings/docker.asc</code></p>
-<h4 id="step-32-add-docker-repository"><strong>Step 3.2: Add Docker Repository</strong></h4>
+<h4 id="step-32-add-docker-repository"><strong>Step 3.2: Add Docker Repository</strong><a class="headerlink" href="#step-32-add-docker-repository" title="Permanent link">&para;</a></h4>
 <p><code>echo \   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \   https://download.docker.com/linux/ubuntu \   $(. /etc/os-release &amp;&amp; echo "$VERSION_CODENAME") stable" | \   sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code>
 <code>sudo apt-get update</code></p>
-<h4 id="step-33-install-docker-engine-and-compose"><strong>Step 3.3: Install Docker Engine and Compose</strong></h4>
+<h4 id="step-33-install-docker-engine-and-compose"><strong>Step 3.3: Install Docker Engine and Compose</strong><a class="headerlink" href="#step-33-install-docker-engine-and-compose" title="Permanent link">&para;</a></h4>
 <p><code>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y</code></p>
-<h4 id="step-34-allow-docker-to-run-without-sudo"><strong>Step 3.4: Allow Docker to Run Without Sudo</strong></h4>
+<h4 id="step-34-allow-docker-to-run-without-sudo"><strong>Step 3.4: Allow Docker to Run Without Sudo</strong><a class="headerlink" href="#step-34-allow-docker-to-run-without-sudo" title="Permanent link">&para;</a></h4>
 <p><code>sudo groupadd docker</code>
 <code>sudo usermod -aG docker $USER</code>
 <code>newgrp docker</code></p>
 <hr />
-<h3 id="4-install-nginx"><strong>4. Install NGINX</strong></h3>
+<h3 id="4-install-nginx"><strong>4. Install NGINX</strong><a class="headerlink" href="#4-install-nginx" title="Permanent link">&para;</a></h3>
 <p>Install and configure <strong>NGINX</strong> as a reverse proxy for your CLM services.</p>
 <p><code>sudo apt install nginx -y</code></p>
 <hr />
-<h3 id="5-dns-configuration"><strong>5. DNS Configuration</strong></h3>
+<h3 id="5-dns-configuration"><strong>5. DNS Configuration</strong><a class="headerlink" href="#5-dns-configuration" title="Permanent link">&para;</a></h3>
 <p>Create the following <strong>DNS entries</strong> for your CLM environment (replace YOURDOMAIN.com with your actual domain):</p>
 <p><code>scep.YOURDOMAIN.com</code></p>
 <p><code>cmp.clm.YOURDOMAIN.com</code></p>
@@ -2017,8 +2594,8 @@
 <p><code>app.clm.YOURDOMAIN.com</code></p>
 <p><code>est.YOURDOMAIN.com</code></p>
 <hr />
-<h3 id="6-nginx-configuration"><strong>6. NGINX Configuration</strong></h3>
-<h3 id="step-61-configure-nginx-sites"><strong>Step 6.1: Configure NGINX Sites</strong></h3>
+<h3 id="6-nginx-configuration"><strong>6. NGINX Configuration</strong><a class="headerlink" href="#6-nginx-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="step-61-configure-nginx-sites"><strong>Step 6.1: Configure NGINX Sites</strong><a class="headerlink" href="#step-61-configure-nginx-sites" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Sample NGINX configuration files are provided in the NGINX-Sample-Files directory.</p>
@@ -2043,10 +2620,10 @@
 <p><code>sudo ln -s /etc/nginx/sites-available/app.clm.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
 <p><code>sudo ln -s /etc/nginx/sites-available/est.YOURDOMAIN.com /etc/nginx/sites-enabled</code></p>
 <hr />
-<h3 id="7-ssl-certificates-setup-lets-encrypt"><strong>7. SSL Certificates Setup (Let’s Encrypt)</strong></h3>
-<h4 id="step-71-install-certbot"><strong>Step 7.1: Install Certbot</strong></h4>
+<h3 id="7-ssl-certificates-setup-lets-encrypt"><strong>7. SSL Certificates Setup (Let’s Encrypt)</strong><a class="headerlink" href="#7-ssl-certificates-setup-lets-encrypt" title="Permanent link">&para;</a></h3>
+<h4 id="step-71-install-certbot"><strong>Step 7.1: Install Certbot</strong><a class="headerlink" href="#step-71-install-certbot" title="Permanent link">&para;</a></h4>
 <p><code>sudo apt install certbot python3-certbot-nginx -y</code></p>
-<h4 id="step-72-generate-ssl-certificates"><strong>Step 7.2: Generate SSL Certificates</strong></h4>
+<h4 id="step-72-generate-ssl-certificates"><strong>Step 7.2: Generate SSL Certificates</strong><a class="headerlink" href="#step-72-generate-ssl-certificates" title="Permanent link">&para;</a></h4>
 <p>Run the following commands for each domain:</p>
 <p><code>sudo certbot certonly --standalone -d scep.YOURDOMAIN.com</code></p>
 <p><code>sudo certbot certonly --standalone -d cmp.clm.YOURDOMAIN.com</code></p>
@@ -2054,11 +2631,11 @@
 <p><code>sudo certbot certonly --standalone -d api.clm.YOURDOMAIN.com</code></p>
 <p><code>sudo certbot certonly --standalone -d app.clm.YOURDOMAIN.com</code></p>
 <p><code>sudo certbot certonly --standalone -d est.YOURDOMAIN.com</code></p>
-<h4 id="step-73-verify-and-enable-nginx"><strong>Step 7.3: Verify and Enable NGINX</strong></h4>
+<h4 id="step-73-verify-and-enable-nginx"><strong>Step 7.3: Verify and Enable NGINX</strong><a class="headerlink" href="#step-73-verify-and-enable-nginx" title="Permanent link">&para;</a></h4>
 <p><code>sudo nginx -t sudo service nginx start</code></p>
 <hr />
-<h3 id="8-clm-deployment"><strong>8. CLM Deployment</strong></h3>
-<h4 id="step-81-frontend-web-application"><strong>Step 8.1: Frontend (Web Application)</strong></h4>
+<h3 id="8-clm-deployment"><strong>8. CLM Deployment</strong><a class="headerlink" href="#8-clm-deployment" title="Permanent link">&para;</a></h3>
+<h4 id="step-81-frontend-web-application"><strong>Step 8.1: Frontend (Web Application)</strong><a class="headerlink" href="#step-81-frontend-web-application" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p>Navigate to the <strong>clm-web-app</strong> directory:</p>
@@ -2073,7 +2650,7 @@
 </li>
 </ol>
 <hr />
-<h4 id="step-82-backend-server-application"><strong>Step 8.2: Backend (Server Application)</strong></h4>
+<h4 id="step-82-backend-server-application"><strong>Step 8.2: Backend (Server Application)</strong><a class="headerlink" href="#step-82-backend-server-application" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p>Navigate to the <strong>clm-server</strong> directory:</p>
@@ -2099,14 +2676,14 @@
 </li>
 </ol>
 <hr />
-<h3 id="9-verification"><strong>9. Verification</strong></h3>
+<h3 id="9-verification"><strong>9. Verification</strong><a class="headerlink" href="#9-verification" title="Permanent link">&para;</a></h3>
 <p>After deployment:</p>
 <ul>
 <li>Access <strong>CLM UI</strong> at:<br />
     https://app.clm.YOURDOMAIN.com</li>
 </ul>
-<h2 id="production-deployment"><strong>Production Deployment</strong></h2>
-<h3 id="1-pre-requisites">1. Pre-Requisites</h3>
+<h2 id="production-deployment"><strong>Production Deployment</strong><a class="headerlink" href="#production-deployment" title="Permanent link">&para;</a></h2>
+<h3 id="1-pre-requisites">1. Pre-Requisites<a class="headerlink" href="#1-pre-requisites" title="Permanent link">&para;</a></h3>
 <p>In order to deploy CLM on cloud following pre-requisites should be kept in mind.</p>
 <ul>
 <li>
@@ -2137,7 +2714,7 @@
 <p>Each backend server and frontend server requires Docker Engine because frontend app and backend services would run inside Docker Containers.</p>
 </li>
 </ul>
-<h3 id="2-license">2. License</h3>
+<h3 id="2-license">2. License<a class="headerlink" href="#2-license" title="Permanent link">&para;</a></h3>
 <p>A license file issue by product owner will be required for each separate backend server.</p>
 <p>Each backend server will be running</p>
 <ul>
@@ -2151,14 +2728,14 @@
 <li>Celery Beat</li>
 </ul>
 <p>No license required for Postgresql Database instance or Frontend. License is required only for CLM API service to run.</p>
-<h3 id="3-vpcvnet-creation-on-cloud">3. VPC/VNet Creation on Cloud</h3>
+<h3 id="3-vpcvnet-creation-on-cloud">3. VPC/VNet Creation on Cloud<a class="headerlink" href="#3-vpcvnet-creation-on-cloud" title="Permanent link">&para;</a></h3>
 <p>First of all on any cloud you will first have to create a project on GCP/Hetzner or VPC/VNET on AWS/Azure</p>
 <p>Yes — AWS now gives you an option to <strong>automatically create a VPC</strong> with <strong>public and private subnets across multiple Availability Zones</strong> using its <strong>VPC Wizard</strong> or the <strong>“VPC with subnets”</strong> template.</p>
 <p>Here’s how you can use that <strong>automatic deployment option</strong> instead of creating everything manually.</p>
 <hr />
-<h3 id="4-automatic-vpc-creation-recommended-for-quick-setup">4. <strong>Automatic VPC Creation (Recommended for Quick Setup)</strong></h3>
+<h3 id="4-automatic-vpc-creation-recommended-for-quick-setup">4. <strong>Automatic VPC Creation (Recommended for Quick Setup)</strong><a class="headerlink" href="#4-automatic-vpc-creation-recommended-for-quick-setup" title="Permanent link">&para;</a></h3>
 <p>AWS Cloud is being used as example in the below installation steps.  You may generalize it based on your preferred cloud service provider</p>
-<h4 id="steps-aws-console">Steps (AWS Console)</h4>
+<h4 id="steps-aws-console">Steps (AWS Console)<a class="headerlink" href="#steps-aws-console" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Open AWS Management Console</strong> → Go to <strong>VPC Dashboard</strong><br />
@@ -2280,8 +2857,8 @@
 <p><strong>Result</strong></p>
 <p>In under a minute, AWS deploys a <strong>fully working VPC network</strong> with two public and two private subnets across two AZs, including routing and gateways.</p>
 <p>Similarly you can create any VNet on Azure or VPC on GCP or cloud service provider of your choice.</p>
-<h3 id="5-application-load-balancer">5. Application Load Balancer</h3>
-<h4 id="requirements">Requirements</h4>
+<h3 id="5-application-load-balancer">5. Application Load Balancer<a class="headerlink" href="#5-application-load-balancer" title="Permanent link">&para;</a></h3>
+<h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h4>
 <p>1 Application Load Balancer required in public subnet for 1 DNS URL of Frontend</p>
 <p><a href="http://test.app.clm.dictalabs.com/" title="http://test.app.clm.dictalabs.com">app.clm.example.com</a>.</p>
 <p>5 Application Load Balancers required in public subnet for 5 DNS URLs</p>
@@ -2337,47 +2914,47 @@
 </tr>
 </tbody>
 </table>
-<h4 id="firewallsecurity-groups">Firewall/Security Groups</h4>
+<h4 id="firewallsecurity-groups">Firewall/Security Groups<a class="headerlink" href="#firewallsecurity-groups" title="Permanent link">&para;</a></h4>
 <p>Allow TCP port 5432 from Backend Server IP network like 10.0.0.0/16</p>
-<h3 id="target-groups">Target Groups</h3>
+<h3 id="target-groups">Target Groups<a class="headerlink" href="#target-groups" title="Permanent link">&para;</a></h3>
 <p>Define 6 Target Groups for 6 URLs</p>
-<h3 id="frontend-target-group">Frontend Target Group</h3>
+<h3 id="frontend-target-group">Frontend Target Group<a class="headerlink" href="#frontend-target-group" title="Permanent link">&para;</a></h3>
 <p>As shown in Diagram frontend</p>
 <p>Targets = Frontend Server</p>
 <p>Port = 8080</p>
 <p>Health Check Path</p>
 <p>/login/health</p>
-<h3 id="6-backend-clm-api-target-group">6. Backend CLM API Target Group</h3>
+<h3 id="6-backend-clm-api-target-group">6. Backend CLM API Target Group<a class="headerlink" href="#6-backend-clm-api-target-group" title="Permanent link">&para;</a></h3>
 <p>As shown in Diagram Backend Server runs clm api service.</p>
 <p>Targets = All CLM Backend Servers</p>
 <p>Port = 8000</p>
 <p>Health Check Path</p>
 <p>/health</p>
-<h4 id="backend-acme-api">Backend ACME API</h4>
+<h4 id="backend-acme-api">Backend ACME API<a class="headerlink" href="#backend-acme-api" title="Permanent link">&para;</a></h4>
 <p>As shown in Diagram Backend Server runs acme service.</p>
 <p>Targets = All CLM Backend Servers</p>
 <p>Port = 8001</p>
 <p>Health Check Path</p>
 <p>/health</p>
-<h4 id="backend-scep-api">Backend SCEP API</h4>
+<h4 id="backend-scep-api">Backend SCEP API<a class="headerlink" href="#backend-scep-api" title="Permanent link">&para;</a></h4>
 <p>As shown in Diagram Backend Server runs scep service.</p>
 <p>Targets = All CLM Backend Servers</p>
 <p>Port = 8002</p>
 <p>Health Check Path</p>
 <p>/health</p>
-<h4 id="backend-est-api">Backend EST API</h4>
+<h4 id="backend-est-api">Backend EST API<a class="headerlink" href="#backend-est-api" title="Permanent link">&para;</a></h4>
 <p>As shown in Diagram Backend Server runs est service.</p>
 <p>Targets = All CLM Backend Servers</p>
 <p>Port = 8003</p>
 <p>Health Check Path</p>
 <p>/health</p>
-<h4 id="backend-cmp-api">Backend CMP API</h4>
+<h4 id="backend-cmp-api">Backend CMP API<a class="headerlink" href="#backend-cmp-api" title="Permanent link">&para;</a></h4>
 <p>As shown in Diagram Backend server runs cmp service.</p>
 <p>Targets = All CLM Backend Servers</p>
 <p>Port = 18080</p>
 <p>Health Check Path</p>
 <p>/health</p>
-<h3 id="7-endpoint-urls">7. Endpoint URLs</h3>
+<h3 id="7-endpoint-urls">7. Endpoint URLs<a class="headerlink" href="#7-endpoint-urls" title="Permanent link">&para;</a></h3>
 <p>Note Down the Endpoint URLs of Application Load Balancers.</p>
 <p>DNS Entries</p>
 <p>Create 6 DNS entries on your DNS registrar (e.g., godaddy, namecheap)</p>
@@ -2459,7 +3036,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="8-postgres-database-setup">8. Postgres Database Setup</h3>
+<h3 id="8-postgres-database-setup">8. Postgres Database Setup<a class="headerlink" href="#8-postgres-database-setup" title="Permanent link">&para;</a></h3>
 <p>For Postgres Setup create a DB instance with a</p>
 <ul>
 <li>
@@ -2482,13 +3059,13 @@
 <p>clm_db and</p>
 <p>default Postgres port 5432</p>
 <p>If your cloud provider just creates a postgres instance with default username postgres, database postgres with some password you set. Then you will have to install a psql client on your machine or a cloud server.</p>
-<h4 id="db-user-and-db-creation">DB User and DB Creation</h4>
+<h4 id="db-user-and-db-creation">DB User and DB Creation<a class="headerlink" href="#db-user-and-db-creation" title="Permanent link">&para;</a></h4>
 <p>Step-by-Step (via <code>psql</code>)</p>
 <p>1. Connect to your PostgreSQL server as an admin (e.g., <code>postgres</code> or master user)</p>
-<pre><code>`psql -h psql -h database-instance-IP-addres -U postgres -d postgres -U postgres`
+<div class="highlight"><pre><span></span><code>`psql -h psql -h database-instance-IP-addres -U postgres -d postgres -U postgres`
 
- by default postgres db instance has a default user 'postgres'
-</code></pre>
+ by default postgres db instance has a default user &#39;postgres&#39;
+</code></pre></div>
 <ol>
 <li>
 <p>Create the database</p>
@@ -2504,21 +3081,21 @@
 </li>
 </ol>
 <p>5. (Optional but Recommended) Make <code>clm_user</code> the owner of that database</p>
-<pre><code> `ALTER DATABASE clm_db OWNER TO clm_user;`
-</code></pre>
+<div class="highlight"><pre><span></span><code> `ALTER DATABASE clm_db OWNER TO clm_user;`
+</code></pre></div>
 <p>6. Verify</p>
 <p>List Databases</p>
 <p><code>\l</code></p>
 <p>List roles/users:</p>
 <p><code>\du</code></p>
 <p>7. Exit <code>psql</code> </p>
-<pre><code>`\q`
-</code></pre>
+<div class="highlight"><pre><span></span><code>`\q`
+</code></pre></div>
 <p>Now test login</p>
 <p>From CLI:</p>
 <p><code>psql -h database-instance-IP-addres -U clm_user -d clm_db</code></p>
 <p>Enter password for example in this guide we are using “clm_password”.</p>
-<h3 id="9-frontend-server-deployment">9. Frontend Server Deployment</h3>
+<h3 id="9-frontend-server-deployment">9. Frontend Server Deployment<a class="headerlink" href="#9-frontend-server-deployment" title="Permanent link">&para;</a></h3>
 <p>System Requirements</p>
 <ul>
 <li>
@@ -2537,45 +3114,45 @@
 <p>Firewall/Security Group allowed ports = SSH, TCP port 8080</p>
 </li>
 </ul>
-<h3 id="10-high-availability">10. High Availability</h3>
+<h3 id="10-high-availability">10. High Availability<a class="headerlink" href="#10-high-availability" title="Permanent link">&para;</a></h3>
 <p>It is recommended to have atleast two frontend servers in different availability zones on (Cloud Service Provider of your choice) for hight availability.  </p>
-<h3 id="pre-requisite-configuration">Pre-requisite Configuration</h3>
+<h3 id="pre-requisite-configuration">Pre-requisite Configuration<a class="headerlink" href="#pre-requisite-configuration" title="Permanent link">&para;</a></h3>
 <p>On each Frontend Ubuntu Server<br />
 Install Docker using</p>
-<pre><code class="language-bash">########## INSTALLATION############
-# https://docs.docker.com/engine/install/ubuntu/
-
-# Step-1:
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
-echo \
-  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
-  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-
-sudo apt-get update
-
-# Step-2:
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-##### After Installation #######
-
-### Run docker commands without sudo
-# https://docs.docker.com/engine/install/linux-postinstall/
-
-sudo groupadd docker
-# Add user to docker group
-sudo usermod -aG docker $USER
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">########## INSTALLATION############</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># https://docs.docker.com/engine/install/ubuntu/</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Step-1:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Add Docker&#39;s official GPG key:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>sudo<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">0755</span><span class="w"> </span>-d<span class="w"> </span>/etc/apt/keyrings
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.asc
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>a+r<span class="w"> </span>/etc/apt/keyrings/docker.asc
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># Add the repository to Apt sources:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s2">  </span><span class="k">$(</span>.<span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># Step-2:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1">##### After Installation #######</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1">### Run docker commands without sudo</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1"># https://docs.docker.com/engine/install/linux-postinstall/</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1"># Add user to docker group</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div>
 <p>Install zip</p>
 <p><code>apt install zip -y</code></p>
-<h3 id="11-backend-server-deployment">11. Backend Server Deployment</h3>
+<h3 id="11-backend-server-deployment">11. Backend Server Deployment<a class="headerlink" href="#11-backend-server-deployment" title="Permanent link">&para;</a></h3>
 <p>System Requirements</p>
 <ul>
 <li>
@@ -2594,54 +3171,54 @@ sudo usermod -aG docker $USER
 <p>Firewall/Security Group allowed ports = SSH, TCP ports 8000, 8001, 8002, 8003, 18080</p>
 </li>
 </ul>
-<h3 id="12-high-availability">12. High Availability</h3>
+<h3 id="12-high-availability">12. High Availability<a class="headerlink" href="#12-high-availability" title="Permanent link">&para;</a></h3>
 <p>It is recommended to have at least two backend servers in different availability zones on (Cloud Service Provider of your choice) for high availability.</p>
-<h4 id="pre-requisite-configuration_1">Pre-requisite Configuration</h4>
+<h4 id="pre-requisite-configuration_1">Pre-requisite Configuration<a class="headerlink" href="#pre-requisite-configuration_1" title="Permanent link">&para;</a></h4>
 <p>On each backend Ubuntu Server<br />
 Install Docker using</p>
-<pre><code class="language-bash">########## INSTALLATION############
-# https://docs.docker.com/engine/install/ubuntu/
-
-# Step-1:
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
-echo \
-  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
-  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-
-sudo apt-get update
-
-# Step-2:
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-##### After Installation #######
-
-### Run docker commands without sudo
-# https://docs.docker.com/engine/install/linux-postinstall/
-
-sudo groupadd docker
-# Add user to docker group
-sudo usermod -aG docker $USER
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">########## INSTALLATION############</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># https://docs.docker.com/engine/install/ubuntu/</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Step-1:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Add Docker&#39;s official GPG key:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>sudo<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">0755</span><span class="w"> </span>-d<span class="w"> </span>/etc/apt/keyrings
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.asc
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>a+r<span class="w"> </span>/etc/apt/keyrings/docker.asc
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># Add the repository to Apt sources:</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="s2">  </span><span class="k">$(</span>.<span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># Step-2:</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="c1">##### After Installation #######</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="c1">### Run docker commands without sudo</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="c1"># https://docs.docker.com/engine/install/linux-postinstall/</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="c1"># Add user to docker group</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div>
 <p>Install unzip</p>
 <p><code>apt install unzip -y</code></p>
-<h3 id="13-register-servers-to-target-groups">13. Register Servers to Target Groups</h3>
+<h3 id="13-register-servers-to-target-groups">13. Register Servers to Target Groups<a class="headerlink" href="#13-register-servers-to-target-groups" title="Permanent link">&para;</a></h3>
 <p>Register Servers to Target Groups of ALBs (Application Load Balancers)</p>
 <p>Register frontend servers to Frontend Target Group.</p>
 <p>Register all backend servers in each Backend Target Group. Same backend servers will be part of all Backend Target Groups.</p>
-<h3 id="14-frontend-server-application-configuration">14. Frontend Server Application Configuration</h3>
-<h4 id="clm-web-app-package">CLM Web App Package</h4>
+<h3 id="14-frontend-server-application-configuration">14. Frontend Server Application Configuration<a class="headerlink" href="#14-frontend-server-application-configuration" title="Permanent link">&para;</a></h3>
+<h4 id="clm-web-app-package">CLM Web App Package<a class="headerlink" href="#clm-web-app-package" title="Permanent link">&para;</a></h4>
 <p>Copy clm-package-v1.0.zip to server for example in /home/clm-frontend using SCP with any tool like winSCP.</p>
 <p>unzip clm-package-v1.0.zip</p>
 <p>go to directory clm-package-v1.0/clm-package-production/clm-web-app</p>
-<h4 id="environment-variables">Environment Variables</h4>
+<h4 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h4>
 <p>edit config.json and write backend api domain.</p>
 <p><code>``{ "API_BASE_URL": "https://api.clm.example.com/api/v1", "PUBLIC_API_BASE_URL": "https://api.clm.example.com" }</code></p>
 <p>run the following command</p>
@@ -2651,18 +3228,18 @@ sudo usermod -aG docker $USER
 <p><code>docker ps -a</code></p>
 <p>To view logs of a backend service you can use following command and to stop view logs you will use <strong>ctrl+c</strong></p>
 <p><code>docker logs -f clm-web-app</code></p>
-<h3 id="14-backend-server-application-configuration">14. Backend Server Application Configuration</h3>
-<h3 id="clm-server-package">CLM Server Package</h3>
+<h3 id="14-backend-server-application-configuration">14. Backend Server Application Configuration<a class="headerlink" href="#14-backend-server-application-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="clm-server-package">CLM Server Package<a class="headerlink" href="#clm-server-package" title="Permanent link">&para;</a></h3>
 <p>Copy clm-package-v1.0.zip to server for example in /home/clm-backend using SCP with any tool like winSCP.</p>
 <p>unzip clm-package-v1.0.zip</p>
 <p>go to directory clm-package-v1.0/clm-package-production/clm-server</p>
-<h3 id="licensing">Licensing</h3>
+<h3 id="licensing">Licensing<a class="headerlink" href="#licensing" title="Permanent link">&para;</a></h3>
 <p><code>sudo su chmod u+x ./get-system-uuid.sh</code></p>
 <p>You will get system-uuid like this</p>
 <p><strong>OS ID: deff8676-a68f-4662-a30b-c7485e3e3ff9</strong><br />
 <strong>Share this OS ID with Dictalabs to acquire license file for this deployment.</strong></p>
 <p>Share this OS ID with Dictalabs Support (support@dictalabs.com) to acquire license file <strong>license.lic.xml</strong> for this server and copy license file in the same directory.</p>
-<h4 id="environment-variables_1">Environment Variables</h4>
+<h4 id="environment-variables_1">Environment Variables<a class="headerlink" href="#environment-variables_1" title="Permanent link">&para;</a></h4>
 <p>edit .env and set Environment variables.</p>
 <p>Set Postgres DB URL</p>
 <p>for example we are using here Postgres endpoint dns name as</p>
@@ -2679,15 +3256,15 @@ sudo usermod -aG docker $USER
 <p>The backend services docker container will start working. You can verify as well.</p>
 <p><code>docker ps -a</code></p>
 <p>To view logs of a backend service you can use following command and to stop view logs you will use <strong>ctrl+c</strong></p>
-<pre><code class="language-bash">docker logs -f clm_api
-docker logs -f est_server
-docker logs -f acme_server
-docker logs -f redis
-docker logs -f scep_server
-docker logs -f cmp_server
-docker logs -f celery_beat
-docker logs -f celery_worker
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>clm_api
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>est_server
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>acme_server
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>redis
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>scep_server
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>cmp_server
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>celery_beat
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>celery_worker
+</code></pre></div>
 
 
 
@@ -2705,19 +3282,67 @@ docker logs -f celery_worker
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../organizations/" class="md-footer__link md-footer__link--next" aria-label="Next: Organizations">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Organizations
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2025 Dictalabs. All rights reserved.
+      © 2026 Dictalabs. All rights reserved.
     </div>
   
   
@@ -2732,11 +3357,16 @@ docker logs -f celery_worker
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../extra.js"></script>
       

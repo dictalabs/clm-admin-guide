@@ -15,8 +15,11 @@
         <link rel="next" href="../est_server/">
       
       
+        
+      
+      
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -24,7 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -38,8 +44,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -51,11 +57,17 @@
 
     
     
-    
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -64,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-acme-server" class="md-skip">
+        <a href="#acme-server" class="md-skip">
           Skip to content
         </a>
       
@@ -106,16 +118,44 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -128,11 +168,18 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -147,6 +194,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -194,9 +242,16 @@
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -214,9 +269,16 @@
       <a href="../install/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Install CLM
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -234,19 +296,32 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     RBAC
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -255,7 +330,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            RBAC
+            
+  
+    RBAC
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -266,12 +345,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../tenants/" class="md-nav__link">
+      <a href="../organizations/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Tenants
+    
+  
+    Organizations
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -290,9 +376,16 @@
       <a href="../roles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Roles
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -308,12 +401,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../users/" class="md-nav__link">
+      <a href="../operators/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Users
+    
+  
+    Operators
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -339,9 +439,16 @@
       <a href="../connectors/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Connectors
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -359,9 +466,16 @@
       <a href="../crypto_sources/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Crypto Sources
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -379,9 +493,16 @@
       <a href="../key_management/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Key Management
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -399,9 +520,16 @@
       <a href="../certificate_requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Certificate Requests
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -416,12 +544,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../certificate_management/" class="md-nav__link">
+      <a href="../certificates/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Certificate Management
+    
+  
+    Certificates
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -436,12 +571,46 @@
   
   
     <li class="md-nav__item">
-      <a href="../compliance/" class="md-nav__link">
+      <a href="../approvals/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Compliance
+    
+  
+    Approvals
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compliance_profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance Profiles
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -459,9 +628,16 @@
       <a href="../discovery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Discovery
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -481,28 +657,45 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Protocols
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
-            Protocols
+            
+  
+    Protocols
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -516,9 +709,16 @@
       <a href="../scep_server/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SCEP Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -546,9 +746,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     ACME Server
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -557,16 +764,25 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     ACME Server
+  
+
+    
   </span>
+  
   
 
       </a>
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -575,14 +791,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#accessing-acme-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing ACME Server
+      
+        Accessing ACME Server
+      
     </span>
   </a>
   
@@ -592,7 +810,53 @@
           <li class="md-nav__item">
   <a href="#acme-server-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      ACME Server Overview
+      
+        ACME Server overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurations tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orders-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orders tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accounts tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-account-keys-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Account Keys tab
+      
     </span>
   </a>
   
@@ -600,75 +864,17 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acme-profiles-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      ACME Profiles List
-    </span>
-  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#creating-a-new-acme-profile" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a New ACME Profile
+      
+        Creating a new ACME profile
+      
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Creating a New ACME Profile">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-navigate-to-the-acme-server-page" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Navigate to the ACME Server Page
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-fill-in-the-acme-profile-form" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Fill in the ACME Profile Form
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-save-the-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Save the Profile
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-post-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Post-Creation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -691,9 +897,16 @@
       <a href="../est_server/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     EST Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -712,9 +925,16 @@
       <a href="../cmp_server/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CMP Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -737,12 +957,100 @@
   
   
     <li class="md-nav__item">
-      <a href="../integrations/" class="md-nav__link">
+      <a href="../mdm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    API Integration
+    
+  
+    MDM
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../active_directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Active Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csc_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSC Configuration
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -760,9 +1068,16 @@
       <a href="../reports/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reports
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -777,12 +1092,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../notifications/" class="md-nav__link">
+      <a href="../alerts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Notifications
+    
+  
+    Alerts
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -797,12 +1119,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../logs/" class="md-nav__link">
+      <a href="../audit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Audit Logs
+    
+  
+    Audit
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -820,9 +1149,16 @@
       <a href="../settings/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Settings
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -840,9 +1176,16 @@
       <a href="../user_profile/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     User Profile
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -863,7 +1206,9 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -872,14 +1217,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#accessing-acme-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing ACME Server
+      
+        Accessing ACME Server
+      
     </span>
   </a>
   
@@ -889,7 +1236,53 @@
           <li class="md-nav__item">
   <a href="#acme-server-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      ACME Server Overview
+      
+        ACME Server overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurations tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orders-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orders tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounts-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accounts tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-account-keys-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Account Keys tab
+      
     </span>
   </a>
   
@@ -897,75 +1290,17 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#search-and-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search and Filter
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acme-profiles-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      ACME Profiles List
-    </span>
-  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#creating-a-new-acme-profile" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a New ACME Profile
+      
+        Creating a new ACME profile
+      
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Creating a New ACME Profile">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-navigate-to-the-acme-server-page" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Navigate to the ACME Server Page
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-fill-in-the-acme-profile-form" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Fill in the ACME Profile Form
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-save-the-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Save the Profile
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-post-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Post-Creation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -979,107 +1314,60 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
-<h1 id="managing-acme-server">Managing ACME Server</h1>
-<p>The ACME Server module allows administrators to manage Automatic Certificate Management Environment (ACME) profiles, process certificate orders, and monitor enrollment activity.</p>
-<h2 id="accessing-acme-server">Accessing ACME Server</h2>
-<p>From the sidebar menu, navigate to <strong>Protocols &gt; ACME Server</strong>.</p>
-<p>The ACME Server page opens, displaying an overview of all configured ACME profiles.</p>
-<p><img alt="ACME Server Page Overview" src="../images/acme_server_page_overview.png" /></p>
-<h3 id="acme-server-overview">ACME Server Overview</h3>
-<p>At the top of the page, administrators can view summary information displayed in cards:</p>
+
+<h1 id="acme-server">ACME Server<a class="headerlink" href="#acme-server" title="Permanent link">&para;</a></h1>
+<p><strong>ACME</strong> (Automatic Certificate Management Environment) profiles let clients (certbot and similar tools) enroll for certificates automatically, following the same protocol used by Let's Encrypt.</p>
+<h2 id="accessing-acme-server">Accessing ACME Server<a class="headerlink" href="#accessing-acme-server" title="Permanent link">&para;</a></h2>
+<p>From the sidebar, select <strong>Protocols → ACME Server</strong>.</p>
+<p><img alt="ACME Server page overview" src="../images/acme_server_page_overview.png" /></p>
+<h3 id="acme-server-overview">ACME Server overview<a class="headerlink" href="#acme-server-overview" title="Permanent link">&para;</a></h3>
+<p>Summary cards show <strong>Total Orders</strong>, <strong>Success Rate</strong>, <strong>Failed Orders</strong>, <strong>Avg Processing Time</strong>, and <strong>Active Accounts</strong>.</p>
+<p>The page has four tabs:</p>
+<h3 id="configurations-tab">Configurations tab<a class="headerlink" href="#configurations-tab" title="Permanent link">&para;</a></h3>
+<p>The list of ACME profiles: <strong>Name</strong>, <strong>Directory</strong> (endpoint URL), <strong>Challenges</strong> supported, <strong>Rate Limits</strong>, <strong>Connector</strong>, <strong>Status</strong>, and row actions. Filter by <strong>Connector</strong>, <strong>Status</strong>, or <strong>Challenge Type</strong>.</p>
+<h3 id="orders-tab">Orders tab<a class="headerlink" href="#orders-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="ACME Orders tab" src="../images/acme_orders_tab.png" /></p>
+<p>Every certificate order placed against your ACME profiles: <strong>Order ID</strong>, <strong>Identifiers</strong> (domains), <strong>Account</strong> (the requesting ACME account email), <strong>Status</strong> (e.g. Ready, Valid, revoked), <strong>Challenges</strong> and their pass/fail state, and <strong>Expires</strong>. Filter by <strong>Status</strong> or <strong>Challenge Status</strong>.</p>
+<h3 id="accounts-tab">Accounts tab<a class="headerlink" href="#accounts-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="ACME Accounts tab" src="../images/acme_accounts_tab.png" /></p>
+<p>The ACME accounts that have registered against your profiles — one per unique client key/contact email.</p>
+<h3 id="external-account-keys-tab">External Account Keys tab<a class="headerlink" href="#external-account-keys-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="ACME External Account Keys tab" src="../images/acme_eak_tab.png" /></p>
+<p>External Account Binding (EAB) keys, used to tie an ACME client's account registration to a specific organization. Give the <strong>Key ID</strong> and <strong>HMAC key</strong> to the client (e.g. <code>certbot --eab-kid / --eab-hmac-key</code>) — accounts registered with a given key automatically belong to that key's organization. Click <strong>New key</strong> to generate one, scoped to an ACME profile. Filter by <strong>Status</strong> or <strong>ACME profile</strong>.</p>
+<h2 id="creating-a-new-acme-profile">Creating a new ACME profile<a class="headerlink" href="#creating-a-new-acme-profile" title="Permanent link">&para;</a></h2>
+<p>Click <strong>Add ACME Profile</strong> (from any tab) to open the profile form:</p>
+<p><img alt="Create ACME Profile form" src="../images/create_acme_profile_form.png" /></p>
+<p><strong>Basic Settings</strong></p>
 <ul>
-<li>
-<p><strong>Total Orders</strong> – The total number of certificate orders processed through ACME.</p>
-</li>
-<li>
-<p><strong>Success Rate</strong> – The percentage of successfully completed certificate orders.</p>
-</li>
-<li>
-<p><strong>Active Orders</strong> – The number of ongoing or pending ACME orders.</p>
-</li>
-<li>
-<p><strong>Failed Orders</strong> – The number of certificate orders that failed during processing.</p>
-</li>
-<li>
-<p><strong>Avg Processing</strong> – The average time taken to process an ACME order.</p>
-</li>
-<li>
-<p><strong>Active Accounts</strong> – The total number of active ACME accounts registered.</p>
-</li>
+<li><strong>Endpoint Name</strong>* — e.g. <code>acme-prod</code>.</li>
+<li><strong>Directory Path</strong>* — e.g. <code>/acme/directory</code>.</li>
+<li><strong>Website URL</strong>, <strong>Terms of Service URL</strong></li>
+<li><strong>Connector</strong>* — the CA/connector issuing certificates through this profile.</li>
+<li><strong>Validity Days</strong> — leave blank to let the CA decide.</li>
+<li><strong>Status</strong> — Active or Inactive.</li>
 </ul>
-<h2 id="search-and-filter">Search and Filter</h2>
-<p>Below the summary cards, a <strong>Search and Filter</strong> section allows administrators to:</p>
+<p><strong>Rate Limits</strong> (leave blank for unlimited)</p>
 <ul>
-<li>
-<p>Search ACME server profiles by name, tenant, or keyword.</p>
-</li>
-<li>
-<p>Apply filters (e.g., by order status, account, or date range).</p>
-</li>
+<li><strong>Certificates Per Domain</strong></li>
+<li><strong>Orders Per Account</strong></li>
+<li><strong>Accounts Per IP</strong></li>
+<li><strong>Renewals Per Week</strong></li>
 </ul>
-<h2 id="acme-profiles-list">ACME Profiles List</h2>
-<p>The ACME server profiles list table provides detailed information about each configured profile, typically including:</p>
+<p><strong>Supported Challenges</strong> — which ACME challenge types are accepted, e.g. <code>http-01</code>, <code>dns-01</code>.</p>
+<p><strong>Key Types &amp; Security</strong></p>
 <ul>
-<li>
-<p><strong>Profile Name</strong></p>
-</li>
-<li>
-<p><strong>Directory Endpoint</strong></p>
-</li>
-<li>
-<p><strong>Challenges</strong></p>
-</li>
-<li>
-<p><strong>Status (Active/Inactive)</strong></p>
-</li>
-<li>
-<p><strong>Rate Limits</strong></p>
-</li>
-<li>
-<p><strong>Connector</strong></p>
-</li>
-<li>
-<p><strong>Actions</strong> (e.g., View, Edit, Disable, or Delete)</p>
-</li>
+<li><strong>Supported Key Types</strong> — e.g. RSA, ECDSA.</li>
+<li><strong>Certificate Approval</strong> — e.g. "Issue immediately" or route through <a href="../approvals/">Approvals</a>.</li>
+<li><strong>Require Terms Acceptance</strong> — clients must accept the Terms of Service URL above.</li>
+<li><strong>Require External Account Binding</strong> — clients must present a valid EAB key/HMAC pair (see the External Account Keys tab) to register.</li>
 </ul>
-<p>This centralized view helps administrators manage ACME-based certificate automation efficiently across multiple tenants.</p>
-<h2 id="creating-a-new-acme-profile">Creating a New ACME Profile</h2>
-<p>To configure a new ACME profile in CLM, follow these steps:</p>
-<h3 id="1-navigate-to-the-acme-server-page">1. Navigate to the ACME Server Page</h3>
-<p>From the sidebar menu, select <strong>Protocols &gt; ACME Server</strong>.</p>
-<p>On the top-right corner of the page, click the <strong>Add ACME Profile</strong> button.
-<img alt="Create ACME Profile Form" src="../images/create_acme_profile_form.png" /></p>
-<h3 id="2-fill-in-the-acme-profile-form">2. Fill in the ACME Profile Form</h3>
-<p>A form will open with the following fields:</p>
-<ul>
-<li>
-<p><strong>Endpoint Name</strong> – Enter a unique name for the ACME endpoint.</p>
-</li>
-<li>
-<p><strong>Directory Path</strong> – Specify the ACME directory path used for order and account requests.</p>
-</li>
-<li>
-<p><strong>Connector (Dropdown)</strong> – Select the connector associated with this ACME profile.</p>
-</li>
-<li>
-<p><strong>Website URL</strong> – Provide the URL of the website or service linked to this ACME configuration.</p>
-</li>
-<li>
-<p><strong>Challenge Type (Dropdown)</strong> – Select the ACME challenge type (e.g., HTTP-01, DNS-01).</p>
-</li>
-<li>
-<p><strong>Status (Dropdown)</strong> – Choose whether the ACME profile is Active or Inactive.</p>
-</li>
-</ul>
-<h3 id="3-save-the-profile">3. Save the Profile</h3>
-<p>After completing the form, click the <strong>Create Profile</strong> button.</p>
-<h3 id="4-post-creation">4. Post-Creation</h3>
-<p>The new ACME profile will appear in the <strong>ACME Server Profiles List</strong> with its details.</p>
+<p>Click <strong>Create ACME Profile</strong> to save.</p>
 
 
 
@@ -1097,19 +1385,67 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../scep_server/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SCEP Server">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                SCEP Server
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../est_server/" class="md-footer__link md-footer__link--next" aria-label="Next: EST Server">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                EST Server
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      © 2025 Dictalabs. All rights reserved.
+      © 2026 Dictalabs. All rights reserved.
     </div>
   
   
@@ -1124,11 +1460,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../extra.js"></script>
       

@@ -1,0 +1,236 @@
+/* ==========================================================================
+   CLM Admin Guide — brand theme
+   Palette derived from the guide's own mark (blue #0EA5E9 / near-black #0F172A),
+   applied via Material's CSS custom properties so it cascades through every
+   component (links, buttons, search highlight, progress bar, footer nav, etc.)
+   rather than a handful of hand-picked selectors.
+   ========================================================================== */
+
+:root {
+  --clm-brand-blue: #0ea5e9;
+  --clm-brand-blue-dark: #0284c7;
+  --clm-brand-ink: #0f172a;
+  --clm-radius: 8px;
+}
+
+/* ---- Light scheme -------------------------------------------------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: #ffffff;
+  --md-primary-bg-color: var(--clm-brand-ink);
+  --md-primary-bg-color--light: var(--clm-brand-ink);
+
+  --md-accent-fg-color: var(--clm-brand-blue);
+  --md-accent-fg-color--transparent: rgba(14, 165, 233, 0.1);
+  --md-accent-bg-color: #ffffff;
+
+  --md-typeset-a-color: var(--clm-brand-blue-dark);
+
+  --md-default-bg-color: #ffffff;
+}
+
+/* ---- Dark scheme ----------------------------------------------------- */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--clm-brand-ink);
+  --md-primary-fg-color--light: #1e293b;
+  --md-primary-fg-color--dark: #0b1220;
+  --md-primary-bg-color: #f8fafc;
+
+  --md-accent-fg-color: #38bdf8;
+  --md-accent-fg-color--transparent: rgba(56, 189, 248, 0.15);
+
+  --md-default-bg-color: #0b1220;
+  --md-default-fg-color: #e2e8f0;
+
+  --md-typeset-a-color: #38bdf8;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.md-header {
+  border-bottom: 1px solid rgba(14, 165, 233, 0.35);
+  box-shadow: none;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  color: var(--clm-brand-ink);
+}
+
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-header__button {
+  color: var(--clm-brand-ink);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  border-bottom-color: rgba(56, 189, 248, 0.3);
+}
+
+.md-header__title {
+  font-weight: 600;
+}
+
+/* Tabs bar (unused today, but styled consistently if enabled later) */
+.md-tabs {
+  background-color: var(--clm-brand-ink);
+}
+
+/* ==========================================================================
+   Sidebar navigation
+   ========================================================================== */
+
+.md-nav__item .md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  color: var(--clm-brand-blue-dark);
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  color: var(--md-accent-fg-color);
+}
+
+.md-nav__link:hover {
+  color: var(--clm-brand-blue-dark);
+}
+
+.md-nav__item--nested > .md-nav__link:hover,
+.md-nav__item--nested > .md-nav__link:focus,
+.md-nav__item--nested > .md-nav__link:active {
+  color: var(--clm-brand-blue-dark);
+}
+
+.md-nav__title {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.md-typeset a {
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* Tables: subtle rounded card with a tinted header row */
+.md-typeset table:not([class]) {
+  border-radius: var(--clm-radius);
+  overflow: hidden;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(14, 165, 233, 0.08);
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(14, 165, 233, 0.04);
+}
+
+/* Admonitions: match the corner radius used elsewhere */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--clm-radius);
+}
+
+/* Inline code */
+.md-typeset code {
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.md-footer {
+  background-color: var(--clm-brand-ink);
+}
+
+.md-footer-meta {
+  background-color: #0b1220;
+}
+
+.md-footer-meta__inner {
+  justify-content: center; /* Material's default is space-between; we only show copyright */
+}
+
+.md-footer-meta .md-copyright {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.md-footer__link {
+  transition: opacity 0.15s ease;
+}
+
+.md-footer__link:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Scrollbars
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #94a3b8 !important;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clm-brand-blue) !important;
+}
+
+.md-sidebar::-webkit-scrollbar,
+.md-sidebar__inner::-webkit-scrollbar,
+.md-nav::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.md-sidebar::-webkit-scrollbar-thumb,
+.md-sidebar__inner::-webkit-scrollbar-thumb,
+.md-nav::-webkit-scrollbar-thumb {
+  background-color: #94a3b8 !important;
+  border-radius: 4px !important;
+}
+
+.md-sidebar::-webkit-scrollbar-thumb:hover,
+.md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+.md-nav::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clm-brand-blue) !important;
+}
+
+.md-sidebar,
+.md-sidebar__inner,
+.md-nav {
+  scrollbar-color: #94a3b8 transparent;
+}
+
+.md-sidebar:hover,
+.md-sidebar__inner:hover,
+.md-nav:hover {
+  scrollbar-color: var(--clm-brand-blue) transparent;
+}
