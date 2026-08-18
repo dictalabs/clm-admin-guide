@@ -1,169 +1,81 @@
 # Settings
 
-The **Settings** section allows administrators to configure system-wide preferences, including general application details, branding options, and scheduling configurations.
+**Settings** covers system-wide configuration: general application details, UI branding, and scheduled/automated tasks.
 
-## General Settings
+## General
 
-From the sidebar, navigate to **Settings > General Settings**.
+From the sidebar, select **Settings → General**.
 
-![Settings Page Overview](images/settings_page_overview.png)
+![General Settings](images/settings_page_overview.png)
 
-The **General Settings** page allows administrators to configure core application details:
+- **Application Name**, **Company Name**
+- **Application URL** — the public URL of your CLM instance.
+- **Support Email**
+- **Choose Logo** — upload a logo file.
 
-- **Application Name** – The name of the application (displayed on the admin web).
-    
-- **Company Name** – The organization name (displayed on the admin web).
-    
-- **Logo** – Upload a company or application logo to be displayed in the admin web interface.
-    
+Click **Save Changes** to apply.
 
-## Branding Settings
+## Branding
 
-From the sidebar, navigate to **Settings > Branding**.
+From the sidebar, select **Settings → Branding**.
 
-![System Configuration](images/Branding_configuration.png)
+![Branding Settings](images/Branding_configuration.png)
 
-The **Branding** page allows administrators to customize the visual identity of the admin web:
+Branding is organized into six sections, each with one or more color pickers:
 
-- **Primary Color** – The main color applied to buttons and highlights.
-    
-- **Secondary Color** – The supporting color used for secondary actions.
-    
-- **Destructive Color** – A color used for failed states or critical actions (e.g., revoke, delete).
-    
-- **Navigation Bar Color** – The color theme applied to the navigation bar.
-    
-- **Sidebar Color** – The background color of the sidebar.
-    
-- **Main Content Color** – The background color of the main content area.
-    
+| Section | Field(s) |
+|---|---|
+| Header Section | Navbar Background Color |
+| Menu Section | Sidebar Background Color |
+| Main Section | Main Content Background Color |
+| Dialogs Section | Dialog Background Color |
+| Buttons Section | Primary Color, Secondary Color |
+| Text Section | Primary Text, Secondary Text |
 
-These settings allow organizations to align the CLM system with their brand identity.
+Click **Save Changes** to apply, or **Reset to Default** to discard your customizations.
 
-View and manage scheduled tasks that automate operations such as notifications, certificate checks, and compliance validations.
+## Scheduler
 
-## Schedulers
+**Scheduler** manages and automates routine tasks — most commonly, the recurring runs created when you enable **Auto Discovery** on a [Discovery](discovery.md) task.
 
-View and manage scheduled tasks that automate operations such as notifications, certificate checks, and compliance validations.
-### Accessing Schedulers
+From the sidebar, select **Settings → Scheduler**.
 
-From the sidebar menu, navigate to **Settings > Scheduler**.
+![Schedulers overview](images/schedulers_page_overview.png)
 
-The **Schedulers** page opens, showing an overview of all configured schedulers in the system.
-![Schedulers Page Overview](images/schedulers_page_overview.png)
+Summary cards show **Active Schedulers**, **Running Schedulers**, **Failed Schedulers**, and **Total Schedulers**.
 
-### Schedulers Overview
+### Search and filter
 
-At the top of the page, administrators can view summary information displayed in cards:
+- **Search Schedulers** — by name or description.
+- **Frequency**, **Scheduler Type** — narrow the list.
+- **Clear All** — resets all filters.
 
-- **Active Schedulers** – The number of schedulers currently active.
-    
-- **Running Schedulers** – The number of schedulers that are in execution.
-    
-- **Failed Schedulers** – The number of schedulers that encountered errors.
-    
-- **Total Schedulers** – The total number of schedulers configured.
+### Schedulers list
 
-### Search and Filter
+| Column | Description |
+|---|---|
+| Name | Scheduler name — auto-discovery schedulers are named `Auto Discovery: <task name>`. |
+| Scheduler Type | e.g. `Auto Discovery`. |
+| Frequency | e.g. `Daily`. |
+| Enabled | Active or Inactive. |
+| Actions | Row-level actions. |
 
-Below the summary cards, a **Search and Filter** section allows administrators to:
+Use **Sync to Beat** (top right) to push the current scheduler configuration to the background task runner.
 
-- Search schedulers by name, type, or status.
-    
-- Apply filters to refine results (e.g., by Frequency, or Scheduler Type).
+### Adding a scheduler
 
-### Schedulers List
+1. Click **Add Scheduler** (top right).
+2. Fill in the form:
 
-The schedulers list table provides detailed information about each scheduler, typically including:
+    ![Add Scheduler form](images/schedulers_creating.png)
 
-- **Scheduler Name**
-    
-- **Type** (e.g., Notifications, Certificate Expiry, Compliance Checks)
-    
-- **Status** (Active / Inactive)
-    
-- **Last Run** (timestamp of last execution)
-    
-- **Next Run** (upcoming scheduled execution time)
-    
-- **Actions** (Edit, Delete)
-    
+    - **Name***
+    - **Scheduler Type***
+    - **Frequency***
+    - **Description**
+    - **Task Status** — enabled or disabled.
 
-This view helps administrators track and manage automated operations efficiently across the CLM system.
+3. Click **Create Scheduler** to save.
 
-### Creating a New Scheduler
-
-To add a new scheduler in CLM:
-
-#### 1. Navigate to the Schedulers Page
-
-From the sidebar, go to **Settings > Scheduler**.
-
-On the top-right corner of the page, click the **Create Scheduler** button.
-
-![Schedulers Overview](images/schedulers_creating.png)
-#### 2. Fill in the Scheduler Form
-
-A form will appear with the following fields:
-
-##### **Basic Information**
-
-- **Name** – Enter a unique name for the scheduler.
-    
-- **Scheduler Type (Dropdown)** – Select the type of scheduler:
-    
-    - **Certificate Renewal**
-        
-    - **Log Archiver**
-        
-    - **Compliance Check**
-        
-- **Frequency (Dropdown)** – Choose how often the scheduler should run:
-    
-    - Every Hour
-        
-    - Daily
-        
-    - Weekly
-        
-    - Monthly
-
-##### Type-Specific Settings
-
-- **If Certificate Renewal is selected:**
-    
-    - **Days Before Expiry** – Define how many days before expiry renewal should start.
-        
-    - **Retry Attempts** – Set the maximum number of retry attempts.
-        
-    - **Retry Delay** – Define the delay between retry attempts.
-        
-- **If Log Archiver is selected:**
-    
-    - **Retention Period** – Specify the duration (in days) to retain archived logs.
-        
-    - **Include Debug Logs (Toggle)** – Enable if debug logs should be included.
-        
-    - **Compress Archives (Toggle)** – Enable to compress archived files for storage optimization.
-        
-- **Enable (Toggle)** – Toggle button to enable or disable the scheduler.
-
-#### 3. Save the Scheduler
-
-After filling in the form, click the **Create Scheduler** button.
-
-The scheduler will be saved and added to the schedulers list.
-
-#### 4. Post-Creation
-
-The new scheduler will appear in the **Schedulers List Table** with its configured details.
-
-Admins can edit, enable/disable, or delete the scheduler as needed.
-
-
-
-
-
-
-
-
+!!! tip
+    In practice, most schedulers you'll see here are created automatically when an administrator enables **Auto Discovery** on a scan in [Discovery](discovery.md), rather than being hand-built from this screen.

@@ -1,6 +1,6 @@
 # **CLM Deployment Guide**
 
-This guide provides a step-by-step walkthrough for installing **vScrawl** on an in-house server. The installation process is automated through a setup script but requires administrator input and consent at various stages. Follow this guide carefully to ensure a successful installation.
+This guide provides a step-by-step walkthrough for installing **CLM** on an in-house server. The installation process is automated through a setup script but requires administrator input and consent at various stages. Follow this guide carefully to ensure a successful installation.
 
 ---
 

@@ -1,98 +1,56 @@
-# Managing CMP Server Profiles
+# CMP Server
 
-The CMP (Certificate Management Protocol) Server module allows administrators to view and manage CMP profiles used for secure certificate enrollment and lifecycle operations.
+**CMP** (Certificate Management Protocol) profiles let clients enroll for certificates using the CMP protocol against a configured endpoint.
 
-## Accessing CMP Server Profiles
+## Accessing CMP Server
 
-From the sidebar menu, navigate to **Protocols > CMP Server**.
+From the sidebar, select **Protocols → CMP Server**.
 
-The CMP Server page opens, displaying an overview of all configured CMP profiles.
+![CMP Server page overview](images/cmp_server_page_overview.png)
 
-![CMP Server Page Overview](images/cmp_server_page_overview.png)
+### CMP Server overview
 
-### CMP Server Overview
+Summary cards show **Total Orders**, **Success Rate**, **Failed Orders**, **Avg Processing Time**, and **Active Profiles**.
 
-At the top of the page, administrators can view summary information displayed in cards:
+### Search and filter
 
-- **Total Orders** – The total number of certificate enrollment orders processed through CMP.
-    
-- **Success Rate** – The percentage of successful CMP requests.
-    
-- **Active Orders** – The number of currently active CMP orders.
-    
-- **Failed Orders** – The number of failed CMP operations.
-    
-- **Average Processing Time** – The average time taken to process CMP requests.
-    
-- **Active Accounts** – The number of accounts actively using CMP profiles.
+- **Search Profiles** — by name or description.
+- **Connector** — narrow the list.
+- **Clear All** — resets all filters.
 
-## Search and Filter
+### CMP profiles list
 
-Below the summary cards, a **Search and Filter** section allows administrators to:
+| Column | Description |
+|---|---|
+| Name | Profile name. |
+| CMP URL | The CMP endpoint, with a copy-to-clipboard shortcut. |
+| Connector | The [connector](connectors.md)/CA backing this profile. |
+| Status | Active or Inactive, plus a sync indicator — **Synced** or **Not synced** — showing whether the profile's configuration has been pushed to the CMP endpoint. |
+| Actions | See [Row actions](#row-actions) below. |
 
-- Search CMP profiles by name or associated tenant.
-    
-- Apply filters (e.g., by status, order success rate, or connector).
+## Creating a new CMP profile
 
-## CMP Profiles List
-The CMP Profiles List table provides detailed information about each CMP profile, including:
+1. Click **Add CMP Profile** (top right).
+2. Fill in the form:
 
-- **Profile Name**
-    
-- **Associated Connector**
-    
-- **Status (Active/Inactive)**
-    
-- **Tenant Association**
-    
-- **Orders (Success/Failed/Total)**
-    
-- **Actions** (e.g., View, Edit, Delete)
-    
+    ![Create CMP Profile form](images/navigate_cmp_server_page.png)
 
-This centralized view helps administrators efficiently manage all CMP-based certificate enrollments across the CLM system.
+    - **Name*** — the CMP profile name.
+    - **Connector***
+    - **Endpoint Path**
+    - **Description**
+    - **Auto Push Config** — automatically push configuration/updates to the CMP endpoint.
+    - **Require Manual Approval** — route enrollments through [Approvals](approvals.md).
 
-## Creating a New CMP Profile
+3. Click **Create CMP Profile** to save.
 
-To add a new CMP profile in CLM, follow these steps:
+## Row actions
 
-### 1. Navigate to the CMP Server Page
+![CMP profile row actions](images/cmp_row_actions.png)
 
-From the sidebar, select **Protocols > CMP Server**.
+Click the **⋮** menu on any CMP profile row:
 
-On the top-right corner of the page, click the **Add CMP Profile** button.
-
-![Navigate to CMP Server Page](images/navigate_cmp_server_page.png)
-### 2. Fill in the CMP Profile Form
-
-A form will appear with the following fields:
-
-- **Name** – Enter a unique name for the CMP profile.
-    
-- **Connector (Dropdown)** – Select the connector associated with this CMP profile.
-    
-- **Java Base URL** – Provide the base URL for the CMP server.
-    
-- **Endpoint Path** – Enter the endpoint path for CMP requests.
-    
-- **Description** – Provide a brief description of the profile’s purpose.
-    
-- **Status (Dropdown/Toggle)** – Set the profile status as Active or Inactive.
-
-### 3. Save the CMP Profile
-
-After completing the form, click the **Create CMP Profile** button.
-
-The new CMP profile will be saved and added to the CMP Profiles List.
-
-### 4. Post-Creation
-
-The profile will appear in the CMP Profiles table with its details.
-
-
-
-
-
-
-
-
+- **Edit** — update the profile's connector, endpoint path, or approval settings.
+- **Generate secret** — issue a new shared secret for the profile.
+- **Sync config** — push the profile's current configuration to the CMP endpoint (clears a **Not synced** status).
+- **Delete** — permanently remove the profile.

@@ -1,90 +1,45 @@
-# Managing SCEP Server
+# SCEP Server
 
-The **Simple Certificate Enrollment Protocol (SCEP)** server module in CLM allows administrators to configure and manage SCEP profiles used for certificate enrollment. This includes handling certificate signing requests, challenge validation, and monitoring enrollment activity.
+**SCEP** (Simple Certificate Enrollment Protocol) profiles let clients and devices enroll for certificates automatically using a shared challenge password.
 
 ## Accessing SCEP Server
 
-From the sidebar menu, navigate to **Protocols > SCEP Server**.
+From the sidebar, select **Protocols → SCEP Server**.
 
-The **SCEP Server** page opens, displaying an overview of all configured SCEP server profiles.
-![SCEP Server Page Overview](images/scep_server_page_overview.png)
+![SCEP Server page overview](images/scep_server_page_overview.png)
 
-### SCEP Server Overview
+### SCEP Server overview
 
-At the top of the page, administrators can view summary information displayed in cards:
+Summary cards show **Total Orders**, **Success Rate**, **Active Failed Orders**, **Average Processing** time, and **Active Accounts**.
 
-- **Total Orders** – The total number of certificate enrollment requests processed.
-    
-- **Success Rate** – The percentage of successfully completed enrollment requests.
-    
-- **Active Failed Orders** – The number of failed requests currently marked as active.
-    
-- **Average Processing** – The average processing time for SCEP enrollment requests.
-    
-- **Active Accounts** – The number of accounts actively using SCEP.
+### Search and filter
 
-## Search and Filter
+- **Search** — by name or keyword.
+- **Connectors**, **Status** — narrow the list.
+- **Clear All** — resets all filters.
 
-Below the summary cards, a **Search and Filter** section allows administrators to:
+### SCEP profiles list
 
-- Search SCEP profiles by name or keyword.
-    
-- Apply filters to refine results (e.g., by status, tenant, connectors).
+| Column | Description |
+|---|---|
+| Name | Profile name. |
+| Server URL | The SCEP enrollment endpoint clients connect to. |
+| Connector | The [connector](connectors.md)/CA backing this profile. |
+| Status | Active or Inactive. |
+| Actions | View, edit, or delete. |
 
+## Creating a new SCEP profile
 
-## SCEP Server Profiles List
+1. Click **Add SCEP Profile** (top right).
+2. Fill in the form:
 
-The SCEP Server Profiles list table provides detailed information about each profile, typically including:
+    ![Create SCEP Profile form](images/create_scep_profile_form.png)
 
-- **Profile Name**
-    
-- **Status (Active/Inactive)**
-    
-- **Associated Tenant**
-    
-- **Server URL**
-    
-- **Connectors**
-    
-- **Actions** (e.g., View, Edit, or Delete)
-    
+    - **Profile Name*** — e.g. `scep.dl` or `scep-dl`.
+    - **Connectors***
+    - **Publish to AD** — optionally publish issued certificates to the matching Active Directory identity (see [Active Directory](active_directory.md)).
+    - **Challenge Validation** — `None` or `Static password`. When set to Static password, a **Challenge Password*** field appears — clients must present this shared secret to enroll.
+    - **Status** — Active or Inactive.
+    - **Require Manual Approval** — route enrollments through [Approvals](approvals.md) before issuance.
 
-This centralized view enables administrators to efficiently monitor and manage SCEP enrollment across the CLM system.
-
-## Creating a New SCEP Profile
-
-To add a new SCEP profile in CLM:
-
-### 1. Navigate to the SCEP Server Page
-
-From the sidebar, select **Protocols > SCEP Server**.
-
-On the top-right corner of the page, click the **Add SCEP Profile** button.
-![Create SCEP Profile Form](images/create_scep_profile_form.png)
-
-### 2. Fill in the SCEP Profile Form
-
-A form will appear with the following fields:
-
-- **Profile Name** – Enter a unique name for the SCEP profile.
-    
-- **Connectors (Dropdown)** – Select the connector associated with this profile.
-    
-- **Challenge Password** – Specify the challenge password to secure certificate enrollment requests.
-    
-- **Status (Dropdown)** – Set the profile status (Active/Inactive).
-    
-
-### 3. Save the SCEP Profile
-
-After completing the form, click the **Create Profile** button.
-
-The profile will be created and added to the SCEP Server Profiles list.
-
-### 4. Post-Creation
-
-The new SCEP profile will appear in the list with its details.
-
-
-
-
+3. Click **Create SCEP Profile** to save.

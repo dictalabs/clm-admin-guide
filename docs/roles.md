@@ -1,79 +1,78 @@
-# Managing Roles
+# Roles
 
-Roles in CLM define the level of access and permissions that users have within the system. After creating a tenant, the next recommended step is to configure roles to control user privileges.
+**Roles** define what an operator is allowed to see and do in CLM. Every role belongs to a single organization, and every operator is assigned exactly one role.
 
 ## Accessing Roles
-1. From the **sidebar menu**, navigate to **Roles**.
-    
-2. The **Roles page** opens, providing an overview of all roles available in the system.
-![Roles Page Overview](images/roles_page_overview.png)
 
-## Roles Overview
-At the top of the page, administrators can view summary information displayed in **cards**:
+From the sidebar, select **Roles**.
 
-- **Total Tenants** – The number of tenants configured in the system.
-    
-- **Global Roles** – Roles that apply across all tenants and are managed at the system level.
-    
-- **Tenant Roles** – Roles specific to individual tenants.
-    
-- **Total Users** – The total number of users assigned to roles.
-## Search and Filter
-Below the summary cards, a **Search and Filter** section allows administrators to:
+![Roles page overview](images/roles_page_overview.png)
 
-- Search roles by name or keyword.
-    
-- Apply filters (e.g., by role type, tenant association, or status).
+### Roles overview
 
-## Roles List
-The **roles list table** provides detailed information about each role, typically including:
+Summary cards show:
 
-- **Role Name**
-    
-- **Associated Tenant** (if applicable)
-    
-- **Number of Users Assigned**
-    
-- **Description**
-    
-- **Actions** (e.g., View, Edit, Delete)
-    
+- **Total Organizations** — organizations that have at least one role defined.
+- **Organization Roles** — total number of roles across all organizations.
+- **Total Operators** — operators currently assigned to a role.
 
-This view helps administrators manage role-based access control across the entire CLM environment.
+### Search and filter
 
-## Creating a New Role
+- **Search roles** — search by role name or description.
+- **Organization** — filter roles by organization.
+- **Clear All** — resets all filters.
 
-To define a new role in CLM, follow these steps:
+### Roles list
 
-1. **Navigate to the Roles Page**
-    
-    - From the sidebar, select **Roles**.
-        
-    - On the **top-right corner** of the page, click the **Create Role** button.
+| Column | Description |
+|---|---|
+| Role Name | The role's name. |
+| Organization | The organization the role belongs to. |
+| Description | Optional description. |
+| Permissions | Number of permissions granted to this role. |
+| Operators | Number of operators currently assigned this role. |
+| Created | When the role was created. |
+| Actions | View, edit, or delete the role. |
 
-![Create New Role](images/create_role.png)
+## Creating a new role
 
-2. **Fill in the Role Form**  
-    A form will open with the following fields:
-    
-    - **Role Name** – Enter a unique name for the role.
-        
-    - **Description** – Provide a short description of the role’s purpose.
-        
-    - **Tenant (Dropdown)** – If the role is **tenant-specific**, select the tenant from the dropdown list.
-        
-    - **Permissions (Toggle List)** – A list of all modules will be displayed (e.g., Certificates, Tenants, Users, Compliance, Protocols).
-        
-        - Use toggle switches to enable or disable permissions for each module.
-            
-3. **Save the Role**
-    
-    - After configuring the details and permissions, click the **Create Role** button.
-        
-    - The new role will be saved and added to the **Roles List**.
-        
-4. **Post-Creation**
-    
-    - Assign users to this role through the **Users Management** section.
-        
-    - Roles can be edited later to adjust permissions as needed.
+1. Click **Create Role** (top right).
+2. Fill in the form:
+
+    ![Create Role form](images/create_role_form.png)
+
+    - **Role Name*** — required.
+    - **Description** — optional.
+    - **Organization*** — required; the role only applies to operators within this organization.
+    - **Permissions*** — a searchable, module-by-module permission tree. Each module shows how many of its permissions are currently selected (e.g. `Certificates 0/6`). Use **All Permissions** to grant everything at once, or expand each module to select individual permissions.
+
+### Permission modules
+
+The permission tree is organized by module. As of this version, the modules are:
+
+| Module | Covers |
+|---|---|
+| Dashboard | Viewing the dashboard |
+| Certificates | View, create, modify, delete, export, revoke, renew, issue |
+| Certificate Requests | View, create, modify, delete, halt, approve, reject (CSR workflow) |
+| Operators | View, create, modify, delete, manage (operator accounts) |
+| Organizations | View, create, modify, delete |
+| Key Management | View, generate, export, delete, modify (cryptographic keys) |
+| Crypto Sources | View, manage |
+| Connectors | View, create, modify, delete, share |
+| Protocols | View, manage (SCEP/ACME/EST/CMP profiles) |
+| Compliance Profiles | View (read), manage (create/edit rules and profiles) |
+| CSC Configuration | Governed by the Settings permissions (view/modify) |
+| Reports | View/read reports |
+| Notifications | View, configure (this covers the **Alerts** feature) |
+| Log | View audit/operation logs |
+| Discovery | View, modify (run scans, manage discovery tasks) |
+| Settings | View, modify |
+| Scheduler | View, manage |
+
+Most modules expose separate **view** vs. **create/modify/delete** permissions so you can grant read-only access without granting the ability to change anything — follow least-privilege and only grant what a role actually needs.
+
+3. Click **Create Role** to save.
+
+!!! note "Scope"
+    Roles are always created within a specific organization from this screen. The platform's initial administrator account uses a separate, built-in system-level role that isn't created or edited here.

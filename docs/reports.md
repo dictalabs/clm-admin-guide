@@ -1,128 +1,39 @@
-# Managing Reports
+# Reports
 
-The **Reports** section provides administrators with insights into SSL certificates and CA/connector usage. Reports are organized into two main categories: **SSL Reports** and **CA Reports**.
+**Reports** provides pre-built, filterable reports across your certificate inventory, organized into three categories: **Certificate Reports**, **CA Reports**, and **Common Reports**. Each report is presented as a launcher card — click **Open report** to view it.
 
-### SSL Reports
+## Certificate Reports
 
-Under the **SSL Reports** tab, administrators can access two types of reports:
+From the sidebar, select **Reports → Certificate Reports**.
 
-- **SSL Certificate Report** – Displays detailed information about SSL certificates.
-    
-- **SSL Expiry Report** – Shows SSL certificates approaching or past their expiry date.
-![Reports Page Overview](images/reports_page_overview.png)
+![Certificate Reports](images/reports_page_overview.png)
 
+- **Certificate Report** — generates a list of certificates discovered, imported, or created.
+- **Certificate Expiry Report** — certificates expiring within N days.
 
-**Accessing Reports**
+## CA Reports
 
-1. Navigate to **Reports > SSL Reports**.
-    
-2. Click the **Open Report** button for the desired report type.
-    
+From the sidebar, select **Reports → CA Reports**.
 
-**SSL Certificate Report Screen**
+![CA Reports](images/reports_dashboard_3.png)
 
-- A **Search and Filter** section is available to refine SSL certificate data.
-    
-- The report results are displayed in a list/table below.
-    
-- From the top-right corner, administrators can export the report in multiple formats:
-    
-    - **PDF**
-        
-    - **CSV**
-        
-    - **Email**
+- **CA / Connector Usage** — per-connector certificate counts and expiries.
+- **EJBCA Connector Usage** — a focused view for EJBCA connectors specifically.
 
-![Reports Dashboard](images/reports_dashboard_1.png)
+## Common Reports
 
-**SSL Expiry Report Screen**
+From the sidebar, select **Reports → Common Reports**.
 
-- A **Search and Filter** section is available to refine expiry-related results.
-    
-- The report results are displayed in a list/table below.
-    
-- From the top-right corner, administrators can export the report in:
-    
-    - **PDF**
-        
-    - **CSV**
-        
-    - **Email**
+![Common Reports](images/reports_dashboard_4.png)
 
-### CA Reports
+- **Key Strength** — key algorithms and sizes across certificates.
+- **Renewal Outcomes** — requested, completed, and failed renewals.
 
-Under the **CA Reports** tab, administrators can access two types of reports:
+## Using a report
 
-- **CA / Connector Usage** – Provides usage statistics of CAs and their associated connectors.
-    
-- **EJBCA Connector Usage** – Displays detailed usage information specific to EJBCA connectors.
+Click **Open report** on any card to view it:
 
-**Accessing Reports**
+![Certificate report opened](images/reports_dashboard_1.png)
 
-1. Navigate to **Reports > CA Reports**.
-    
-2. Click the **Open Report** button for the desired report type.
-
-![Reports Dashboard](images/reports_dashboard_3.png)
-
-**CA / Connector Usage Screen**
-
-- A **Search and Filter** section is available to refine connector usage data.
-    
-- The report results are displayed in a list/table below.
-    
-- From the top-right corner, administrators can export the report in:
-    
-    - **PDF**
-        
-    - **CSV**
-        
-    - **Email**
-        
-
-**EJBCA Connector Usage Screen**
-
-- A **Search and Filter** section is available to refine EJBCA usage data.
-    
-- The report results are displayed in a list/table below.
-    
-- From the top-right corner, administrators can export the report in:
-    
-    - **PDF**
-        
-    - **CSV**
-        
-    - **Email**
-
-![Reports Dashboard](images/reports_dashboard_4.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Use the **Search** box and report-specific filters (e.g. Issuer, Key Algorithm) to narrow the results.
+- Click **Export** (top right) to download the current results, or use the **⋮** menu on a report's launcher card for additional options.

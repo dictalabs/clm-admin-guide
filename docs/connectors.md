@@ -1,114 +1,115 @@
-# Connector Management
+# Connectors
 
-The **Connector Management** module allows administrators to configure and manage third-party integrations across tenants in the CLM system. Connectors enable communication with external systems such as Certificate Authorities (CAs),EMAIL/SMTP Servers, Crypto Sources ,etc.
+**Connectors** are the integrations CLM uses to talk to the outside world — certificate authorities, mail servers, crypto engines, directories, and more. Certificate requests, crypto sources, and protocol profiles are all built on top of a connector.
 
 ## Accessing Connectors
-1. From the **sidebar menu**, navigate to **Connectors**.
-    
-2. The **Connectors page** opens, providing an overview of all configured connectors.
-![Connectors Page Overview](images/connectors_page_overview.png)
 
-## Connectors Overview
-At the top of the page, administrators can view summary information displayed in **cards**:
+From the sidebar, select **Connectors**.
 
-- **Total Tenants** – The number of tenants that have connectors configured.
-    
-- **Total Connectors** – The total number of connectors across the system.
-    
-- **Active Connectors** – The number of connectors currently active and functional.
+![Connectors page overview](images/connectors_page_overview.png)
 
-## Search and Filter
-Below the summary cards, a **Search and Filter** section allows administrators to:
+### Connectors overview
 
-- Search connectors by name, type, or tenant.
-    
-- Apply filters (e.g., by connector status, tenant association, or type).
+Summary cards show **Total Organizations**, **Total Connectors**, and **Active** connector count.
 
-## Connectors List
-The **connectors list table** provides detailed information about each connector, typically including:
+### Search and filter
 
-- **Connector Name**
-    
-- **Type**
-    
-- **Associated Tenant**
-    
-- **Status** (Active/Inactive)
-    
-- **Created**
-    
-- **Actions** (e.g., View, Edit, Delete)
-    
+- **Search connectors** — by name or description.
+- **Organization**, **Connector Type**, **Status** — narrow the list.
+- **Clear All** — resets all filters.
 
-This centralized view allows administrators to efficiently manage external system integrations and ensure smooth certificate lifecycle operations.
+### Connectors list
 
-## Creating a New Connector
-To configure a new connector in CLM:
+| Column | Description |
+|---|---|
+| Connector | Name of the connector. |
+| Organization | Owning organization. |
+| Type | Connector type (see below). |
+| Status | Active or Inactive. |
+| Created | Creation timestamp. |
+| Actions | View, edit, or delete. |
 
-1. **Navigate to the Connectors Page**
-    
-    - From the sidebar, select **Connectors**.
-        
-    - On the **top-right corner** of the page, click the **Add Connector** button.
-![Create Connector Form](images/create_connector_form.png)
+## Creating a new connector
 
-2. **Fill in the Connector Form**  
-    A form will appear with the following fields:
-    
-    - **Connector Type (Dropdown)** – Select the type of connector (e.g., SMTP Server, EJBCA).
-        
-    - **Connector Name** – Enter a unique name for the connector.
-        
-    - **Tenant (Dropdown)** – Select the tenant for which this connector will be associated.
-        
-    - **Description** – Provide a brief description of the connector’s purpose.
-        
-    - **Status (Dropdown)** – Choose whether the connector should be **Active** or **Inactive**.
-        
-3. **Connector-Specific Configuration**  
-    Depending on the **Connector Type**, additional fields will be displayed:
-    
-    - **SMTP Server Connector**
-        
-        - SMTP Server
-            
-        - Port
-            
-        - Username
-            
-        - Password
+1. Click **Add Connector** (top right).
+2. Fill in the base fields:
 
-![Connector Details Page](images/connector_smtp.png)
+    ![Add Connector form](images/create_connector_form.png)
 
-**EJBCA Connector**
+    - **Connector Type*** — select from the list below.
+    - **Connector Name***
+    - **Organization***
+    - **Compliance Profiles** — optionally attach a compliance profile to certificates issued through this connector.
+    - **Require Approval** — if enabled, requests routed through this connector need an approval before issuance (see [Approvals](approvals.md)).
+    - **Description**
+    - **Status** — Active or Inactive.
 
-- Connector URL
-    
-- CA Name
-    
-- CA URL
-    
-- PFX File (upload)
-    
-- PFX Password
-    
-- End Entity Profile
-    
-- Certificate Profile
+3. Choosing a **Connector Type** reveals a type-specific **Configuration** section. The available types are:
 
-![Connector Details Page](images/connector_details.png)
+    ![Connector type options](images/connector_types_list.png)
 
-**Crypto Engine Connector**
+    - SMTP Server
+    - Crypto Engine
+    - EJBCA
+    - Microsoft CA
+    - Dictalabs CA
+    - Microsoft Intune
+    - Active Directory / LDAP
+    - SYSLOG
+    - Single Sign-On
 
-- URL
-    
-- Client ID
-    
-- Client Secret
+    Most connector types provide a **Test Connection** button so you can validate credentials before saving.
 
-![Connector Logs](images/connector_logs.png)
+4. Click **Create Connector** to save.
 
-**Save the Connector**
+### Example: SMTP Server connector
 
-- After completing the configuration, click the **Create Connector** button.
-- The new connector will appear in the **Connectors List**.
+Used to send outbound email (password resets, alerts, notifications).
+
+![SMTP connector configuration](images/connector_smtp.png)
+
+- **Authentication Type*** (e.g. Basic — Username & Password)
+- **SMTP Server*** (host)
+- **Port***
+- **Username***
+- **Password***
+
+### Example: EJBCA connector
+
+Connects CLM to an EJBCA certificate authority for issuance.
+
+![EJBCA connector configuration](images/connector_details.png)
+
+- **CA Name***
+- **CA URL***
+- **PFX File*** — client authentication certificate for the EJBCA API.
+- **PFX Password***
+- **End Entity Profile***
+- **Certificate Profile***
+
+### Example: Microsoft CA connector
+
+Connects CLM to a Microsoft Certificate Authority via a middleware service.
+
+![Microsoft CA connector configuration](images/connector_microsoft_ca.png)
+
+- **Middleware URL***
+- **Request Mode***
+- **Template Name***
+- **API Key**
+- **Port**
+- **Save Certificate** (toggle)
+
+### Example: Crypto Engine connector
+
+Connects CLM to a crypto engine service — the backend that actually performs key generation and signing for a [Crypto Source](crypto_sources.md). If you're evaluating CLM without an external HSM or cloud KMS, this is the connector you need first: a software-backed crypto source still requires a Crypto Engine connector in front of it.
+
+![Crypto Engine connector configuration](images/connector_crypto_engine.png)
+
+- **URL*** — the crypto engine service's endpoint.
+- **Client ID***
+- **Client Secret***
+
+Use **Test Connection** to confirm CLM can reach the crypto engine before saving. Once this connector exists, it becomes available in the **Connectors** dropdown on [Crypto Sources](crypto_sources.md) → **Add Crypto Source**.
+
+The remaining connector types (Dictalabs CA, Microsoft Intune, Active Directory/LDAP, SYSLOG, Single Sign-On) follow the same pattern: pick the type, fill in its specific configuration section, and test the connection before saving.

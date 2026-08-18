@@ -1,45 +1,102 @@
 site_name: CLM Admin Guide
 theme:
   name: material
-  theme_dir: docs/custom_theme
   logo: images/logo.png
   favicon: images/favicon.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+    - content.tabs.link
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - extra.css
 
 extra:
   generator: false  # This disables the "Made with Material for MkDocs" footer
-  footer: "© 2025 Dictalabs. All rights reserved."
+  footer: "© 2026 Dictalabs. All rights reserved."
 
 extra_javascript:
   - extra.js  # Make sure to point to the correct location of extra.js
 
-copyright: "© 2025 Dictalabs. All rights reserved."
+copyright: "© 2026 Dictalabs. All rights reserved."
 
 # Navigation
 nav:
   - Home: index.md
   - Install CLM: install.md
   - RBAC:
-    - Tenants: tenants.md
+    - Organizations: organizations.md
     - Roles: roles.md
-    - Users: users.md
+    - Operators: operators.md
   - Connectors: connectors.md
   - Crypto Sources: crypto_sources.md
   - Key Management: key_management.md
   - Certificate Requests: certificate_requests.md
-  - Certificate Management: certificate_management.md
-  - Compliance: compliance.md
+  - Certificates: certificates.md
+  - Approvals: approvals.md
+  - Compliance Profiles: compliance_profiles.md
   - Discovery: discovery.md
   - Protocols:
     - SCEP Server: scep_server.md
     - ACME Server: acme_server.md
     - EST Server: est_server.md
     - CMP Server: cmp_server.md
-  - API Integration: integrations.md
+  - MDM: mdm.md
+  - Active Directory: active_directory.md
+  - API Keys: api_keys.md
+  - CSC Configuration: csc_configuration.md
   - Reports: reports.md
-  - Notifications: notifications.md
-  - Audit Logs: logs.md
+  - Alerts: alerts.md
+  - Audit: audit.md
   - Settings: settings.md
   - User Profile: user_profile.md

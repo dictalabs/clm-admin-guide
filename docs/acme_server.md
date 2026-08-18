@@ -1,94 +1,70 @@
-# Managing ACME Server
+# ACME Server
 
-The ACME Server module allows administrators to manage Automatic Certificate Management Environment (ACME) profiles, process certificate orders, and monitor enrollment activity.
+**ACME** (Automatic Certificate Management Environment) profiles let clients (certbot and similar tools) enroll for certificates automatically, following the same protocol used by Let's Encrypt.
 
 ## Accessing ACME Server
 
-From the sidebar menu, navigate to **Protocols > ACME Server**.
+From the sidebar, select **Protocols → ACME Server**.
 
-The ACME Server page opens, displaying an overview of all configured ACME profiles.
+![ACME Server page overview](images/acme_server_page_overview.png)
 
-![ACME Server Page Overview](images/acme_server_page_overview.png)
+### ACME Server overview
 
-### ACME Server Overview
+Summary cards show **Total Orders**, **Success Rate**, **Failed Orders**, **Avg Processing Time**, and **Active Accounts**.
 
-At the top of the page, administrators can view summary information displayed in cards:
+The page has four tabs:
 
-- **Total Orders** – The total number of certificate orders processed through ACME.
-    
-- **Success Rate** – The percentage of successfully completed certificate orders.
-    
-- **Active Orders** – The number of ongoing or pending ACME orders.
-    
-- **Failed Orders** – The number of certificate orders that failed during processing.
-    
-- **Avg Processing** – The average time taken to process an ACME order.
-    
-- **Active Accounts** – The total number of active ACME accounts registered.
-## Search and Filter
+### Configurations tab
 
- Below the summary cards, a **Search and Filter** section allows administrators to:
+The list of ACME profiles: **Name**, **Directory** (endpoint URL), **Challenges** supported, **Rate Limits**, **Connector**, **Status**, and row actions. Filter by **Connector**, **Status**, or **Challenge Type**.
 
-- Search ACME server profiles by name, tenant, or keyword.
-    
-- Apply filters (e.g., by order status, account, or date range).
+### Orders tab
 
-## ACME Profiles List
+![ACME Orders tab](images/acme_orders_tab.png)
 
-The ACME server profiles list table provides detailed information about each configured profile, typically including:
+Every certificate order placed against your ACME profiles: **Order ID**, **Identifiers** (domains), **Account** (the requesting ACME account email), **Status** (e.g. Ready, Valid, revoked), **Challenges** and their pass/fail state, and **Expires**. Filter by **Status** or **Challenge Status**.
 
-- **Profile Name**
-    
-- **Directory Endpoint**
-    
-- **Challenges**
-    
-- **Status (Active/Inactive)**
-    
-- **Rate Limits**
-    
-- **Connector**
-    
-- **Actions** (e.g., View, Edit, Disable, or Delete)
-    
+### Accounts tab
 
-This centralized view helps administrators manage ACME-based certificate automation efficiently across multiple tenants.
+![ACME Accounts tab](images/acme_accounts_tab.png)
 
-## Creating a New ACME Profile
+The ACME accounts that have registered against your profiles — one per unique client key/contact email.
 
-To configure a new ACME profile in CLM, follow these steps:
+### External Account Keys tab
 
-### 1. Navigate to the ACME Server Page
+![ACME External Account Keys tab](images/acme_eak_tab.png)
 
-From the sidebar menu, select **Protocols > ACME Server**.
+External Account Binding (EAB) keys, used to tie an ACME client's account registration to a specific organization. Give the **Key ID** and **HMAC key** to the client (e.g. `certbot --eab-kid / --eab-hmac-key`) — accounts registered with a given key automatically belong to that key's organization. Click **New key** to generate one, scoped to an ACME profile. Filter by **Status** or **ACME profile**.
 
-On the top-right corner of the page, click the **Add ACME Profile** button.
-![Create ACME Profile Form](images/create_acme_profile_form.png)
-### 2. Fill in the ACME Profile Form
+## Creating a new ACME profile
 
-A form will open with the following fields:
+Click **Add ACME Profile** (from any tab) to open the profile form:
 
-- **Endpoint Name** – Enter a unique name for the ACME endpoint.
-    
-- **Directory Path** – Specify the ACME directory path used for order and account requests.
-    
-- **Connector (Dropdown)** – Select the connector associated with this ACME profile.
-    
-- **Website URL** – Provide the URL of the website or service linked to this ACME configuration.
-    
-- **Challenge Type (Dropdown)** – Select the ACME challenge type (e.g., HTTP-01, DNS-01).
-    
-- **Status (Dropdown)** – Choose whether the ACME profile is Active or Inactive.
+![Create ACME Profile form](images/create_acme_profile_form.png)
 
+**Basic Settings**
 
-### 3. Save the Profile
+- **Endpoint Name*** — e.g. `acme-prod`.
+- **Directory Path*** — e.g. `/acme/directory`.
+- **Website URL**, **Terms of Service URL**
+- **Connector*** — the CA/connector issuing certificates through this profile.
+- **Validity Days** — leave blank to let the CA decide.
+- **Status** — Active or Inactive.
 
-After completing the form, click the **Create Profile** button.
+**Rate Limits** (leave blank for unlimited)
 
-### 4. Post-Creation
+- **Certificates Per Domain**
+- **Orders Per Account**
+- **Accounts Per IP**
+- **Renewals Per Week**
 
-The new ACME profile will appear in the **ACME Server Profiles List** with its details.
+**Supported Challenges** — which ACME challenge types are accepted, e.g. `http-01`, `dns-01`.
 
+**Key Types & Security**
 
+- **Supported Key Types** — e.g. RSA, ECDSA.
+- **Certificate Approval** — e.g. "Issue immediately" or route through [Approvals](approvals.md).
+- **Require Terms Acceptance** — clients must accept the Terms of Service URL above.
+- **Require External Account Binding** — clients must present a valid EAB key/HMAC pair (see the External Account Keys tab) to register.
 
-
+Click **Create ACME Profile** to save.

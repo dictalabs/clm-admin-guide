@@ -1,108 +1,57 @@
 # Key Management
 
-The **Key Management** module allows administrators to manage cryptographic keys used for document signing, TLS authentication, and data encryption.
+**Key Management** is where cryptographic key pairs are generated and tracked. Keys are created on a chosen [Crypto Source](crypto_sources.md) and are later selected when generating a [Certificate Request](certificate_requests.md).
 
 ## Accessing Key Management
 
-From the **sidebar menu**, navigate to **Key Management**.
-
-The Key Management page opens, displaying an overview of all configured keys.
-![Key Management Page Overview](images/key_management_page_overview.png)
-
-
-### Key Management Overview
-
-At the top of the page, administrators can view summary information displayed in cards:
-
-- **Total Keys** – The total number of cryptographic keys managed.
-    
-- **Active Keys** – The number of keys currently active and available for use.
-    
-- **RSA Keys** – The number of keys using the RSA algorithm.
-    
-- **ECDSA Keys** – The number of keys using the ECDSA algorithm.
-
-### Search and Filter
-
-Below the summary cards, a **Search and Filter** section allows administrators to:
-
-- Search keys by name, type, or tenant.
-    
-- Apply filters (e.g., by algorithm, status, or usage).
-
-### Keys List
-
-The **keys list table** provides detailed information about each key, typically including:
-
-- **Key Name**
-    
-- **Algorithm** (e.g., RSA, ECDSA, EdDSA (Edwards Curve))
-    
-- **Key Size / Curve**
-    
-- **Associated Crypto Source**
-    
-- **Usage** (e.g., Signing, Encryption, TLS)
-    
-- **Status** (Active/Inactive)
-    
-- **Tenant Association**
-    
-- **Actions** (e.g. Delete)
-    
-
-This centralized view enables administrators to securely manage all cryptographic keys across the CLM system.
-
-## Creating a New Key
-
-To define a new cryptographic key in CLM, follow these steps:
-
-1. **Navigate to the Key Management Page**
-    
-
 From the sidebar, select **Key Management**.
 
-On the top-right corner of the page, click the **Generate Key** button.
+![Key Management page overview](images/key_management_page_overview.png)
 
-2. **Fill in the Create Key Form**
-    
+### Key Management overview
 
-A form will open with the following fields:
+Summary cards show:
 
-- **Key Name** – Enter a unique name for the key.
-    
-- **Key Password** – Provide a password to protect the key material (if required by the crypto source).
-    
-- **Description** – Enter a short description of the key’s purpose.
-    
-- **Key Purpose (Dropdown)** – Select the intended purpose of the key (e.g., Signing, Encryption, TLS/Authentication, Multi-purpose).
-    
-- **Crypto Source (Dropdown)** – Select the configured crypto source (e.g., HSM, AWS KMS, Azure Key Vault) where the key will be stored or generated.
-    
-- **Algorithm (Dropdown)** – Choose the algorithm for the key (e.g., RSA, ECDSA, EdDSA (Edwards Curve)).
-    
-- **Key Size (Dropdown)** – Select the key size or curve, depending on the chosen algorithm (e.g., 2048/3072/4096 for RSA, or P-256/P-384 for ECDSA, or ED25519/ED448 for EdDSA (Edwards Curve)).
+- **Total Keys**
+- **Active Keys**
+- **Classical Keys** — traditional algorithms (RSA, ECDSA, EdDSA).
+- **Post-Quantum Keys** — quantum-resistant algorithms (e.g. the ML-DSA / Dilithium family).
 
-![Create Key Form](images/create_key_form.png)
+### Search and filter
 
-3. **Save the Key**
-    
+- **Search Keys** — by key name, alias, algorithm, or purpose.
+- **Algorithm**, **Crypto Source**, **Organization** — narrow the list.
+- **Clear All** — resets all filters.
 
-- After completing the form, click the **Create Key** button.
-    
+### Keys list
 
-4. **Post-Creation**
-    
+| Column | Description |
+|---|---|
+| Key Information | Key name and owning organization. |
+| Type | Algorithm and size/curve, e.g. `RSA_2048`, `AES_256`, `ML_DSA_44`, `ED25519`. |
+| Usage | Tags such as `SIGN`, `VERIFY`, `ENCRYPT`, `DECRYPT`, `EXTRACTABLE`. |
+| Crypto Source | The store the key lives on. |
+| Status | Active or Inactive. |
+| Version | Key version number — incremented on rotation. |
+| Last Used | Timestamp of last use, or "Never Used". |
+| Actions | Row-level actions. |
 
-- The new key will be added to the **Keys List Table**
-  
+## Generating a new key
 
+1. Click **Generate Key** (top right).
+2. Fill in the form:
 
+    ![Generate New Key form](images/create_key_form.png)
 
+    - **Key Name*** — e.g. "Document Signing Key".
+    - **Description**
+    - **Crypto Source*** — which store (see [Crypto Sources](crypto_sources.md)) generates and holds the key.
+    - **Key Purpose*** — e.g. Signing, Encryption, TLS/Authentication.
+    - **Algorithm** — the available options depend on the selected Key Purpose and Crypto Source, and include classical algorithms (RSA, ECDSA, EdDSA) and post-quantum algorithms (the ML-DSA family).
+    - **Key Size** — algorithm-dependent (e.g. 2048/3072/4096 for RSA; curve name for ECDSA/EdDSA).
+    - **Private Key Usage*** and **Public Key Usage*** — the cryptographic operations each half of the key pair is allowed to perform (sign, verify, encrypt, decrypt, etc.).
 
+3. Click **Generate Key** to save.
 
-
-
-
-
-
+!!! tip "Rotation"
+    Generating a new version of an existing key (rather than a brand-new key) increments its **Version** number, which is how CLM tracks key rotation history while keeping the same logical key identity for dependent certificates.

@@ -1,101 +1,61 @@
 # Crypto Sources
 
-The **Crypto Sources** module allows administrators to configure and manage cryptographic sources used for secure key generation and storage. Crypto sources may include Hardware Security Modules (HSMs), Key Vaults, or other secure storage backends that ensure private keys are managed according to compliance and security standards.
+**Crypto Sources** define where cryptographic keys are actually generated and stored — a software store, a PKCS#11-compatible HSM, or a cloud key management service. Every key you generate in [Key Management](key_management.md) is created on a specific crypto source.
+
 ## Accessing Crypto Sources
-1. From the **sidebar menu**, navigate to **Crypto Sources**.
-    
-2. The **Crypto Sources page** opens, displaying an overview of all configured sources.
-![Crypto Sources Page Overview](images/crypto_sources_page_overview.png)
 
-## Crypto Sources Overview
-At the top of the page, administrators can view summary information displayed in **cards**:
+From the sidebar, select **Crypto Sources**.
 
-- **Total Crypto Sources** – The total number of cryptographic sources configured.
-    
-- **Total Store Types** – The number of different key storage types available
-    
-- **Total Connectors** – The number of active connectors linked to cryptographic sources.
-## Search and Filter
-Below the summary cards, a **Search and Filter** section allows administrators to:
+![Crypto Sources page overview](images/crypto_sources_page_overview.png)
 
-- Search crypto sources by name, type, or tenant.
-    
-- Apply filters (e.g., by source type, connector, or status). 
+### Crypto Sources overview
 
-## Crypto Sources List
-The **crypto sources list table** provides detailed information about each configured source, typically including:
+Summary cards show **Total Crypto Sources**, **Total Store Types**, and **Total Connectors**.
 
-- **Source Name**
-    
-- **Store Type** (e.g., HSM, Key Vault, Local Store)
-    
-- **Associated Connector**
-    
-- **Status** (Active/Inactive)
-    
-- **Actions** (e.g. Delete)
-    
+### Search and filter
 
-This centralized view helps administrators securely manage all cryptographic key sources across the CLM system.
+- **Search Crypto Sources** — by name or store type.
+- **Connectors**, **Store Type**, **Organization** — narrow the list.
+- **Clear All** — resets all filters.
 
-## Creating a New Crypto Source
-Administrators can add a new crypto source (connector) to manage keys and certificates stored in external systems.
+### Crypto Sources list
 
-## Steps to Create a New Crypto Source
-1. **Navigate** to the **Crypto Sources** section in the Admin Console.
-    
-2. Click the **Add Crypto Source** button.
-    
-    - A form will appear.
-![Crypto Source Configuration Details](images/crypto_source_configuration.png)
+| Column | Description |
+|---|---|
+| Name | The crypto source's name. |
+| Store Type | `PKCS#11`, `AWS KMS`, `Azure Key Vault`, or `SOFTWARE`. |
+| Connector | The [connector](connectors.md) (typically a Crypto Engine connector) backing this store. |
+| Actions | Delete. |
 
-3. **Fill in the basic information**:
-    
-    - **Store Name** – Provide a unique name for the crypto source.
-        
-    - **Connector** – Select the desired connector from the dropdown.
-        
-    - **Store Type** – Choose the type of key store from the dropdown (`PKCS11`, `AWS KMS`, or `Azure Key Vault`).  
-          
-        
-4. **Provide Store Configurations** based on the selected Store Type:
-    
-    - **If Store Type = PKCS11**
-        
-        - **Name** – Enter a name for the PKCS11 configuration.
-            
-        - **Password** – Provide the store password.
-            
-        - **Library** – Path to the PKCS11 library file.
-            
-        - **Vendor** – Vendor information for the library.
-            
-        - **Slot** – Specify the slot number.
+## Creating a new crypto source
 
-![Create Crypto Source Page](images/crypto_source_pkcs11.png)
+1. Click **Add Crypto Source** (top right).
+2. Fill in the base fields:
 
-**If Store Type = AWS KMS**
+    ![Add Crypto Source form](images/crypto_source_configuration.png)
 
-- **Region** – AWS region of the KMS instance.
-    
-- **Access Key** – AWS access key.
-    
-- **Secret Key** – AWS secret key (entered securely).
-![Create Crypto Source Page](images/crypto_source_aws.png)
+    - **Store Name***
+    - **Connectors*** — the connector this store operates through.
+    - **Store Type*** — `PKCS11`, `AWS KMS`, or `Azure Key Vault`.
 
-**If Store Type = Azure Key Vault**
+3. Selecting a Store Type reveals its specific fields:
 
-- **Key Vault URL** – Provide the full URL of the Azure Key Vault.
+    **PKCS11**
 
-![Create Crypto Source Page](images/crypto_source_azure.png)
+    ![PKCS11 crypto source fields](images/crypto_source_pkcs11.png)
 
-5. **Click Create Connector** to save the new crypto source.
-    
-    - The crypto source will now appear in the list of available connectors.
-        
+    - **Name**, **Password**, **Library** (path to the PKCS#11 library on the crypto engine host), **Vendor**, **Slot**.
 
-- Ensure the credentials provided (e.g., AWS Access/Secret Keys) have appropriate permissions.
-    
-- For PKCS11, verify that the library path and slot number are correct.
-    
-- For Azure Key Vault, the application must have access permissions configured in Azure.
+    **AWS KMS**
+
+    ![AWS KMS crypto source fields](images/crypto_source_aws.png)
+
+    - **Region**, **Access Key**, **Secret Key**.
+
+    **Azure Key Vault**
+
+    ![Azure Key Vault crypto source fields](images/crypto_source_azure.png)
+
+    - **Key Vault URL**.
+
+4. Click **Add Crypto Source** to save. The new store then appears as an option in the [Generate Key](key_management.md) form's Crypto Source dropdown.
