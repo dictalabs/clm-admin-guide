@@ -217,11 +217,16 @@ body {
   margin: 0 !important;
   display: flex;
   align-items: center;
+  /* Material's own default (flex: 0.01 1 auto) barely lets this grow, so the
+     title next to it gets squeezed and ellipsized even with plenty of room
+     in the bar — let each side actually claim its fair share of the width. */
+  flex: 1 1 auto !important;
 }
 
 .md-footer__title {
   padding: 0 0.6rem;
   margin: 0 !important;
+  max-width: none !important;
 }
 
 .md-footer__button {
