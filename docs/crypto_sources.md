@@ -22,10 +22,10 @@ Summary cards show **Total Crypto Sources**, **Total Store Types**, and **Total 
 
 | Column | Description |
 |---|---|
-| Name | The crypto source's name. |
+| Name | The crypto source's name. A colored status indicator (shown after running **Test Connection**) reflects the last reachability check. |
 | Store Type | `PKCS#11`, `AWS KMS`, `Azure Key Vault`, or `SOFTWARE`. |
 | Connector | The [connector](connectors.md) (typically a Crypto Engine connector) backing this store. |
-| Actions | Delete. |
+| Actions | **Test Connection**, **Edit** (PKCS#11 stores only), Delete. |
 
 ## Creating a new crypto source
 
@@ -58,4 +58,22 @@ Summary cards show **Total Crypto Sources**, **Total Store Types**, and **Total 
 
     - **Key Vault URL**.
 
-4. Click **Add Crypto Source** to save. The new store then appears as an option in the [Generate Key](key_management.md) form's Crypto Source dropdown.
+4. Click **Add Crypto Source** to save. The new store then appears as an option in the [Generate Key](key_management.md) form's Crypto Source dropdown. CLM automatically runs a connection test right after the store is created.
+
+## Testing a crypto source
+
+From a crypto source row's **⋮** menu, click **Test Connection**. CLM checks connectivity to the store and shows the result both as a toast and as a status indicator next to the source's name:
+
+- **Reachable** — store is accessible (OK).
+- **Reachable with warnings** — store responded, but with a warning condition.
+- **Not reachable** — store could not be reached (FAILED).
+
+## Editing a crypto source
+
+Only **PKCS#11** stores can be edited (the row action is hidden for other store types, since their credentials are managed by the connector). From the row's **⋮** menu, click **Edit** to open the **Edit Crypto Source** dialog:
+
+- **Store Name**, **Store Type**, **Token Name**, **Vendor**, and **Slot** are read-only — they cannot be changed after creation.
+- **Store's PIN** — leave blank to keep the stored PIN; enter a new value to change it. The current PIN is never shown or pre-filled.
+- **Library Path** — the path to the PKCS#11 library on the crypto engine host; pre-filled with the current value and editable.
+
+Click **Update Crypto Source** to save. CLM automatically re-runs a connection test afterward to confirm the new PIN/library path work.

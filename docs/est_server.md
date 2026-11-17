@@ -41,7 +41,15 @@ Summary cards show **Total Orders**, **Success Rate**, **Active Orders**, **Fail
     - **Description**
     - **Status** — Active or Inactive.
     - **Require Manual Approval** — route enrollments through [Approvals](approvals.md).
-    - **Client authentication** — how EST authenticates enrolling clients, e.g. "Either — accept whichever the client presents" (username/password or a client certificate).
-    - **Client certificate trust anchor (PEM)** — when client-certificate authentication is used, paste the CA certificate(s) EST should trust for verifying the client's presented certificate.
+    - **Client authentication** — how EST authenticates enrolling clients:
+        - **HTTP Basic credentials**
+        - **TLS client certificate**
+        - **Either — accept whichever the client presents**
+        - **Both — require credentials and a certificate**
+        - **None** — only offered when editing an existing profile that is already set to None; it cannot be selected on a new profile or re-selected once a profile has been switched away from it. A profile left on None shows a warning that EST refuses every enrollment on it (403) until an authentication mode is chosen and saved.
+    - **Client certificate trust anchor (PEM)** — shown when a certificate-based authentication mode is used. Either select **Trust anchor from CA connector** (the connector's CA chain is fetched and stored as the trust anchor on save) or paste PEM certificate(s) directly — a pasted PEM takes precedence over the connector's chain.
 
 3. Click **Create EST Profile** to save.
+
+!!! note
+    HTTPS enforcement, refusal of unverifiable client identity, and the authentication failure lockout are fixed security behavior and are no longer configurable — there is no environment or settings toggle for them.

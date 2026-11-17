@@ -159,6 +159,18 @@ body {
   border-radius: 4px;
 }
 
+/* App screenshots and diagrams: every one of them is a plain white
+   rectangle (real app UI, or a white-background SVG diagram), which read
+   as a rendering glitch floating with no edge against the dark theme.
+   A subtle frame makes the boundary intentional in both themes. */
+.md-typeset img {
+  border-radius: var(--clm-radius);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+[data-md-color-scheme="slate"] .md-typeset img {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -233,4 +245,145 @@ body {
 .md-sidebar__inner:hover,
 .md-nav:hover {
   scrollbar-color: var(--clm-brand-blue) transparent;
+}
+
+/* ===== Header: site title + subtitle under it =====
+   Material swaps this for the current page's title once you scroll past
+   the article heading (its built-in "where am I" behavior) — here that
+   swap replaced our title+subtitle with a bare page name like "Home",
+   which read as a layout glitch rather than a feature. Pin the header to
+   always show the site title/subtitle and never swap to the page title. */
+.md-header__topic:first-child {
+  overflow: visible;
+  /* center the two-line (title + subtitle) block vertically with the logo */
+  top: 50%;
+  transform: translateY(-50%) !important;
+  opacity: 1 !important;
+  z-index: 10;
+  pointer-events: auto !important;
+}
+.md-header__topic:first-child + .md-header__topic {
+  display: none !important;
+}
+.md-header__topic:first-child .md-ellipsis {
+  overflow: visible;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.md-header__topic:first-child .md-ellipsis::after {
+  content: "Certificate Lifecycle Management";
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 400;
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ===== Header logo sizing (Certinium shield) ===== */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2.1rem;
+  width: auto;
+}
+
+/* ==========================================================================
+   Search box (clean, branded — fixes blend on the white header)
+   ========================================================================== */
+.md-search__form {
+  border-radius: var(--clm-radius, 0.4rem);
+  background-color: rgba(15, 23, 42, 0.06);
+  box-shadow: none;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+.md-search__form:hover {
+  background-color: rgba(15, 23, 42, 0.10);
+}
+/* when search is focused/active */
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0.35);
+}
+.md-search__input {
+  color: var(--clm-brand-ink, #0f172a);
+}
+.md-search__input::placeholder {
+  color: rgba(15, 23, 42, 0.5);
+}
+.md-search__icon {
+  color: var(--clm-brand-ink, #0f172a);
+}
+/* results dropdown panel */
+.md-search__output {
+  border-radius: 0 0 var(--clm-radius, 0.4rem) var(--clm-radius, 0.4rem);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.12);
+}
+.md-search-result__meta {
+  background-color: rgba(14, 165, 233, 0.06);
+  color: var(--clm-brand-ink, #0f172a);
+}
+
+/* dark mode */
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+[data-md-color-scheme="slate"] .md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+[data-md-color-scheme="slate"] [data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  background-color: #0b1220;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+}
+[data-md-color-scheme="slate"] .md-search__input,
+[data-md-color-scheme="slate"] .md-search__icon {
+  color: #e2e8f0;
+}
+[data-md-color-scheme="slate"] .md-search__input::placeholder {
+  color: rgba(226, 232, 240, 0.55);
+}
+[data-md-color-scheme="slate"] .md-search-result__meta {
+  background-color: rgba(56, 189, 248, 0.10);
+  color: #e2e8f0;
+}
+
+/* ==========================================================================
+   Keep focused search COMPACT (stop the full-height mobile overlay)
+
+   Material's own CSS only draws the small, desktop-style dropdown above
+   the 76.25em breakpoint; below it (common on a maximized laptop window,
+   not just phones/tablets) it switches to a full-screen takeover: a dark
+   `.md-overlay` backdrop plus a search box that spans the header's full
+   width. That full-screen mode is what looked broken/odd, so it's
+   disabled here and the compact dropdown is forced at every width.
+   ========================================================================== */
+.md-overlay {
+  display: none !important;
+}
+/* `.md-search__overlay` is also the click-outside-to-close target for the
+   search box (it's a <label for="__search"> covering the viewport) — keep
+   it in place and clickable, just invisible, instead of removing it. */
+.md-search__overlay {
+  background: transparent !important;
+}
+.md-search__output {
+  /* !important because Material's own narrow-viewport rule for this exact
+     selector — the one that turns it into a fixed, full-screen dark panel —
+     is scoped to a more specific selector chain and otherwise wins back. */
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;      /* don't stretch to viewport bottom */
+  height: auto !important;
+  width: 100% !important;
+  background-color: var(--md-default-bg-color) !important;
+  border-radius: 0 0 var(--clm-radius, 0.4rem) var(--clm-radius, 0.4rem);
+}
+.md-search__scrollwrap {
+  max-height: 55vh;             /* cap results height */
+  width: 100% !important;
+}
+/* tidy empty-state row */
+.md-search-result__meta {
+  line-height: 1.7rem;
 }

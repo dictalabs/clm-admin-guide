@@ -37,3 +37,16 @@ Click **Open report** on any card to view it:
 
 - Use the **Search** box and report-specific filters (e.g. Issuer, Key Algorithm) to narrow the results.
 - Click **Export** (top right) to download the current results, or use the **⋮** menu on a report's launcher card for additional options.
+
+## Scheduling a report by email
+
+Open a report's **⋮** menu on its launcher card and choose **Schedule…** to have CLM generate and email it on a recurring basis, instead of exporting it by hand each time.
+
+- **Schedule name** — defaults to "`<report>` report".
+- **Frequency** — Daily, Weekly (pick a **Day**), or Monthly (pick a **Day of month**, 1–28).
+- **Time** — UTC.
+- **Report**, **Format** (CSV/PDF), and the report's own filters — preset to the report you launched this from, but changeable.
+- **Recipients*** — up to 10 CLM users, searched by name or email.
+- **Mail connector** — **Automatic**, or a specific SMTP connector.
+
+Click **Create schedule** to save. The schedule then appears on [Settings → Scheduler](settings.md#scheduled-report), where you can edit it, run it on demand, or review its run history.

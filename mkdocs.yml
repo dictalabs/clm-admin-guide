@@ -1,7 +1,7 @@
-site_name: CLM Admin Guide
+site_name: Certinium Admin Guide
 theme:
   name: material
-  logo: images/logo.png
+  logo: images/certinium-logo.png
   favicon: images/favicon.png
   font:
     text: Inter
@@ -25,7 +25,6 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
-    - navigation.sections
     - navigation.top
     - navigation.footer
     - toc.follow
@@ -85,7 +84,16 @@ nav:
   - Certificates: certificates.md
   - Approvals: approvals.md
   - Compliance Profiles: compliance_profiles.md
-  - Discovery: discovery.md
+  - Discovery:
+    - Overview: discovery.md
+    - SSL Discovery: discovery_ssl.md
+    - File Scan Discovery: discovery_filescan.md
+    - SSH Discovery: discovery_ssh.md
+    - AD CS Discovery: discovery_adcs.md
+    - Proxy Discovery: discovery_proxy.md
+    - AWS ACM Discovery: discovery_aws.md
+    - Azure Key Vault Discovery: discovery_azure.md
+    - GCP Certificate Manager Discovery: discovery_gcp.md
   - Protocols:
     - SCEP Server: scep_server.md
     - ACME Server: acme_server.md

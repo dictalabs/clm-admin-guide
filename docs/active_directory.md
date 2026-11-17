@@ -31,4 +31,4 @@ From the sidebar, select **Active Directory**.
 Use **Run Directory Sync** (top right) to re-sync certificate-publishing status against Active Directory on demand.
 
 !!! note
-    This page tracks certificates CLM has *published* to AD. To *discover* certificates that already exist in AD/AD CS, use [Discovery → AD CS](discovery.md#active-directory-ad-cs-discovery) instead.
+    This page tracks certificates CLM has *published* to AD. To *discover* certificates that already exist in AD/AD CS, use [Discovery → AD CS](discovery_adcs.md) instead.

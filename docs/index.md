@@ -1,4 +1,4 @@
-# CLM Admin Guide
+# Certinium Admin Guide
 
 ## Overview
 

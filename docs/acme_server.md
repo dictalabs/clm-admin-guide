@@ -22,13 +22,13 @@ The list of ACME profiles: **Name**, **Directory** (endpoint URL), **Challenges*
 
 ![ACME Orders tab](images/acme_orders_tab.png)
 
-Every certificate order placed against your ACME profiles: **Order ID**, **Identifiers** (domains), **Account** (the requesting ACME account email), **Status** (e.g. Ready, Valid, revoked), **Challenges** and their pass/fail state, and **Expires**. Filter by **Status** or **Challenge Status**.
+Every certificate order placed against your ACME profiles: **Order ID**, **Identifiers** (domains), **Account** (the requesting ACME account email), **Status** (e.g. Ready, Valid, revoked), **Challenges** and their pass/fail state, and **Expires**. Filter by **Status** or **Challenge Status**; sort by Identifiers, Status, or Expires. The list is paginated.
 
 ### Accounts tab
 
 ![ACME Accounts tab](images/acme_accounts_tab.png)
 
-The ACME accounts that have registered against your profiles — one per unique client key/contact email.
+The ACME accounts that have registered against your profiles — one per unique client key/contact email. An account row has a **Deactivate** action (requires manage permission) — this is irreversible and asks for confirmation before deactivating the account per RFC 8555.
 
 ### External Account Keys tab
 
@@ -59,6 +59,8 @@ Click **Add ACME Profile** (from any tab) to open the profile form:
 - **Renewals Per Week**
 
 **Supported Challenges** — which ACME challenge types are accepted, e.g. `http-01`, `dns-01`.
+
+- **DNS resolvers (dns-01)** — up to 3 resolver IP addresses (e.g. `192.0.2.53, 2001:db8::53`) that dns-01 validation uses to look up the TXT record. Leave empty to use the server's own resolver.
 
 **Key Types & Security**
 
