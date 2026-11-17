@@ -185,10 +185,13 @@ body {
 
 .md-footer-meta__inner {
   justify-content: center; /* Material's default is space-between; we only show copyright */
+  padding: 0.3rem 0.8rem;
+  min-height: 0;
 }
 
 .md-footer-meta .md-copyright {
   color: rgba(255, 255, 255, 0.7);
+  font-size: 0.65rem;
 }
 
 .md-footer__link {
@@ -201,27 +204,44 @@ body {
 
 /* Prev/Next nav bar: Material's default padding makes this strip much
    taller than the single line of text it holds, which read as bulky next
-   to the slim copyright bar below it. Trim it down to a compact size. */
+   to the slim copyright bar below it. Collapse it to a single line (drop
+   the "Previous"/"Next" caption, keep just the page title) and trim every
+   remaining gap down to the minimum the text itself needs. */
 .md-footer__inner {
-  margin: 0.3rem 0.8rem;
+  margin: 0.2rem 0.8rem;
 }
 
 .md-footer__link {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
 }
 
 .md-footer__title {
-  font-size: 0.7rem;
+  padding: 0 0.6rem;
+  margin: 0 !important;
+}
+
+.md-footer__button {
+  margin: 0 !important;
+}
+
+.md-footer__title .md-ellipsis {
+  font-size: 0.7rem !important;
+  line-height: 1.15 !important;
 }
 
 .md-footer__direction {
-  font-size: 0.55rem;
+  font-size: 0.55rem !important;
+  line-height: 1.15 !important;
+  margin-bottom: 0 !important;
 }
 
 .md-footer__button svg {
-  height: 0.85rem;
-  width: 0.85rem;
+  height: 0.8rem;
+  width: 0.8rem;
 }
 
 /* ==========================================================================
