@@ -199,6 +199,31 @@ body {
   opacity: 0.8;
 }
 
+/* Prev/Next nav bar: Material's default padding makes this strip much
+   taller than the single line of text it holds, which read as bulky next
+   to the slim copyright bar below it. Trim it down to a compact size. */
+.md-footer__inner {
+  margin: 0.5rem 0.8rem;
+}
+
+.md-footer__link {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.md-footer__title {
+  font-size: 0.75rem;
+}
+
+.md-footer__direction {
+  font-size: 0.6rem;
+}
+
+.md-footer__button svg {
+  height: 1rem;
+  width: 1rem;
+}
+
 /* ==========================================================================
    Scrollbars
    ========================================================================== */
